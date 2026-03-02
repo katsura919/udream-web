@@ -1,26 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700&family=Satisfy&display=swap');
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-script: var(--font-script);
+  --font-body: var(--font-body);
   --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 0.5rem;
+
+  /* Udream Branding - Light Mode Base */
+  --background: #EBE6D9;
+  /* Parchment */
+  --foreground: #2E261E;
+  /* Bistre Night */
+
+  --card: #F4F1E8;
+  /* Lighter Parchment variant */
+  --card-foreground: #2E261E;
+
+  --popover: #F4F1E8;
+  --popover-foreground: #2E261E;
+
+  --primary: #9E414C;
+  /* Adventure Red */
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #D4A373;
+  /* Desert Sand */
+  --secondary-foreground: #2E261E;
+
+  --muted: #DED9C9;
+  --muted-foreground: #6B5E53;
+
+  --accent: #D4A373;
+  --accent-foreground: #2E261E;
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #D1CEC4;
+  --input: #D1CEC4;
+  --ring: #9E414C;
+
+  --chart-1: #9E414C;
+  --chart-2: #D4A373;
+  --chart-3: #2E261E;
+  --chart-4: #6B5E53;
+  --chart-5: #A89B8D;
+
+  /* Typography */
+  --font-display: 'Alfa Slab One', serif;
+  --font-script: 'Satisfy', cursive;
+  --font-body: 'Inter', sans-serif;
+
+  --sidebar: #F4F1E8;
+  --sidebar-foreground: #2E261E;
+  --sidebar-primary: #9E414C;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #D4A373;
+  --sidebar-accent-foreground: #2E261E;
+  --sidebar-border: #D1CEC4;
+  --sidebar-ring: #9E414C;
+}
+
+.dark {
+  /* For dark mode, we invert the warmth but keep the brown-red palette */
+  --background: #1C1814;
+  /* Deep Dark Brown */
+  --foreground: #EBE6D9;
+
+  --card: #2E261E;
+  --card-foreground: #EBE6D9;
+
+  --popover: #2E261E;
+  --popover-foreground: #EBE6D9;
+
+  --primary: #B3525E;
+  /* Slightly brighter Adventure Red for contrast */
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #A67C52;
+  --secondary-foreground: #FFFFFF;
+
+  --muted: #2E261E;
+  --muted-foreground: #A8917E;
+
+  --accent: #D4A373;
+  --accent-foreground: #1C1814;
+
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #3D342C;
+  --input: #3D342C;
+  --ring: #B3525E;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight;
+  }
 }
