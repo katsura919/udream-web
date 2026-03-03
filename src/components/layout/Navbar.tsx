@@ -9,7 +9,7 @@ import { Menu, X, Globe, Map as MapIcon, BookOpen, User, Home, Backpack } from "
 
 const navItems = [
     { name: "Home", href: "/", icon: <Home size={18} /> },
-    { name: "Destinations", href: "/destinations", icon: <Globe size={18} /> },
+    // { name: "Destinations", href: "/destinations", icon: <Globe size={18} /> },
     { name: "Blog", href: "/blog", icon: <BookOpen size={18} /> },
     { name: "Map", href: "/map", icon: <MapIcon size={18} /> },
     { name: "Resources", href: "/resources", icon: <Backpack size={18} /> },
