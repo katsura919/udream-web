@@ -32,7 +32,7 @@ const AnimatedHeroDemo = () => {
         </>
       }
       description="Boost Your Brand with High-Impact Short Videos from our expert content creators. Our team is ready to propel your business forward."
-      ctaText="Get Started"
+      ctaText="View Footprints"
       images={DEMO_IMAGES}
     />
   );

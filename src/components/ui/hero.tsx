@@ -21,7 +21,7 @@ const ActionButton = ({ children }: { children: React.ReactNode }) => (
     whileTap={{ scale: 0.95 }}
     className="mt-8 px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold shadow-lg transition-colors hover:bg-secondary hover:text-secondary-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-opacity-75"
   >
-    {children}
+    <a href="/map">{children}</a>
   </motion.button>
 );
 
