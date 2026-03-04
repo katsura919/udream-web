@@ -66,7 +66,7 @@ export default function GuideListingPage() {
                             {filteredGuides.map((guide) => (
                                 <Link
                                     key={guide.id}
-                                    href={`/guide/${guide.id}`}
+                                    href={`/resources/guide/${guide.id}`}
                                     className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl overflow-hidden hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-500"
                                 >
                                     {/* Image Container */}
