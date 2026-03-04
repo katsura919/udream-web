@@ -2348,5 +2348,1337 @@ export const travelGuides: TravelGuideData[] = [
                 evening: "Sky100 or Rooftop bar"
             }
         ]
+    },
+    {
+        id: "macau",
+        destinationName: "Macau",
+        country: "China (SAR)",
+        bestTime: "October–December",
+        lengthOfStay: "1–2 days (often a day trip from HK)",
+        budgetRange: "Mid-range / Luxury",
+        quickDescription: "Macau is a fascinating blend of Portuguese colonial history and glitzy, modern casino resorts. You can walk through cobblestone European squares in the morning and visit the world's largest casinos in the afternoon.",
+        heroImage: "https://images.unsplash.com/photo-1590333247333-826040742d4a?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Macau International Airport (MFM)",
+            transportation: "Free Hotel Shuttle Buses, Taxi, Public Bus, or LRT.",
+            visa: "Similar to Hong Kong; most Western and ASEAN passports are visa-free."
+        },
+        whereToStay: {
+            budget: {
+                name: "San Va Hospedaria",
+                why: "Historic, no-frills guest house featured in many films; located in the old town."
+            },
+            midRange: {
+                name: "Hotel Royal Macau",
+                why: "Near the city center with great service and an indoor pool."
+            },
+            luxury: {
+                name: "The Venetian Macao or The Londoner",
+                why: "Massive integrated resorts with themed canals and world-class entertainment."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Ruins of St. Paul's",
+                why: "The iconic stone facade of a 17th-century Portuguese church.",
+                fee: "Free",
+                bestTime: "Before 9:00 AM",
+                image: "https://images.unsplash.com/photo-1590333247333-826040742d4a?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Senado Square",
+                why: "The heart of the historic center with beautiful mosaic tiles and colonial buildings.",
+                fee: "Free",
+                bestTime: "Late afternoon",
+                image: "https://images.unsplash.com/photo-1616484173745-af9077977609?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "The Cotai Strip",
+                why: "To see the spectacular scale of casinos like The Venetian and Parisian.",
+                fee: "Free to enter resorts",
+                bestTime: "Night (for the lights)",
+                image: "https://images.unsplash.com/photo-1590333247504-0370884638fa?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Lord Stow’s Bakery", typeAndPrice: "Portuguese Egg Tarts (Budget)" },
+                { name: "Restaurante Litoral", typeAndPrice: "Authentic Macanese/Portuguese (Mid-range)" }
+            ],
+            mustTryDish: "Portuguese Egg Tart or Pork Chop Bun"
+        },
+        gettingAround: {
+            publicTransport: "Public Buses, LRT, Free Hotel Shuttles",
+            apps: ["Bus Macau"],
+            dailyBudget: "$0–$10"
+        },
+        dailyBudget: {
+            accommodation: "$50–$400",
+            food: "$20–$80",
+            transportation: "$0–$15",
+            activities: "$0–$100",
+            total: "$70–$595"
+        },
+        whatToPack: {
+            clothing: "Smart casual, comfortable walking shoes",
+            documents: "Passport, Ferry tickets",
+            gadgets: "Universal adapter (Type G), Power bank",
+            other: "Macau Pass (optional)"
+        },
+        travelTips: {
+            safety: "Stick to well-lit areas in the old town at night.",
+            money: "HKD is accepted everywhere 1:1.",
+            etiquette: "Photography strictly prohibited inside gaming areas.",
+            reminder: "Use free shuttle buses to save money."
+        },
+        photoSpots: [
+            "Ruins of St. Paul's",
+            "The Parisian Macao (Eiffel Tower)",
+            "Fisherman’s Wharf"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "History & Heritage",
+                morning: "Senado Square & Ruins of St. Paul's",
+                afternoon: "Monte Fort",
+                evening: "Dinner in the historic center"
+            },
+            {
+                day: 2,
+                focus: "The Glitz & Glam",
+                morning: "Taipa Village",
+                afternoon: "Cotai Strip resort hopping",
+                evening: "The House of Dancing Water show"
+            },
+            {
+                day: 3,
+                focus: "Quiet Villages",
+                morning: "Coloane Village",
+                afternoon: "Hac Sa Beach",
+                evening: "Macau Tower"
+            }
+        ]
+    },
+    {
+        id: "hong-kong-trip-2",
+        destinationName: "Hong Kong (Local Soul)",
+        country: "China (SAR)",
+        bestTime: "October–December (Cool/Dry)",
+        lengthOfStay: "3–4 days",
+        budgetRange: "Mid-range",
+        quickDescription: "A deep dive into HK's heritage, featuring traditional fishing villages, world-class modern art, and local 'Insta-famous' architecture.",
+        heroImage: "https://images.unsplash.com/photo-1543165365-07232ed12abd?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Hong Kong International Airport (HKG)",
+            transportation: "Airport Express, Bus A21, Red Taxi.",
+            visa: "Visa-free for many (US, UK, ASEAN)."
+        },
+        whereToStay: {
+            budget: {
+                name: "Mei Ho House",
+                why: "Heritage hostel in Sham Shui Po."
+            },
+            midRange: {
+                name: "Page148",
+                why: "Boutique hotel in the heart of Tsim Sha Tsui."
+            },
+            luxury: {
+                name: "The Rosewood",
+                why: "Ultra-luxury hotel at Victoria Dockside."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "M+ Museum",
+                why: "World-class modern art and design at West Kowloon.",
+                fee: "~HK$190",
+                bestTime: "Weekday morning",
+                image: "https://images.unsplash.com/photo-1543165365-07232ed12abd?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Tai O Village",
+                why: "Historic fishing village with traditional stilt houses.",
+                fee: "Free",
+                bestTime: "Late afternoon",
+                image: "https://images.unsplash.com/photo-1510255502695-10826958440d?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Dragon’s Back (Hiking)",
+                why: "Popular trail with spectacular coastal views.",
+                fee: "Free",
+                bestTime: "Early morning",
+                image: "https://images.unsplash.com/photo-1543165365-07232ed12abd?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Kung Wo Tofu", typeAndPrice: "Tofu snacks (Budget)" },
+                { name: "Under Bridge Spicy Crab", typeAndPrice: "Seafood (Mid-range)" }
+            ],
+            mustTryDish: "Claypot Rice"
+        },
+        gettingAround: {
+            publicTransport: "MTR, 'Ding Ding' Tram, Star Ferry",
+            apps: ["MTR Mobile", "Citymapper"],
+            dailyBudget: "$10"
+        },
+        dailyBudget: {
+            accommodation: "$60",
+            food: "$40",
+            transportation: "$10",
+            activities: "$25",
+            total: "$135"
+        },
+        whatToPack: {
+            clothing: "Light layers, non-slip shoes",
+            documents: "Passport, Octopus Card",
+            gadgets: "Type G adapter, Power bank",
+            other: "Compact umbrella"
+        },
+        travelTips: {
+            safety: "Watch for pickpockets in crowded markets.",
+            money: "Use Octopus for 90% of transactions.",
+            etiquette: "Stand on the right on escalators.",
+            reminder: "No eating/drinking on the MTR."
+        },
+        photoSpots: [
+            "Lok Wah South Estate (Blue circles)",
+            "Choi Hung Estate (Rainbow)",
+            "Sai Wan Swimming Shed"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Art & History",
+                morning: "M+ Museum at West Kowloon",
+                afternoon: "Heritage walk in Sham Shui Po",
+                evening: "Skyline views from West Kowloon Art Park"
+            },
+            {
+                day: 2,
+                focus: "Nature & Local Life",
+                morning: "Hike Dragon's Back",
+                afternoon: "Seafood lunch and stilt houses at Tai O Village",
+                evening: "Dinner in trendy Kennedy Town"
+            },
+            {
+                day: 3,
+                focus: "Islands & Estates",
+                morning: "Ferry to Cheung Chau Island for street food",
+                afternoon: "Photo ops at Choi Hung & Lok Wah Estates",
+                evening: "Rooftop drinks in Causeway Bay"
+            }
+        ]
+    },
+    {
+        id: "almaty",
+        destinationName: "Almaty",
+        country: "Kazakhstan",
+        bestTime: "June–Sept (Hiking) / Dec–Feb (Ski)",
+        lengthOfStay: "4–5 Days",
+        budgetRange: "Budget-Friendly",
+        quickDescription: "A sophisticated Eurasian city at the foot of the mountains, blending Soviet history with trendy café culture and stunning alpine scenery.",
+        heroImage: "https://images.unsplash.com/photo-1548680601-0906236ee3de?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Almaty (ALA)",
+            transportation: "Yandex Go (App), Bus 92.",
+            visa: "Visa-free (30 days) for many (inc. Philippines)."
+        },
+        whereToStay: {
+            budget: {
+                name: "My Hostel Almaty",
+                why: "Highly rated, social and clean."
+            },
+            midRange: {
+                name: "Hotel Kazakhstan",
+                why: "Iconic Soviet-era skyscraper with great views."
+            },
+            luxury: {
+                name: "Ritz-Carlton Almaty",
+                why: "Stunning views from the Esentai Tower."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Shymbulak/Medeu",
+                why: "Alpine scenery, world-class skating rink, and skiing peaks.",
+                fee: "Free (Cable Car ~¥12)",
+                bestTime: "Morning",
+                image: "https://images.unsplash.com/photo-1548680601-0906236ee3de?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Charyn Canyon",
+                why: "Known as the 'Little Grand Canyon' of Central Asia.",
+                fee: "~$3",
+                bestTime: "Full-day trip",
+                image: "https://images.unsplash.com/photo-1628102431718-e30129dc370f?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Zenkov Cathedral",
+                why: "Colorful 19th-century wooden church built without nails.",
+                fee: "Free",
+                bestTime: "Afternoon",
+                image: "https://images.unsplash.com/photo-1579737194883-75f8f8ed945c?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Green Bazaar", typeAndPrice: "Local snacks and street food (Budget)" },
+                { name: "Navat", typeAndPrice: "Traditional Central Asian tea house (Mid-range)" }
+            ],
+            mustTryDish: "Beshbarmak (Meat & Pasta)"
+        },
+        gettingAround: {
+            publicTransport: "Metro, Bus, Yandex Go",
+            apps: ["Yandex Go"],
+            dailyBudget: "$5"
+        },
+        dailyBudget: {
+            accommodation: "$25",
+            food: "$20",
+            transportation: "$5",
+            activities: "$15",
+            total: "$65"
+        },
+        whatToPack: {
+            clothing: "Hiking gear or heavy winter wear (seasonal)",
+            documents: "Passport",
+            gadgets: "Type C/F adapter, Power bank",
+            other: "Lip balm (dry air)"
+        },
+        travelTips: {
+            safety: "Stick to registered apps (Yandex) for taxis.",
+            money: "Exchange USD/EUR to Tenge (KZT) in town.",
+            etiquette: "Remove shoes when entering homes.",
+            reminder: "Download offline Google Maps."
+        },
+        photoSpots: [
+            "Shymbulak Peaks",
+            "Zenkov Cathedral",
+            "Kok Tobe City Views"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "City Highlights",
+                morning: "Zenkov Cathedral and Panfilov Park",
+                afternoon: "Shopping at Green Bazaar",
+                evening: "Kok Tobe Hill for sunset city views"
+            },
+            {
+                day: 2,
+                focus: "The High Mountains",
+                morning: "Medeu Skating Rink",
+                afternoon: "Cable car to Shymbulak Ski Resort",
+                evening: "Dinner at a traditional cafe in the city center"
+            },
+            {
+                day: 3,
+                focus: "Nature Escape",
+                morning: "Full-day excursion to Charyn Canyon",
+                afternoon: "Hiking the 'Valley of Castles'",
+                evening: "Return to Almaty for a spa session at Arasan Baths"
+            }
+        ]
+    },
+    {
+        id: "tashkent",
+        destinationName: "Tashkent",
+        country: "Uzbekistan",
+        bestTime: "March–June and September–October",
+        lengthOfStay: "2–3 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "Tashkent is a fascinating mix of Soviet-era architecture, modern skyscrapers, and ancient Silk Road history. It is the greenest city in Central Asia, known for its museum-like metro stations and world-famous Plov.",
+        heroImage: "https://images.unsplash.com/photo-1589561454226-728f32ac9108?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Tashkent International Airport (TAS)",
+            transportation: "Yandex Go app, Taxi, or Public Bus.",
+            visa: "e-Visa required for many (~$20); Visa-free for EU, UK, and US."
+        },
+        whereToStay: {
+            budget: {
+                name: "Jahongir B&B",
+                why: "Authentic local feel, family-run, and near Chorsu Bazaar."
+            },
+            midRange: {
+                name: "Lotte City Hotel Tashkent Palace",
+                why: "Stunning classic architecture and prime central location."
+            },
+            luxury: {
+                name: "Hyatt Regency Tashkent",
+                why: "World-class 5-star amenities in the modern heart of the city."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Chorsu Bazaar",
+                why: "A massive blue-domed traditional market; the heart of local life.",
+                fee: "Free",
+                bestTime: "Morning (9:00 AM)",
+                image: "https://images.unsplash.com/photo-1528642463367-7cb9a826702c?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Hazrati Imam Complex",
+                why: "Spiritual center housing the world's oldest Quran (7th century).",
+                fee: "Free (Small fee for library)",
+                bestTime: "Early afternoon",
+                image: "https://images.unsplash.com/photo-1589405234141-86a073584852?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Tashkent Metro Tour",
+                why: "Every station is an art gallery (e.g., Kosmonavtlar).",
+                fee: "~$0.15 per ride",
+                bestTime: "Mid-day (avoid rush hour)",
+                image: "https://images.unsplash.com/photo-1510255502695-10826958440d?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Besh Qozon", typeAndPrice: "Central Asian Plov Center (Budget: ~$4)" },
+                { name: "Navat", typeAndPrice: "Traditional decor and local menu (Mid-range: ~$15)" }
+            ],
+            mustTryDish: "Tashkent Plov (Rice, meat, and carrots) and Samsa"
+        },
+        gettingAround: {
+            publicTransport: "Metro, Buses, Shared Taxis",
+            apps: ["Yandex Go"],
+            dailyBudget: "$5–$10"
+        },
+        dailyBudget: {
+            accommodation: "$20–$120",
+            food: "$10–$30",
+            transportation: "$3–$10",
+            activities: "$5–$15",
+            total: "$38–$175"
+        },
+        whatToPack: {
+            clothing: "Modest clothing, light layers for desert nights",
+            documents: "Passport, e-Visa printout, Hotel registration slips",
+            gadgets: "Power bank, Type C/F adapter",
+            other: "Cash (USD for exchange)"
+        },
+        travelTips: {
+            safety: "Stick to Yandex Go rather than street-hailing.",
+            money: "Use the Metro; it’s one of the cheapest in the world.",
+            etiquette: "Always break bread by hand; never put it face-down.",
+            reminder: "Declare prescription medications upon arrival."
+        },
+        photoSpots: [
+            "Blue domes of Chorsu Bazaar",
+            "Kosmonavtlar Metro Station",
+            "Hotel Uzbekistan (Soviet-brutalist)"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Market & Tradition",
+                morning: "Chorsu Bazaar",
+                afternoon: "Kukeldash Madrasah",
+                evening: "Dinner at Plov Center"
+            },
+            {
+                day: 2,
+                focus: "Spirituality & Art",
+                morning: "Hazrati Imam Complex",
+                afternoon: "Metro hopping tour",
+                evening: "Tashkent City Park fountains"
+            },
+            {
+                day: 3,
+                focus: "History & Parks",
+                morning: "Museum of Applied Arts",
+                afternoon: "Independence Square",
+                evening: "Farewell dinner at Navat"
+            }
+        ]
+    },
+    {
+        id: "samarkand",
+        destinationName: "Samarkand",
+        country: "Uzbekistan",
+        bestTime: "April–May and September–October",
+        lengthOfStay: "2–3 days",
+        budgetRange: "Mid-range",
+        quickDescription: "Often called the 'Pearl of the East,' Samarkand is home to some of the most breathtaking Islamic architecture in the world. It is a city defined by massive turquoise domes, intricate mosaic tiles, and the legendary history of the conqueror Amir Timur.",
+        heroImage: "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Samarkand International Airport (SKD)",
+            transportation: "Yandex Go, Public Bus, or private transfers.",
+            visa: "e-Visa required for many (~$20); Visa-free for EU, UK, and US."
+        },
+        whereToStay: {
+            budget: {
+                name: "Amir Hostel",
+                why: "Extremely close to Registan Square and popular with backpackers."
+            },
+            midRange: {
+                name: "Bibi-Khanym Hotel",
+                why: "Traditional decor with a rooftop view facing the Bibi-Khanym Mosque."
+            },
+            luxury: {
+                name: "Sangzor Boutique Hotel",
+                why: "High-end comfort close to the historic heart."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Registan Square",
+                why: "The most iconic square in Central Asia, flanked by three massive Madrasahs.",
+                fee: "~100,000 UZS (~$8)",
+                bestTime: "Sunset / Night Show",
+                image: "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Shah-i-Zinda",
+                why: "A narrow 'street' of tombs featuring the most intense blue tilework in the world.",
+                fee: "~50,000 UZS (~$4)",
+                bestTime: "Early morning",
+                image: "https://images.unsplash.com/photo-1589405234141-86a073584852?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Gur-e-Amir (Amir Timur’s Mausoleum)",
+                why: "The final resting place of Tamerlane; interior covered in real gold leaf and jade.",
+                fee: "~75,000 UZS (~$6)",
+                bestTime: "Late evening",
+                image: "https://images.unsplash.com/photo-1510255502695-10826958440d?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Ikrom Shashlik", typeAndPrice: "Famous for best kebabs (Budget: ~$1 per skewer)" },
+                { name: "Platan", typeAndPrice: "Mix of Uzbek and European cuisine (Mid-range: ~$15–$25)" }
+            ],
+            mustTryDish: "Samarkand Plov and Samarkand Bread"
+        },
+        gettingAround: {
+            publicTransport: "Taxis, local minibuses (Damas), and Tram",
+            apps: ["Yandex Go"],
+            dailyBudget: "$3–$8"
+        },
+        dailyBudget: {
+            accommodation: "$20–$100",
+            food: "$10–$30",
+            transportation: "$2–$5",
+            activities: "$15–$25",
+            total: "$47–$160"
+        },
+        whatToPack: {
+            clothing: "Modest attire, comfortable walking shoes",
+            documents: "Passport, e-Visa, high-speed train tickets",
+            gadgets: "Universal 2-pin adapter, high-quality camera",
+            other: "Cash (New crisp USD bills)"
+        },
+        travelTips: {
+            safety: "The old city is very safe; watch for uneven sidewalks.",
+            money: "Registan light show has a free viewing platform.",
+            etiquette: "Never place bread face-down; it's disrespectful.",
+            reminder: "Book high-speed train tickets 4-6 weeks in advance."
+        },
+        photoSpots: [
+            "Tilya-Kori Madrasah gold ceiling",
+            "Blue Corridor of Shah-i-Zinda",
+            "Bibi-Khanym Mosque facade"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "The Icons",
+                morning: "Registan Square",
+                afternoon: "Siyob Bazaar & Bibi-Khanym Mosque",
+                evening: "Registan Light Show"
+            },
+            {
+                day: 2,
+                focus: "History & Culture",
+                morning: "Shah-i-Zinda Necropolis",
+                afternoon: "Ulugh Beg Observatory",
+                evening: "Dinner at a local's home"
+            },
+            {
+                day: 3,
+                focus: "Heritage & Craft",
+                morning: "Gur-e-Amir Mausoleum",
+                afternoon: "Paper Mill at Konigil Village",
+                evening: "Stroll along University Boulevard"
+            }
+        ]
+    },
+    {
+        id: "bukhara",
+        destinationName: "Bukhara",
+        country: "Uzbekistan",
+        bestTime: "April–May and September–October",
+        lengthOfStay: "2 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "Bukhara is an ancient oasis that feels like an open-air museum with over 2,000 years of history. Unlike the grand scale of Samarkand, Bukhara is compact and walkable, filled with mud-brick labyrinthine streets and blue-tiled mosques.",
+        heroImage: "https://images.unsplash.com/photo-1589405234237-6784852?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Bukhara International Airport (BHK)",
+            transportation: "Yandex Go, Taxi, or Public Bus. Most arrive via Afrosiyob train.",
+            visa: "e-Visa required for many (~$20); Visa-free for EU, UK, and US."
+        },
+        whereToStay: {
+            budget: {
+                name: "Rumi Hotel",
+                why: "Affordable, cozy, and located in the heart of the historic Old City."
+            },
+            midRange: {
+                name: "Komil Bukhara Boutique Hotel",
+                why: "Famous for its stunning 19th-century traditional dining room."
+            },
+            luxury: {
+                name: "Mercure Bukhara Old Town",
+                why: "Modern 5-star luxury located just a short walk from historic landmarks."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Po-i-Kalyan Complex",
+                why: "Home to the Kalyan Minaret, which Genghis Khan spared from destruction.",
+                fee: "Free to walk; ~$3 for Madrasah interiors",
+                bestTime: "Sunset",
+                image: "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "The Ark of Bukhara",
+                why: "A massive 5th-century fortress that served as the residence of the Emirs.",
+                fee: "~40,000 UZS (~$3)",
+                bestTime: "Early morning",
+                image: "https://images.unsplash.com/photo-1589405234141-86a073584852?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Chor Minor",
+                why: "A charming gatehouse with four blue-domed towers representing different religions.",
+                fee: "Free",
+                bestTime: "Afternoon",
+                image: "https://images.unsplash.com/photo-1510255502695-10826958440d?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "The Old House (Adras)", typeAndPrice: "Traditional food in a beautiful historic courtyard (Mid-range: ~$15)" },
+                { name: "Ayvan Design", typeAndPrice: "Modern twist on Uzbek classics (Mid-range: ~$20)" }
+            ],
+            mustTryDish: "Bukhara Plov (Oshi Sofi)"
+        },
+        gettingAround: {
+            publicTransport: "Taxis and small buses. Old City is best explored on foot.",
+            apps: ["Yandex Go"],
+            dailyBudget: "$2–$5"
+        },
+        dailyBudget: {
+            accommodation: "$20–$90",
+            food: "$10–$25",
+            transportation: "$2–$5",
+            activities: "$10–$20",
+            total: "$42–$140"
+        },
+        whatToPack: {
+            clothing: "Modest clothes, wide-brimmed hat, sturdy walking shoes",
+            documents: "Passport, e-Visa, Afrosiyob train tickets",
+            gadgets: "Power bank and Type C/F adapter",
+            other: "Cash (UZS) for the bazaars"
+        },
+        travelTips: {
+            safety: "Be mindful of your footing on uneven ancient brick paths.",
+            money: "Bargaining is expected in the Trading Domes (Bazaars).",
+            etiquette: "Bukhara can be hotter than Tashkent; stay hydrated.",
+            reminder: "Most major sights are free to view from the outside."
+        },
+        photoSpots: [
+            "Lyabi-Hauz reflecting pool at night",
+            "Kalyan Minaret from cafe balconies",
+            "Four towers of Chor Minor"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "The Old City",
+                morning: "Po-i-Kalyan Complex",
+                afternoon: "Shopping in the Trading Domes",
+                evening: "Dinner at Lyabi-Hauz"
+            },
+            {
+                day: 2,
+                focus: "Fortress & Gates",
+                morning: "The Ark Fortress & Bolo Haouz Mosque",
+                afternoon: "Chor Minor",
+                evening: "Traditional puppet show"
+            },
+            {
+                day: 3,
+                focus: "Summer Palace",
+                morning: "Sitorai Mokhi-Khosa",
+                afternoon: "Bahoutdin Naqshband Mausoleum",
+                evening: "Departure via train"
+            }
+        ]
+    },
+    {
+        id: "dushanbe",
+        destinationName: "Dushanbe",
+        country: "Tajikistan",
+        bestTime: "April–June and September–October",
+        lengthOfStay: "2–3 days",
+        budgetRange: "Budget",
+        quickDescription: "Dushanbe (meaning 'Monday' in Tajik) is a city of grand monuments, neoclassical Soviet architecture, and massive public parks. It serves as a sophisticated, tranquil gateway to the wild mountains of the Pamirs and the Fann range.",
+        heroImage: "https://images.unsplash.com/photo-1579737194883-75f8f8ed945c?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Dushanbe International Airport (DYU)",
+            transportation: "Yandex Go, local Trolleybus #4, or Marshrutka.",
+            visa: "Visa-free for many (30 days) including Philippines, US, UK, and EU."
+        },
+        whereToStay: {
+            budget: {
+                name: "Greenhouse Hostel",
+                why: "Social hub for travelers, very clean, and offers help with GBAO permits."
+            },
+            midRange: {
+                name: "Hotel Atlas",
+                why: "Comfortable, traditional hospitality and central location."
+            },
+            luxury: {
+                name: "Hyatt Regency Dushanbe",
+                why: "Top-tier 5-star luxury near the main city park."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "National Museum of Tajikistan",
+                why: "Features the famous 13-meter sleeping Buddha.",
+                fee: "~35 TJS (~$3)",
+                bestTime: "Morning (10:00 AM)",
+                image: "https://images.unsplash.com/photo-1548680601-0906236ee3de?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Ismoil Somoni Statue & Rudaki Park",
+                why: "The heart of the city featuring one of the world's tallest flagpoles.",
+                fee: "Free",
+                bestTime: "Sunset",
+                image: "https://images.unsplash.com/photo-1579737194883-75f8f8ed945c?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Mehrgon Bazaar",
+                why: "A beautifully designed 'palace' bazaar with incredible displays.",
+                fee: "Free",
+                bestTime: "Early morning",
+                image: "https://images.unsplash.com/photo-1528642463367-7cb9a826702c?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Rohat Chaikhona", typeAndPrice: "Most famous traditional teahouse (Budget: ~$5)" },
+                { name: "Toqi", typeAndPrice: "Authentic Tajik cuisine with outdoor terrace (Mid-range: ~$10–$15)" }
+            ],
+            mustTryDish: "Qurutob (National dish: bread, yogurt sauce, and onions)"
+        },
+        gettingAround: {
+            publicTransport: "Marshrutkas, Trolleybuses, and shared taxis",
+            apps: ["Yandex Go"],
+            dailyBudget: "$2–$6"
+        },
+        dailyBudget: {
+            accommodation: "$10–$150",
+            food: "$8–$25",
+            transportation: "$2–$10",
+            activities: "$5–$15",
+            total: "$25–$200"
+        },
+        whatToPack: {
+            clothing: "Modest clothing, light layers",
+            documents: "Passport, GBAO permit",
+            gadgets: "Power bank, Type C/F adapter",
+            other: "High-SPF sunscreen"
+        },
+        travelTips: {
+            safety: "Dushanbe is very safe; keep your passport copy on you.",
+            money: "Eat at 'Chaikhonas' for high-quality, low-cost meals.",
+            etiquette: "Never put bread face-down; always break it by hand.",
+            reminder: "ATMs can run out of cash; keep a small USD/EUR backup."
+        },
+        photoSpots: [
+            "Ismoil Somoni Monument",
+            "Atrium of Mehrgon Bazaar",
+            "Kokhi Navruz (Navruz Palace)"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Park & Monument",
+                morning: "Rudaki Park & Somoni Statue",
+                afternoon: "National Museum of Tajikistan",
+                evening: "Dinner at Rohat Chaikhona"
+            },
+            {
+                day: 2,
+                focus: "Market & Garden",
+                morning: "Mehrgon Bazaar",
+                afternoon: "Botanical Garden (Bogi Iram)",
+                evening: "Victory Park for panoramic view"
+            },
+            {
+                day: 3,
+                focus: "Fortress & Palace",
+                morning: "Excursion to Hissar Fortress",
+                afternoon: "Kokhi Navruz Palace tour",
+                evening: "Relax at a local spa"
+            }
+        ]
+    },
+    {
+        id: "tbilisi",
+        destinationName: "Tbilisi",
+        country: "Georgia",
+        bestTime: "May–June or September–October",
+        lengthOfStay: "3–4 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "A city where ancient history meets a bohemian, modern spirit. Tbilisi is famous for its colorful carved balconies, sulfur baths, a world-class wine scene, and a skyline that blends medieval fortresses with futuristic architecture.",
+        heroImage: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Tbilisi International Airport (TBS)",
+            transportation: "Bolt app, Airport Bus #337, or Taxi.",
+            visa: "e-Visa required for Filipinos (~$20); Visa-free for US, UK, EU, and many others."
+        },
+        whereToStay: {
+            budget: {
+                name: "Fabrika Hostel",
+                why: "A converted Soviet sewing factory that is now the city's coolest social hub."
+            },
+            midRange: {
+                name: "Rooms Hotel Tbilisi",
+                why: "Industrial-chic design in the heart of the Vera district."
+            },
+            luxury: {
+                name: "The Stamba Hotel",
+                why: "High-end luxury with stunning interiors and a prime location."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Narikala Fortress & Cable Car",
+                why: "For the best panoramic views of the city and the 'Mother of Georgia' statue.",
+                fee: "Fortress is Free; Cable car is 2.5 GEL (~$1)",
+                bestTime: "Sunset",
+                image: "https://images.unsplash.com/photo-1523585045050-0229875e5264?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Holy Trinity Cathedral (Sameba)",
+                why: "One of the tallest Orthodox churches in the world; a massive landmark.",
+                fee: "Free",
+                bestTime: "Late afternoon",
+                image: "https://images.unsplash.com/photo-1548680601-0906236ee3de?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Abanotubani (Sulfur Baths)",
+                why: "Historic brick-domed bathhouses where the city was founded.",
+                fee: "Public ~$5; Private $20–$100/hr",
+                bestTime: "Evening",
+                image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Mapshalia", typeAndPrice: "Authentic Megrelian food (Budget: ~$5)" },
+                { name: "Shavi Lomi", typeAndPrice: "Creative Georgian fusion (Mid-range: ~$15)" }
+            ],
+            mustTryDish: "Khachapuri Adjaruli (Cheese-filled bread boat with an egg)"
+        },
+        gettingAround: {
+            publicTransport: "Metro and Buses (Metromoney card)",
+            apps: ["Bolt"],
+            dailyBudget: "$3–$7"
+        },
+        dailyBudget: {
+            accommodation: "Varies",
+            food: "Varies",
+            transportation: "$3–$7",
+            activities: "Varies",
+            total: "$40–$150"
+        },
+        whatToPack: {
+            clothing: "Comfortable shoes, layers, scarf for churches",
+            documents: "Passport, health insurance, e-Visa",
+            gadgets: "Type C/F travel adapter, Bolt app",
+            other: "Refillable water bottle, umbrella"
+        },
+        travelTips: {
+            safety: "Use Bolt to avoid overcharging. Be wary of bar invitation scams.",
+            money: "Metromoney card is essential for cheap transport.",
+            etiquette: "Take a sip if offered wine. Wait for the Tamada's toast.",
+            reminder: "Mandatory health insurance ($30k GEL) required as of 2026."
+        },
+        photoSpots: [
+            "Gabriadze Clock Tower",
+            "Sololaki District wooden balconies",
+            "The Chronicles of Georgia (Stonehenge of Georgia)"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "City Views & Baths",
+                morning: "Rudaki Park & Somoni Statue",
+                afternoon: "Narikala Fortress & Cable Car",
+                evening: "Sulfur Baths & Dinner"
+            },
+            {
+                day: 2,
+                focus: "History & Landmarks",
+                morning: "Holy Trinity Cathedral",
+                afternoon: "Sololaki Explorations",
+                evening: "The Chronicles of Georgia"
+            },
+            {
+                day: 3,
+                focus: "Day Trips",
+                morning: "Kazbegi (Stepantsminda)",
+                afternoon: "Mtskheta (Old Capital)",
+                evening: "Farewell dinner at Shavi Lomi"
+            }
+        ]
+    },
+    {
+        id: "kazbegi",
+        destinationName: "Kazbegi (Stepantsminda)",
+        country: "Georgia",
+        bestTime: "June–September (Green) or Jan–Feb (Snow)",
+        lengthOfStay: "1–2 days",
+        budgetRange: "Mid-range",
+        quickDescription: "The quintessential Georgian mountain escape. It is home to the iconic Gergeti Trinity Church, perched against the backdrop of the massive 5,047m Mount Kazbek.",
+        heroImage: "https://images.unsplash.com/photo-1548680601-0906236ee3de?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Tbilisi (TBS), then overland.",
+            transportation: "Marshrutka, Shared Taxi, or Private Transfer.",
+            visa: "Common Georgian entry (same as Tbilisi)."
+        },
+        whereToStay: {
+            budget: {
+                name: "Camp Kuzburi",
+                why: "Warm hospitality and delicious home-cooked meals."
+            },
+            midRange: {
+                name: "Hotel Terrace Kazbegi",
+                why: "Modern rooms with huge balconies facing the mountains."
+            },
+            luxury: {
+                name: "Rooms Hotel Kazbegi",
+                why: "Famous for its breathtaking terrace views and world-class design."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Gergeti Trinity Church",
+                why: "A 14th-century church surrounded by high peaks; the most famous photo spot.",
+                fee: "Free (4WD Taxi to top ~15-20 GEL)",
+                bestTime: "Sunrise",
+                image: "https://images.unsplash.com/photo-1523585045050-0229875e5264?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Gveleti Waterfalls",
+                why: "Beautiful easy hike to two powerful waterfalls in a deep gorge.",
+                fee: "Free",
+                bestTime: "Morning",
+                image: "https://images.unsplash.com/photo-1548680601-0906236ee3de?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Dariali Gorge",
+                why: "Rugged landscapes near the border with a modern monastery.",
+                fee: "Free",
+                bestTime: "Mid-day",
+                image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Shorena’s Bar", typeAndPrice: "Mountain staples in center (Budget: ~$8)" },
+                { name: "Rooms Hotel Restaurant", typeAndPrice: "High-end dining with the best view (Mid-range/Luxury: ~$30)" }
+            ],
+            mustTryDish: "Mountain Khinkali (Lamb or beef dumplings)"
+        },
+        gettingAround: {
+            publicTransport: "Walking and 4WD Delica Taxis",
+            apps: ["Bolt (in Tbilisi to get here)"],
+            dailyBudget: "$10–$20"
+        },
+        dailyBudget: {
+            accommodation: "Varies",
+            food: "Varies",
+            transportation: "$10–$20",
+            activities: "Varies",
+            total: "$50–$200"
+        },
+        whatToPack: {
+            clothing: "Windbreaker, fleece, sturdy hiking boots",
+            documents: "Passport",
+            gadgets: "Camera, Power bank",
+            other: "High-SPF Sunscreen"
+        },
+        travelTips: {
+            safety: "Military Road is safe but winding; use professional drivers.",
+            money: "Marshrutka is 1/5th the price of a taxi from Tbilisi.",
+            etiquette: "Cover heads and wear skirts in churches.",
+            reminder: "Mountain weather changes extremely fast; be prepared."
+        },
+        photoSpots: [
+            "Mount Kazbek at Sunrise",
+            "Gergeti Trinity Church facade",
+            "Rooms Hotel Terrace view"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Arrival & Views",
+                morning: "Travel from Tbilisi",
+                afternoon: "Check-in & Terrace chill",
+                evening: "Sunset at Gergeti Trinity"
+            },
+            {
+                day: 2,
+                focus: "Nature & Hike",
+                morning: "Hike to Gveleti Waterfalls",
+                afternoon: "Dariali Gorge excursion",
+                evening: "Traditional dinner"
+            },
+            {
+                day: 3,
+                focus: "Relaxation",
+                morning: "Breakfast with a view",
+                afternoon: "Return to Tbilisi",
+                evening: "Farewell in the capital"
+            }
+        ]
+    },
+    {
+        id: "yerevan",
+        destinationName: "Yerevan",
+        country: "Armenia",
+        bestTime: "May–June, September–October",
+        lengthOfStay: "3–5 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "Yerevan is one of the world's oldest inhabited cities, known as the 'Pink City' for its beautiful rosy volcanic stone architecture. It blends Soviet-era grandiosity with a hip, modern cafe culture, offering incredible mountain views and world-class hospitality.",
+        heroImage: "https://images.unsplash.com/photo-1549405626-90f779dc059c?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Zvartnots International Airport (EVN)",
+            transportation: "GG (Local App), Yandex Go, Airport Express Bus.",
+            visa: "Visa-free for many (US, EU, UK); e-visa available for others."
+        },
+        whereToStay: {
+            budget: {
+                name: "Envoy Hostel",
+                why: "Highly rated, social vibe, and located right in the city center."
+            },
+            midRange: {
+                name: "Republica Hotel Yerevan",
+                why: "Stylish boutique hotel located just steps from Republic Square."
+            },
+            luxury: {
+                name: "The Alexander",
+                why: "The city's premier luxury address with a world-class spa."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "The Cascade Complex",
+                why: "A massive limestone stairway with art exhibits and views of Mount Ararat.",
+                fee: "Free",
+                bestTime: "Sunset",
+                image: "https://images.unsplash.com/photo-1549413233-066ec0407a97?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Republic Square",
+                why: "The heart of the city featuring the 'Dancing Fountains' show.",
+                fee: "Free",
+                bestTime: "Evening (8:00 PM)",
+                image: "https://images.unsplash.com/photo-1510255502695-10826958440d?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Vernissage Market",
+                why: "Large open-air market for handmade crafts and Soviet antiques.",
+                fee: "Free",
+                bestTime: "Weekend mornings",
+                image: "https://images.unsplash.com/photo-1528642463367-7cb9a826702c?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Lavash Restaurant", typeAndPrice: "Traditional Armenian (Mid-range)" },
+                { name: "Tavern Yerevan", typeAndPrice: "Authentic BBQ/Khorovats (Mid-range)" }
+            ],
+            mustTryDish: "Tolma (Minced meat wrapped in grape leaves)"
+        },
+        gettingAround: {
+            publicTransport: "Metro, Marshrutka, Buses",
+            apps: ["GG", "Yandex Go"],
+            dailyBudget: "$3–$8"
+        },
+        dailyBudget: {
+            accommodation: "$15–$150",
+            food: "$12–$35",
+            transportation: "$3–$10",
+            activities: "$5–$25",
+            total: "$35–$220"
+        },
+        whatToPack: {
+            clothing: "Modest layers for churches, comfortable walking shoes",
+            documents: "Passport, Travel Insurance",
+            gadgets: "Power bank, Type C/F adapter",
+            other: "Refillable water bottle, Sunscreen"
+        },
+        travelTips: {
+            safety: "Very safe at night; use official apps for taxis.",
+            money: "Drink from the 'Pulpulaks'—free mountain water fountains.",
+            etiquette: "Always remove shoes when entering an Armenian home.",
+            reminder: "City comes alive after 8:00 PM; many places stay open late."
+        },
+        photoSpots: [
+            "Top of the Cascade",
+            "Blue Mosque tile work",
+            "Northern Avenue modern architecture"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "City Centers & Sunsets",
+                morning: "Explore Republic Square",
+                afternoon: "Walk Northern Avenue",
+                evening: "Sunset at The Cascade"
+            },
+            {
+                day: 2,
+                focus: "History & Souvenirs",
+                morning: "Genocide Memorial",
+                afternoon: "Shopping at Vernissage",
+                evening: "Brandy Tasting at Ararat Factory"
+            },
+            {
+                day: 3,
+                focus: "Ancient Outskirts",
+                morning: "Garni Temple & Geghard Monastery",
+                afternoon: "Hike Symphony of Stones",
+                evening: "Farewell dinner at Sherep"
+            }
+        ]
+    },
+    {
+        id: "tbilisi-beyond",
+        destinationName: "Tbilisi & Beyond",
+        country: "Georgia",
+        bestTime: "May–June (Wildflowers) or Sept–October (Wine Harvest)",
+        lengthOfStay: "4–5 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "Georgia is the birthplace of wine and a crossroads of Europe and Asia. Tbilisi, its capital, is famous for its dramatic setting in a river valley, ancient sulfur baths, and a food scene that is legendary for its richness and hospitality.",
+        heroImage: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Tbilisi International Airport (TBS)",
+            transportation: "Bolt or Yandex Go app, Airport Bus #337.",
+            visa: "Visa-free for 90+ countries (including US, EU, GCC) for 1 year. Health insurance mandatory for 2026."
+        },
+        whereToStay: {
+            budget: {
+                name: "Fabrika Hostel & Suites",
+                why: "A former Soviet sewing factory turned into the city's coolest social hub."
+            },
+            midRange: {
+                name: "Rooms Hotel Tbilisi",
+                why: "Housed in an old publishing house, offering an 'industrial chic' vibe."
+            },
+            luxury: {
+                name: "Stamba Hotel",
+                why: "High-concept luxury with soaring ceilings and an indoor jungle."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Old Town & Sulfur Baths",
+                why: "Soak in historic domed brick bathhouses and see hidden waterfalls.",
+                fee: "Free to walk; Baths 50–150 GEL/hr",
+                bestTime: "Afternoon",
+                image: "https://images.unsplash.com/photo-1523585045050-0229875e5264?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Gergeti Trinity Church",
+                why: "The most iconic image of Georgia sitting against the backdrop of Mt. Kazbek.",
+                fee: "Free (4x4 taxi ~20-30 GEL)",
+                bestTime: "Early morning",
+                image: "https://images.unsplash.com/photo-1548680601-0906236ee3de?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Chronicle of Georgia",
+                why: "Known as the 'Stonehenge of Tbilisi,' offering surreal views and history.",
+                fee: "Free",
+                bestTime: "Golden Hour",
+                image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Shavi Lomi", typeAndPrice: "Creative Georgian fusion (Mid-range: $$)" },
+                { name: "Mapshalia", typeAndPrice: "Authentic Megrelian food (Budget: $)" }
+            ],
+            mustTryDish: "Adjaruli Khachapuri (Cheese-filled bread boat with an egg)"
+        },
+        gettingAround: {
+            publicTransport: "Metro, Blue Buses, and Marshrutkas",
+            apps: ["Bolt", "GoTrip.ge"],
+            dailyBudget: "$5–$15"
+        },
+        dailyBudget: {
+            accommodation: "$15–$120",
+            food: "$15–$30",
+            transportation: "$5–$15",
+            activities: "$10–$25",
+            total: "$45–$190"
+        },
+        whatToPack: {
+            clothing: "Scarf/Long skirt (women), long pants (men), mountain layers",
+            documents: "Passport, Proof of Health Insurance",
+            gadgets: "Power bank, European Type C/F adapter",
+            other: "Activated charcoal"
+        },
+        travelTips: {
+            safety: "Be aggressive when crossing roads; drivers rarely stop.",
+            money: "Use GoTrip.ge for day trips for fixed-price flexibility.",
+            etiquette: "Wait for the Tamada (toastmaster) to finish before drinking.",
+            reminder: "Don't drink the wine too fast! It's stronger than it tastes."
+        },
+        photoSpots: [
+            "Peace Bridge at night",
+            "Kaleidoscope balcony on Betlemi Street",
+            "Holy Trinity Cathedral (Sameba) at night"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Spirit of Tbilisi",
+                morning: "Old Town & Clock Tower",
+                afternoon: "Narikala Fortress & Cable Car",
+                evening: "Traditional dinner & Sulfur Baths"
+            },
+            {
+                day: 2,
+                focus: "High Caucasus",
+                morning: "Georgian Military Highway",
+                afternoon: "Gergeti Trinity Church in Kazbegi",
+                evening: "Khinkali dinner in Tbilisi"
+            },
+            {
+                day: 3,
+                focus: "Roots & Wine",
+                morning: "Mtskheta & Jvari Monastery",
+                afternoon: "Dry Bridge Flea Market",
+                evening: "Wine tasting at 8000 Vintages"
+            }
+        ]
+    },
+    {
+        id: "istanbul",
+        destinationName: "Istanbul",
+        country: "Turkey (Türkiye)",
+        bestTime: "March–May or September–October",
+        lengthOfStay: "3–5 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "Istanbul is the only city in the world straddling two continents, Europe and Asia. It is a mesmerizing mix of Byzantine churches, Ottoman mosques, and bustling bazaars, all connected by the sparkling Bosphorus Strait.",
+        heroImage: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Istanbul Airport (IST) or Sabiha Gökçen (SAW)",
+            transportation: "Havaist Shuttle, Metro (M11), or Taxis.",
+            visa: "e-Visa required for most (apply via official portal); some nationalities visa-free."
+        },
+        whereToStay: {
+            budget: {
+                name: "Sultanahmet Inn Hotel",
+                why: "Perfectly located in the historic heart, within walking distance to major sights."
+            },
+            midRange: {
+                name: "White House Hotel Istanbul",
+                why: "Consistently top-rated for its Turkish Hospitality and Ottoman-style charm."
+            },
+            luxury: {
+                name: "Pera Palace Hotel",
+                why: "A historic landmark where Agatha Christie stayed; offers old-world glamour."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Hagia Sophia (Ayasofya)",
+                why: "A 1,500-year-old architectural marvel that has served as a cathedral, museum, and mosque.",
+                fee: "Paid (~€25 for foreign tourists)",
+                bestTime: "Early morning (9:00 AM)",
+                image: "https://images.unsplash.com/photo-1543949806-2c9935e6838d?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Basilica Cistern (Yerebatan Sarnıcı)",
+                why: "A hauntingly beautiful subterranean reservoir with Medusa heads.",
+                fee: "~1,300 TL",
+                bestTime: "Late afternoon",
+                image: "https://images.unsplash.com/photo-1563911531102-4fd24bb56972?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Bosphorus Sunset Cruise",
+                why: "See palaces, fortresses, and the city skyline while traveling between two continents.",
+                fee: "30–50 TL (Ferry) or $30–$50 (Private)",
+                bestTime: "One hour before sunset",
+                image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Hafiz Mustafa 1864", typeAndPrice: "Baklava and Turkish delight (Mid-range)" },
+                { name: "Tarihi Sultanahmet Köftecisi", typeAndPrice: "Iconic meatballs since 1920 (Budget)" }
+            ],
+            mustTryDish: "Balık Ekmek (Grilled fish sandwich from the boats in Eminönü)"
+        },
+        gettingAround: {
+            publicTransport: "Trams (T1), Metros, and yellow Ferries",
+            apps: ["BiTaksi", "Uber"],
+            dailyBudget: "$5–$10"
+        },
+        dailyBudget: {
+            accommodation: "$25–$200",
+            food: "$15–$45",
+            transportation: "$5–$12",
+            activities: "$20–$60",
+            total: "$65–$317"
+        },
+        whatToPack: {
+            clothing: "Scarf (women), modest dress, comfortable walking shoes",
+            documents: "E-visa printout, Passport, Istanbulkart",
+            gadgets: "Universal adapter (Type C/F), Power bank",
+            other: "Umbrella (unpredictable weather)"
+        },
+        travelTips: {
+            safety: "Use BiTaksi to avoid street-hail scams and ensure tracking.",
+            money: "Use the Muzekart (Museum Pass) for high-value savings.",
+            etiquette: "Remove shoes when entering mosques or local homes.",
+            reminder: "Most shops and cafes stay open late; city comes alive after 8PM."
+        },
+        photoSpots: [
+            "Seven Hills Restaurant Rooftop",
+            "Colorful houses of Balat",
+            "Ortaköy Pier with Bosphorus Bridge background"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Imperial History",
+                morning: "Hagia Sophia & Blue Mosque",
+                afternoon: "Topkapi Palace & Harem",
+                evening: "Grand Bazaar exploration"
+            },
+            {
+                day: 2,
+                focus: "Continents & Water",
+                morning: "Basilica Cistern",
+                afternoon: "Ferry to Kadıköy (Asian Side)",
+                evening: "Sunset Bosphorus Cruise"
+            },
+            {
+                day: 3,
+                focus: "Modern Vibe",
+                morning: "Galata Tower views",
+                afternoon: "Istiklal Avenue walk",
+                evening: "Whirling Dervish show"
+            }
+        ]
     }
 ];

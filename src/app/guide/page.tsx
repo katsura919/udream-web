@@ -44,7 +44,7 @@ export default function GuideListingPage() {
 
                     {/* Search Bar */}
                     <div className="max-w-xl mx-auto relative">
-                        <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+                        <div className="bg-card absolute inset-y-0 left-4 flex items-center pointer-events-none">
                             <Search className="w-5 h-5 text-muted-foreground" />
                         </div>
                         <input
