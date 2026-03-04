@@ -3680,5 +3680,2176 @@ export const travelGuides: TravelGuideData[] = [
                 evening: "Whirling Dervish show"
             }
         ]
+    },
+    {
+        id: "cappadocia",
+        destinationName: "Cappadocia (Göreme, Uchisar, and Ürgüp)",
+        country: "Turkey (Türkiye)",
+        bestTime: "April–June or September–October",
+        lengthOfStay: "2–3 days",
+        budgetRange: "Mid-range / Luxury",
+        quickDescription: "Cappadocia is a geological wonderland of 'fairy chimneys,' ancient cave dwellings, and underground cities. It is world-famous for its sunrise sky filled with hundreds of hot air balloons and its unique landscape carved from soft volcanic tuff.",
+        heroImage: "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Nevşehir Kapadokya Airport (NAV) or Kayseri Erkilet (ASR)",
+            transportation: "Shared Shuttle, Private Transfer, or pre-booked hotel pick-up.",
+            visa: "Same as Istanbul (e-Visa required for many)."
+        },
+        whereToStay: {
+            budget: {
+                name: "Homestay Cave Hostel",
+                why: "Budget-friendly cave dorms and rooms in the heart of Göreme with a great terrace."
+            },
+            midRange: {
+                name: "Sultan Cave Suites",
+                why: "Famous for its iconic rooftop view of the balloons; authentic cave rooms."
+            },
+            luxury: {
+                name: "Museum Hotel",
+                why: "A living museum with heated pools and 180-degree valley views."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Hot Air Balloon Flight",
+                why: "Floating over the valleys at sunrise; the quintessential Cappadocia experience.",
+                fee: "€150–€300",
+                bestTime: "Sunrise",
+                image: "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Göreme Open Air Museum",
+                why: "UNESCO site with rock-cut churches and 10th-century Byzantine frescoes.",
+                fee: "~480 TL",
+                bestTime: "Early morning (8:00 AM)",
+                image: "https://images.unsplash.com/photo-1570737197266-4d7078347285?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Derinkuyu Underground City",
+                why: "An ancient multi-level city once capable of housing 20,000 people.",
+                fee: "~300 TL",
+                bestTime: "Mid-day (stays cool)",
+                image: "https://images.unsplash.com/photo-1623946258019-9f6043ee7d80?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Dibek", typeAndPrice: "Traditional home-cooked food in historic building (Mid-range)" },
+                { name: "Topdeck Cave Restaurant", typeAndPrice: "Mezes and slow-cooked meats (Mid-range)" }
+            ],
+            mustTryDish: "Testi Kebab (Pottery Kebab cooked in a sealed clay pot)"
+        },
+        gettingAround: {
+            publicTransport: "Limited local 'Dolmuş' buses",
+            apps: ["BiTaksi (limited)", "Uber (limited)"],
+            dailyBudget: "$30–$60"
+        },
+        dailyBudget: {
+            accommodation: "$40–$350",
+            food: "$20–$50",
+            transportation: "$10–$40",
+            activities: "$50–$300",
+            total: "$120–$740"
+        },
+        whatToPack: {
+            clothing: "Warm layers (freezing at sunrise), sturdy hiking boots, hat",
+            documents: "Passport, Balloon flight confirmation",
+            gadgets: "Action camera (GoPro), Power bank",
+            other: "Lip balm and moisturizer (dry and dusty air)"
+        },
+        travelTips: {
+            safety: "Balloon flights are wind-dependent; book for your first morning as backup.",
+            money: "Watch balloons for free from 'Lover's Hill' sunset point in Göreme.",
+            etiquette: "Never use flash photography in rock-cut churches.",
+            reminder: "Involves a lot of uphill walking and tight spaces; mind claustrophobia."
+        },
+        photoSpots: [
+            "Hotel terrace at sunrise with balloons",
+            "Love Valley 'fairy chimney' formations",
+            "Uchisar Castle panoramic view"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Classics (Red Tour)",
+                morning: "Sunrise Hot Air Balloon flight",
+                afternoon: "Göreme Open Air Museum & Pasabag",
+                evening: "Sunset at Rose Valley"
+            },
+            {
+                day: 2,
+                focus: "History (Green Tour)",
+                morning: "Derinkuyu Underground City",
+                afternoon: "Hike through Ihlara Valley",
+                evening: "Whirling Dervish ceremony"
+            },
+            {
+                day: 3,
+                focus: "Hidden Gems",
+                morning: "Pottery workshop in Avanos",
+                afternoon: "ATV tour through Sword Valley",
+                evening: "Farewell dinner in Uchisar"
+            }
+        ]
+    },
+    {
+        id: "athens",
+        destinationName: "Athens",
+        country: "Greece",
+        bestTime: "April–June or September–October",
+        lengthOfStay: "3–4 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "Athens is the cradle of Western civilization, where 2,500-year-old temples stand guard over a bustling, modern metropolis. It is a city of layers, offering world-class museums, vibrant rooftop bars with Acropolis views, and some of the best street food in Europe.",
+        heroImage: "https://images.unsplash.com/photo-1503152394-c571994fd383?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Athens International Airport 'Eleftherios Venizelos' (ATH)",
+            transportation: "Metro Line 3 (Blue), X95 Express Bus, or Taxi.",
+            visa: "Schengen Area rules. New for 2026: ETIAS required for visa-exempt countries."
+        },
+        whereToStay: {
+            budget: {
+                name: "Bedbox Hostel",
+                why: "Trendy, clean, and located in Psirri/Monastiraki, within walking distance of ruins."
+            },
+            midRange: {
+                name: "A for Athens",
+                why: "Famous for its rooftop bar; rooms overlook Monastiraki Square and the Acropolis."
+            },
+            luxury: {
+                name: "Hotel Grande Bretagne",
+                why: "A historic landmark on Syntagma Square offering old-world European elegance."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "The Acropolis & Parthenon",
+                why: "The iconic symbol of Ancient Greece; the most famous historic site in the country.",
+                fee: "€20 (Apr-Oct) / €10 (Nov-Mar)",
+                bestTime: "8:00 AM sharp",
+                image: "https://images.unsplash.com/photo-1603566030512-7067b57fd14c?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Plaka District",
+                why: "The 'Neighborhood of the Gods,' a maze of narrow streets and neoclassical houses.",
+                fee: "Free",
+                bestTime: "Late afternoon",
+                image: "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Panathenaic Stadium",
+                why: "The only stadium built entirely of marble; site of the first modern Olympics.",
+                fee: "€10",
+                bestTime: "Morning",
+                image: "https://images.unsplash.com/photo-1555990548-732386fd6599?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "O Thanasis", typeAndPrice: "Kebab and Souvlaki specialist (Budget)" },
+                { name: "Karamanlidika fanis", typeAndPrice: "Deli-style tavern with cured meats (Mid-range)" }
+            ],
+            mustTryDish: "Moussaka (Layered eggplant, potato, and spiced meat topped with béchamel)"
+        },
+        gettingAround: {
+            publicTransport: "Metro, Tram, and Bus network",
+            apps: ["FreeNow", "Uber"],
+            dailyBudget: "$5–$12"
+        },
+        dailyBudget: {
+            accommodation: "$30–$180",
+            food: "$25–$60",
+            transportation: "$5–$15",
+            activities: "$15–$40",
+            total: "$75–$295"
+        },
+        whatToPack: {
+            clothing: "Light linens, sun hat, high-traction shoes (marble is slippery!)",
+            documents: "Passport, ETIAS approval, reserved time-slot tickets",
+            gadgets: "Power bank, wide-angle lens",
+            other: "High-SPF sunscreen, Reusable water bottle"
+        },
+        travelTips: {
+            safety: "Be vigilant against pickpockets on Metro Line 3 and in Monastiraki Square.",
+            money: "Buy the 'Athens Combo Ticket' (€30) for the Acropolis and 6 other sites.",
+            etiquette: "Dinner starts late—restaurants fill up after 9:00 PM.",
+            reminder: "Pre-book Acropolis entry time; daily caps are strictly enforced in 2026."
+        },
+        photoSpots: [
+            "Areopagus Hill at sunset",
+            "Anafiotika neighborhood in Plaka",
+            "Lycabettus Hill panoramic view"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Ancient Wonders",
+                morning: "Acropolis & Acropolis Museum",
+                afternoon: "Ancient Agora & Temple of Hephaestus",
+                evening: "Sunset drinks in Monastiraki"
+            },
+            {
+                day: 2,
+                focus: "City Vibes",
+                morning: "Changing of the Guard at Syntagma",
+                afternoon: "National Gardens & Panathenaic Stadium",
+                evening: "Explore edges of Psirri neighborhood"
+            },
+            {
+                day: 3,
+                focus: "Coastal Escape",
+                morning: "Tram to Athens Riviera beach",
+                afternoon: "Stavros Niarchos Cultural Center",
+                evening: "Farewell dinner in Plaka"
+            }
+        ]
+    },
+    {
+        id: "santorini",
+        destinationName: "Santorini",
+        country: "Greece",
+        bestTime: "May–June or September–early October",
+        lengthOfStay: "2–3 days",
+        budgetRange: "Mid-range / Luxury",
+        quickDescription: "Santorini is the crown jewel of the Cyclades, famous for its dramatic caldera views, whitewashed villages, and blue-domed churches. Formed by a massive volcanic eruption, it offers some of the most spectacular sunsets and unique volcanic beaches in the world.",
+        heroImage: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Santorini (Thira) International Airport (JTR)",
+            transportation: "Local KTEL Bus, Pre-booked Shuttle, or High-speed Ferry.",
+            visa: "Schengen Area rules. ETIAS required for visa-exempt countries from 2026."
+        },
+        whereToStay: {
+            budget: {
+                name: "Fira Backpackers Place",
+                why: "Located in the transport hub; affordable and social without the caldera price tag."
+            },
+            midRange: {
+                name: "Afroessa (Imerovigli)",
+                why: "Located at the highest point of the caldera; stunning views and a quieter vibe."
+            },
+            luxury: {
+                name: "Canaves Oia Boutique Hotel",
+                why: "World-class 'cave style' luxury with private infinity pools overlooking the Aegean."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Fira to Oia Hike",
+                why: "A breathtaking 10km trail along the caldera rim passing through four villages.",
+                fee: "Free",
+                bestTime: "7:30 AM (beat the heat)",
+                image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Akrotiri Archaeological Site",
+                why: "The 'Minoan Pompeii'—a sophisticated prehistoric city preserved under volcanic ash.",
+                fee: "€12",
+                bestTime: "Mid-day (Indoor/AC)",
+                image: "https://images.unsplash.com/photo-1615555620953-ad41577759ad?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Sunset in Oia",
+                why: "The most famous sunset in the world with iconic windmills and blue domes.",
+                fee: "Free",
+                bestTime: "2 hours before sunset",
+                image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Lucky’s Souvlakis", typeAndPrice: "Best quick, cheap Gyros on the island (Budget)" },
+                { name: "Metaxi Mas", typeAndPrice: "Authentic Cretan-Santorinian fusion (Mid-range)" }
+            ],
+            mustTryDish: "Tomato Geftedes (Tomato fritters made with local cherry tomatoes)"
+        },
+        gettingAround: {
+            publicTransport: "KTEL Buses (hub in Fira)",
+            apps: ["No Uber/Grab"],
+            dailyBudget: "$5 (Bus) – $50 (ATV Rental)"
+        },
+        dailyBudget: {
+            accommodation: "$40–$600+",
+            food: "$30–$80",
+            transportation: "$5–$55",
+            activities: "$20–$150",
+            total: "$95–$800+"
+        },
+        whatToPack: {
+            clothing: "Dressy-casual evening wear, swimwear, shoes with good grip",
+            documents: "Passport, ETIAS approval, Ferry tickets, IDP (for rentals)",
+            gadgets: "Camera, Gimbal for stairs",
+            other: "High-SPF sunscreen, Windbreaker"
+        },
+        travelTips: {
+            safety: "Use the Cable Car instead of donkeys at the Old Port.",
+            money: "Enjoy the sunset from public walls with supermarket wine for savings.",
+            etiquette: "Do not climb on roofs of blue-domed churches; they are active worship places.",
+            reminder: "Do not flush toilet paper; use the bins provided due to old infrastructure."
+        },
+        photoSpots: [
+            "Three Blue Domes of Oia",
+            "Skaros Rock in Imerovigli",
+            "The Red Beach volcanic cliffs"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "The Caldera Experience",
+                morning: "Hike from Fira to Imerovigli",
+                afternoon: "Explore shops in Oia",
+                evening: "Sunset from Oia Castle"
+            },
+            {
+                day: 2,
+                focus: "History & Wine",
+                morning: "Visit Akrotiri & Red Beach",
+                afternoon: "Wine tasting at Santo Wines",
+                evening: "Open-air cinema in Kamari"
+            },
+            {
+                day: 3,
+                focus: "Volcanic Sea",
+                morning: "Catamaran Cruise & Hot Springs",
+                afternoon: "Black Sand Beach (Perissa)",
+                evening: "Farewell dinner in Pyrgos"
+            }
+        ]
+    },
+    {
+        id: "rome",
+        destinationName: "Rome",
+        country: "Italy",
+        bestTime: "April–May or September–October",
+        lengthOfStay: "3–5 days",
+        budgetRange: "Mid-range / Luxury",
+        quickDescription: "Known as the 'Eternal City,' Rome is a living museum where nearly 3,000 years of art, architecture, and culture are on display. From the colossal ruins of the Roman Empire to the spiritual grandeur of Vatican City, it is a city that rewards those who explore its cobblestone streets.",
+        heroImage: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Leonardo da Vinci–Fiumicino (FCO) or Ciampino (CIA)",
+            transportation: "Leonardo Express train, Terravision Bus, or Taxi.",
+            visa: "Schengen Area rules. ETIAS required for visa-exempt countries from 2026."
+        },
+        whereToStay: {
+            budget: {
+                name: "The Beehive",
+                why: "Highly rated, clean, and social atmosphere near Termini Station."
+            },
+            midRange: {
+                name: "Hotel IQ Roma",
+                why: "Modern, centrally located near the Opera House with a great rooftop terrace."
+            },
+            luxury: {
+                name: "Hotel Hassler Roma",
+                why: "Located at the top of the Spanish Steps; one of the world's most iconic luxury hotels."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "The Colosseum & Roman Forum",
+                why: "The ultimate symbol of the Roman Empire and architectural marvel.",
+                fee: "€18–€24+",
+                bestTime: "8:30 AM (Opening)",
+                image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Vatican Museums",
+                why: "Home to the Sistine Chapel and significant collection of Renaissance art.",
+                fee: "€20+",
+                bestTime: "Late afternoon (3:00 PM)",
+                image: "https://images.unsplash.com/photo-1542820229-081e0c12af0b?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Trevi Fountain & Pantheon",
+                why: "World's most famous fountain and largest unreinforced concrete dome.",
+                fee: "Trevi (Free); Pantheon (€5)",
+                bestTime: "Very early morning (6:30 AM)",
+                image: "https://images.unsplash.com/photo-1529154036614-a60975f5c760?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Pizzarium Bonci", typeAndPrice: "Legendary pizza by the slice near Vatican (Budget)" },
+                { name: "Tonnarello", typeAndPrice: "Handmade pasta in lively Trastevere (Mid-range)" }
+            ],
+            mustTryDish: "Pasta Carbonara (Guanciale, pecorino romano, egg, and black pepper)"
+        },
+        gettingAround: {
+            publicTransport: "Metro (Lines A, B, C), Trams, and extensive Bus network",
+            apps: ["FreeNow", "Google Maps"],
+            dailyBudget: "$7–$15"
+        },
+        dailyBudget: {
+            accommodation: "$40–$300+",
+            food: "$30–$70",
+            transportation: "$7–$15",
+            activities: "$20–$60",
+            total: "$97–$445+"
+        },
+        whatToPack: {
+            clothing: "Shoulders/knees covered for churches, comfortable walking shoes",
+            documents: "Passport, ETIAS approval, pre-booked attraction tickets",
+            gadgets: "Power bank, Reusable water bottle",
+            other: "Crossbody bag for safety"
+        },
+        travelTips: {
+            safety: "Be very careful with belongings in crowded Metro areas and landmarks.",
+            money: "Avoid 'Tourist Menu' traps directly facing major landmarks.",
+            etiquette: "Never order a Cappuccino after 11:00 AM; order Espresso instead.",
+            reminder: "Pre-book Colosseum and Vatican weeks in advance; they sell out fast."
+        },
+        photoSpots: [
+            "Terrazza Viale del Belvedere (St. Peter's Dome views)",
+            "Ponte Sant'Angelo with the castle",
+            "Janiculum Hill panoramic skyline"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Ancient Rome",
+                morning: "Colosseum, Palatine Hill, and Forum",
+                afternoon: "Pantheon walk",
+                evening: "Trevi Fountain & Piazza Navona"
+            },
+            {
+                day: 2,
+                focus: "Vatican & Trastevere",
+                morning: "Vatican Museums & Sistine Chapel",
+                afternoon: "St. Peter's Basilica & Dome",
+                evening: "Dinner and nightlife in Trastevere"
+            },
+            {
+                day: 3,
+                focus: "Renaissance Squares",
+                morning: "Borghese Gallery & Gardens",
+                afternoon: "Spanish Steps & Via del Corso shopping",
+                evening: "Sunset at Pincio Terrace & Jewish Ghetto dinner"
+            }
+        ]
+    },
+    {
+        id: "vatican-city",
+        destinationName: "Vatican City",
+        country: "Vatican City (Independent City-State)",
+        bestTime: "Tuesday or Thursday (Avoid Monday/Weekends)",
+        lengthOfStay: "1 day",
+        budgetRange: "Mid-range",
+        quickDescription: "The smallest country in the world is a powerhouse of art, faith, and history. Home to the Pope and the headquarters of the Roman Catholic Church, it contains the world’s most famous frescoes in the Sistine Chapel and the colossal architectural wonder of St. Peter’s Basilica.",
+        heroImage: "https://images.unsplash.com/photo-1542820229-081e0c12af0b?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Rome Fiumicino (FCO)",
+            transportation: "Metro Line A (Orange) to Ottaviano or Cipro, or walking from Rome.",
+            visa: "No border controls with Italy; if you can enter Italy, you can enter the Vatican."
+        },
+        whereToStay: {
+            budget: {
+                name: "Comic’s Guesthouse (Prati)",
+                why: "Fun, themed hostel in the neighboring Prati district, 10 min walk from Museums."
+            },
+            midRange: {
+                name: "Hotel OTTOVINO",
+                why: "Modern boutique hotel located right next to the Vatican walls."
+            },
+            luxury: {
+                name: "Gran Meliá Rome",
+                why: "Resort-style luxury just outside the walls with direct views of St. Peter's."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Vatican Museums & Sistine Chapel",
+                why: "To see the Raphael Rooms and Michelangelo’s masterpiece on the Sistine Chapel ceiling.",
+                fee: "€25 total (incl. booking fee)",
+                bestTime: "8:00 AM or after 3:00 PM",
+                image: "https://images.unsplash.com/photo-1542820229-081e0c12af0b?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "St. Peter’s Basilica",
+                why: "One of the largest churches in Christendom, housing the Pietà by Michelangelo.",
+                fee: "Free",
+                bestTime: "7:00 AM sharp",
+                image: "https://images.unsplash.com/photo-1510255502695-10826958440d?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "St. Peter’s Dome Climb",
+                why: "For the absolute best 360-degree view of Rome and the Vatican Gardens.",
+                fee: "€8 (Stairs) or €10 (Elevator)",
+                bestTime: "Immediately after visiting the Basilica",
+                image: "https://images.unsplash.com/photo-1529154036614-a60975f5c760?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Pizzarium Bonci", typeAndPrice: "Legendary Roman pizza near Cipro Metro ($)" },
+                { name: "Sciascia Caffè 1919", typeAndPrice: "Historic café famous for chocolate coffee ($$)" }
+            ],
+            mustTryDish: "Suppli (Roman fried rice ball with mozzarella)"
+        },
+        gettingAround: {
+            publicTransport: "Entirely walkable",
+            apps: ["Google Maps"],
+            dailyBudget: "$3 (Metro fare)"
+        },
+        dailyBudget: {
+            accommodation: "$100–$250",
+            food: "$30–$60",
+            transportation: "$3–$10",
+            activities: "$35–$120",
+            total: "$168–$440"
+        },
+        whatToPack: {
+            clothing: "STRICT DRESS CODE: Shoulders and knees must be covered",
+            documents: "Passport (for security), Printed/Digital tickets",
+            gadgets: "Power bank, Pair of good walking shoes",
+            other: "Reusable water bottle"
+        },
+        travelTips: {
+            safety: "Beware of 'ticket touts' outside the walls; only buy from official website.",
+            money: "Free entry on last Sunday of month, but crowds are extreme.",
+            etiquette: "Silence mandatory and no photos in the Sistine Chapel.",
+            reminder: "St. Peter's Basilica usually closed Wed mornings due to Papal Audience."
+        },
+        photoSpots: [
+            "Center of St. Peter’s Square obelisk alignment",
+            "Bramante Staircase in Vatican Museums",
+            "Top of the Dome looking down at the square"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Spiritual & Artistic",
+                morning: "St. Peter's Basilica (7:00 AM) & Dome Climb",
+                afternoon: "Vatican Museums & Sistine Chapel",
+                evening: "Sunset walk to Castel Sant'Angelo"
+            }
+        ]
+    },
+    {
+        id: "vienna",
+        destinationName: "Vienna",
+        country: "Austria",
+        bestTime: "May–June (flowers) or December (Christmas markets)",
+        lengthOfStay: "3–4 days",
+        budgetRange: "Mid-range / Luxury",
+        quickDescription: "Vienna is a city of imperial grandeur, classical music, and a legendary coffee house culture. As the former seat of the Habsburg Empire, it boasts opulent palaces, clean cobblestone streets, and an artistic legacy that spans from Mozart to Klimt.",
+        heroImage: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Vienna International Airport (VIE)",
+            transportation: "City Airport Train (CAT), S7 S-Bahn, or Railjet (ÖBB).",
+            visa: "Schengen Area rules. ETIAS required for visa-exempt countries from 2026."
+        },
+        whereToStay: {
+            budget: {
+                name: "Wombat’s City Hostel Vienna",
+                why: "Among the best hostels in Europe, located next to Naschmarkt food market."
+            },
+            midRange: {
+                name: "Hotel Motel One Wien-Staatsoper",
+                why: "Designer hotel with incredible value, steps from the State Opera House."
+            },
+            luxury: {
+                name: "Hotel Sacher Wien",
+                why: "Historic institution famous for Sacher-Torte and peak Viennese elegance."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Schönbrunn Palace",
+                why: "Former Habsburg summer residence with massive gardens and the world’s oldest zoo.",
+                fee: "€22–€32",
+                bestTime: "8:00 AM (for gardens)",
+                image: "https://images.unsplash.com/photo-1573075173516-77864ddae31c?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "St. Stephen’s Cathedral",
+                why: "Symbol of Vienna with a colorful tiled roof and massive tower.",
+                fee: "General (Free); Tower (€6–€7)",
+                bestTime: "Late afternoon",
+                image: "https://images.unsplash.com/photo-1616493231406-8dce493c04d4?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "The Belvedere",
+                why: "Home to Gustav Klimt’s 'The Kiss' in a stunning Baroque palace.",
+                fee: "€17–€20",
+                bestTime: "Mid-morning",
+                image: "https://images.unsplash.com/photo-1541323331668-54e7c37cc0b5?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Figlmüller", typeAndPrice: "Home of the original Wiener Schnitzel (Mid-range)" },
+                { name: "Café Central", typeAndPrice: "Historic coffee house for Freud and Trotsky ($$)" }
+            ],
+            mustTryDish: "Wiener Schnitzel (Thin, breaded, and fried veal or pork cutlet)"
+        },
+        gettingAround: {
+            publicTransport: "U-Bahn (Metro), Trams ('Bim'), and Buses",
+            apps: ["WienMobil"],
+            dailyBudget: "$6–$10"
+        },
+        dailyBudget: {
+            accommodation: "$35–$250+",
+            food: "$30–$80",
+            transportation: "$6–$15",
+            activities: "$20–$55",
+            total: "$91–$400+"
+        },
+        whatToPack: {
+            clothing: "Smart-casual for Opera, comfortable walking shoes, heavy winter coat",
+            documents: "Passport, ETIAS approval, map of Innere Stadt",
+            gadgets: "Power bank, Camera with good zoom",
+            other: "Umbrella (shifty weather)"
+        },
+        travelTips: {
+            safety: "Very safe; avoid unofficial 'Mozart' ticket sellers in the street.",
+            money: "Shops closed Sundays; use Vienna City Card for discounts.",
+            etiquette: "Take your time in coffee houses; it's okay to sit for hours with one cup.",
+            reminder: "Tipping is customary (around 5-10% or rounding up)."
+        },
+        photoSpots: [
+            "Gloriette hill at Schönbrunn",
+            "Hundertwasserhaus colorful architecture",
+            "Prater Park giant Ferris wheel at sunset"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Imperial Traditions",
+                morning: "St. Stephen’s Cathedral & Innere Stadt walk",
+                afternoon: "Hofburg Palace (Sisi Museum)",
+                evening: "Café Sacher & State Opera performance"
+            },
+            {
+                day: 2,
+                focus: "Art & Gardens",
+                morning: "Schönbrunn Palace & Zoo",
+                afternoon: "Naschmarkt lunch & Belvedere Museum",
+                evening: "Heuriger wine tavern in Grinzing"
+            },
+            {
+                day: 3,
+                focus: "Modern Vienna",
+                morning: "Museumsquartier (Leopold/MUMOK)",
+                afternoon: "Prater Amusement Park ride",
+                evening: "Danube Canal sunset walk"
+            }
+        ]
+    },
+    {
+        id: "attnang-puchheim",
+        destinationName: "Attnang-Puchheim",
+        country: "Austria",
+        bestTime: "May–September (lakes) or December (winter tranquility)",
+        lengthOfStay: "1–2 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "Attnang-Puchheim is a major railway junction in Upper Austria, often seen as the gateway to the stunning Lake District (Salzkammergut). While it is an industrial and transit hub, it offers a peaceful, authentic Austrian atmosphere with beautiful nearby nature and the historic Maria Puchheim Basilica.",
+        heroImage: "https://images.unsplash.com/photo-1520114878144-6123749968dd?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Linz Airport (LNZ) or Salzburg Airport (SZG)",
+            transportation: "Train (ÖBB/Westbahn) is the best way; major rail stop on Vienna-Salzburg line.",
+            visa: "Schengen Area rules. ETIAS required for visa-exempt countries from 2026."
+        },
+        whereToStay: {
+            budget: {
+                name: "Gasthof Weissl",
+                why: "Traditional Austrian inn with a local feel, walking distance from the station."
+            },
+            midRange: {
+                name: "eee Hotel Eberstalzell (Nearby)",
+                why: "Modern, automated hotel concept offering great value and comfort."
+            },
+            luxury: {
+                name: "Post am See (Traunkirchen)",
+                why: "Nearby lakeside luxury spa hotel with incredible views of Lake Traunsee."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Maria Puchheim Basilica",
+                why: "A beautiful 19th-century pilgrimage church with impressive architecture.",
+                fee: "Free",
+                bestTime: "Morning",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Traunfall Waterfall",
+                why: "A wide, scenic waterfall on the Traun river; great for light hiking.",
+                fee: "Free",
+                bestTime: "Afternoon",
+                image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Gmunden & Traunsee Day Trip",
+                why: "Visit the lakeside town featuring the famous Schloss Ort castle on the water.",
+                fee: "Free/Small fee for museum",
+                bestTime: "Full day",
+                image: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Wirtshaus Post", typeAndPrice: "Hearty, local Upper Austrian cuisine ($$)" },
+                { name: "Cafe-Konditorei Eisner", typeAndPrice: "Classic Austrian coffee and cake break ($)" }
+            ],
+            mustTryDish: "Linzer Torte (Nutty shortcake with redcurrant jam)"
+        },
+        gettingAround: {
+            publicTransport: "ÖBB Train (excellent connections to Hallstatt/Salzburg)",
+            apps: ["ÖBB Scotty"],
+            dailyBudget: "$10–$25"
+        },
+        dailyBudget: {
+            accommodation: "$45–$110",
+            food: "$25–$50",
+            transportation: "$10–$30",
+            activities: "$5–$20",
+            total: "$85–$210"
+        },
+        whatToPack: {
+            clothing: "Waterproof light jacket (for schnürlregen), comfortable walking shoes",
+            documents: "Passport, ETIAS approval",
+            gadgets: "Power bank, Camera for landscapes",
+            other: "Reusable water bottle (great tap water)"
+        },
+        travelTips: {
+            safety: "Be mindful of platform numbers; it's a large and busy rail junction.",
+            money: "Look into the Einfach-Raus-Ticket for group train travel savings.",
+            etiquette: "A friendly 'Grüß Gott' is the preferred local greeting.",
+            reminder: "Shops close early on Saturdays (6 PM) and are closed on Sundays."
+        },
+        photoSpots: [
+            "Maria Puchheim Basilica exterior at sunset",
+            "Traunfall footbridge view over waterfall",
+            "Alps in the distance from town heights"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Local Heritage",
+                morning: "Maria Puchheim Basilica visit",
+                afternoon: "Hike or cycle to Traunfall waterfall",
+                evening: "Traditional dinner at Wirtshaus Post"
+            },
+            {
+                day: 2,
+                focus: "Lake Gateway",
+                morning: "Train trip to Gmunden (Schloss Ort)",
+                afternoon: "Continue to Hallstatt for alpine views",
+                evening: "Quiet evening at a local café"
+            }
+        ]
+    },
+    {
+        id: "hallstatt",
+        destinationName: "Hallstatt",
+        country: "Austria",
+        bestTime: "May–June or December",
+        lengthOfStay: "1–2 days",
+        budgetRange: "Mid-range / Luxury",
+        quickDescription: "Often called 'the most Instagrammable town in the world,' Hallstatt is a UNESCO World Heritage site perched between the Dachstein mountains and Lake Hallstatt. It is famous for its 7,000-year-old salt mine, pastel-colored houses, and stunning alpine scenery.",
+        heroImage: "https://images.unsplash.com/photo-1520114878144-6123749968dd?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Salzburg Airport (SZG)",
+            transportation: "Train from Salzburg (via Attnang-Puchheim), followed by a scenic ferry across the lake.",
+            visa: "Schengen Area rules. ETIAS required for visa-exempt countries from 2026."
+        },
+        whereToStay: {
+            budget: {
+                name: "Heritage Hotel Hallstatt (Annex)",
+                why: "Non-lake-view rooms in historic annexes offer a more affordable entry to the town center."
+            },
+            midRange: {
+                name: "Gasthof Pension Grüner Anger",
+                why: "Cozy, family-run atmosphere with great breakfast, a short walk from the center."
+            },
+            luxury: {
+                name: "Seehotel Grüner Baum",
+                why: "Iconic hotel on the market square with private balconies overhanging the lake."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Hallstatt Salt Mine (Salzwelten)",
+                why: "The world's oldest salt mine; includes funicular, slides, and an underground lake.",
+                fee: "€40",
+                bestTime: "First tour of the morning",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Skywalk World Heritage View",
+                why: "350m high platform for a breathtaking 'birds-eye' view of the lake.",
+                fee: "€22 (Funicular only)",
+                bestTime: "Mid-morning",
+                image: "https://images.unsplash.com/photo-1520114878144-6123749968dd?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Lake Hallstatt Boat Rental",
+                why: "Rent an electric or 'swan' pedal boat to see the village from the water.",
+                fee: "€20–€30 per hour",
+                bestTime: "Late afternoon",
+                image: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Braugasthof am Hallstättersee", typeAndPrice: "Traditional food with lakeside beer garden ($$)" },
+                { name: "Maislinger Bakery", typeAndPrice: "Cheap snacks, fresh pretzels, and pastries ($)" }
+            ],
+            mustTryDish: "Reinanke (Freshly caught whitefish from Lake Hallstatt)"
+        },
+        gettingAround: {
+            publicTransport: "Entirely pedestrianized; walking is mandatory",
+            apps: ["ÖBB Scotty"],
+            dailyBudget: "$5–$10"
+        },
+        dailyBudget: {
+            accommodation: "$120–$400",
+            food: "$35–$70",
+            transportation: "$10",
+            activities: "$45",
+            total: "$210–$525"
+        },
+        whatToPack: {
+            clothing: "Comfortable walking shoes, warm jacket (salt mine is 8°C even in summer)",
+            documents: "Passport, ETIAS approval",
+            gadgets: "Extra camera batteries/memory cards",
+            other: "Cash (preferred by small shops and the ferry)"
+        },
+        travelTips: {
+            safety: "Roads and stairs can be slippery; wear shoes with good tread.",
+            money: "Stay in nearby Obertraun for significantly cheaper accommodation.",
+            etiquette: "Do not enter private gardens or use drones; respect locals' privacy.",
+            reminder: "Most day-trippers leave by 5 PM; staying overnight offers silent streets."
+        },
+        photoSpots: [
+            "The Classic Postcard View (Gosaumühlstraße 67)",
+            "Market Square flower-covered buildings",
+            "The Bone House (Beinhaus) hand-painted skulls"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Alpine Fairytale",
+                morning: "Salt Mine tour and Skywalk view",
+                afternoon: "Bone House and Catholic Church visit",
+                evening: "Sunset boat rental and quiet village walk"
+            }
+        ]
+    },
+    {
+        id: "brussels",
+        destinationName: "Brussels",
+        country: "Belgium",
+        bestTime: "April–June or December",
+        lengthOfStay: "2–3 days",
+        budgetRange: "Mid-range",
+        quickDescription: "The 'Capital of Europe' is a surreal mix of medieval majesty, Art Nouveau elegance, and quirky comic strip art. It’s a city that doesn't take itself too seriously—home to both the grandest square in Europe and a small statue of a peeing boy.",
+        heroImage: "https://images.unsplash.com/photo-1580838561619-c506591963fc?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Brussels Airport (BRU) or Charleroi (CRL)",
+            transportation: "Train from BRU (17 mins), STIB Bus #12, or Flibco Shuttle from CRL.",
+            visa: "Schengen Area rules. ETIAS required for visa-exempt countries from late 2026."
+        },
+        whereToStay: {
+            budget: {
+                name: "Sleep Well Youth Hostel",
+                why: "Clean, eco-friendly, central, and famous for its free breakfast."
+            },
+            midRange: {
+                name: "Motel One Brussels",
+                why: "High-end design at an affordable price point near the Royal Park."
+            },
+            luxury: {
+                name: "Hotel Amigo",
+                why: "Rocco Forte luxury located just behind the Grand Place in a historic setting."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Grand Place (Grote Markt)",
+                why: "Widely considered the most beautiful town square in the world.",
+                fee: "Free",
+                bestTime: "At night (illuminated)",
+                image: "https://images.unsplash.com/photo-1563249007-88902507851d?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "The Atomium & Mini-Europe",
+                why: "An iconic 1958 World's Fair landmark and a park of miniature European monuments.",
+                fee: "€17–€30 (Combo)",
+                bestTime: "Sunset",
+                image: "https://images.unsplash.com/photo-1579711654877-e0750ba42c0b?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Comic Strip Walk",
+                why: "Explore hidden neighborhoods and over 50 giant comic murals on city walls.",
+                fee: "Free",
+                bestTime: "Anytime",
+                image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Fin de Siècle", typeAndPrice: "Hearty Belgian classics in a bustling hall ($$)" },
+                { name: "Frit Flagey", typeAndPrice: "Arguably the best authentic frites in the city ($)" }
+            ],
+            mustTryDish: "Moules-Frites (Mussels cooked in white wine/celery with crispy fries)"
+        },
+        gettingAround: {
+            publicTransport: "Integrated Metro, Tram, and Bus network",
+            apps: ["STIB-MIVB app", "Contactless tapping"],
+            dailyBudget: "$8–$12"
+        },
+        dailyBudget: {
+            accommodation: "$35–$250",
+            food: "$30–$70",
+            transportation: "$8–$15",
+            activities: "$15–$40",
+            total: "$88–$375"
+        },
+        whatToPack: {
+            clothing: "Layers and a sturdy umbrella (weather is fickle)",
+            documents: "Passport, ETIAS approval",
+            gadgets: "Wide-angle lens for architecture",
+            other: "Appetite for chocolate and strong beer"
+        },
+        travelTips: {
+            safety: "Avoid areas around Brussels-Midi and North stations late at night.",
+            money: "Free entry at many museums on the first Wednesday afternoon.",
+            etiquette: "They are 'Belgian Fries', not French! Also, sip strong beers slowly.",
+            reminder: "Belgian beer is very strong (8-12%); eat something hearty."
+        },
+        photoSpots: [
+            "Mont des Arts city garden view",
+            "Galeries Royales Saint-Hubert glazed arcade",
+            "Manneken Pis (check for daily costumes)"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Historic Heart",
+                morning: "Grand Place and local chocolatiers",
+                afternoon: "Magritte Museum & Mont des Arts",
+                evening: "Beer tasting at Delirium Café"
+            },
+            {
+                day: 2,
+                focus: "Surreal Brussels",
+                morning: "Atomium & Mini-Europe",
+                afternoon: "Comic Strip Center Mural Route",
+                evening: "Marolles district dinner"
+            },
+            {
+                day: 3,
+                focus: "Bridge to Bruges",
+                morning: "Train to Bruges ('Venice of the North')",
+                afternoon: "Canal boat tour & Belfry climb",
+                evening: "Waffles at Maison Dandoy back in Brussels"
+            }
+        ]
+    },
+    {
+        id: "zurich",
+        destinationName: "Zurich",
+        country: "Switzerland",
+        bestTime: "June–August or December",
+        lengthOfStay: "2–3 days",
+        budgetRange: "Luxury",
+        quickDescription: "Zurich is a global center for banking and finance that manages to be incredibly scenic and historic. Situated where the Limmat River meets Lake Zurich, it offers pristine nature, high-end shopping on Bahnhofstrasse, and a surprisingly trendy nightlife in the industrial Zurich West district.",
+        heroImage: "https://images.unsplash.com/photo-1515488764276-beab7607c1e6?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Zurich Airport (ZRH)",
+            transportation: "Frequent trains run to Zurich Hauptbahnhof (HB) in just 10–12 mins, or Tram #10.",
+            visa: "Schengen Area rules. ETIAS required for visa-exempt countries from 2026."
+        },
+        whereToStay: {
+            budget: {
+                name: "Oldtown Hostel Otter",
+                why: "Located in the heart of the Old Town (Niederdorf); quirky, clean, and has a trendy bar."
+            },
+            midRange: {
+                name: "25hours Hotel Langstrasse",
+                why: "Stylish, modern, near the station, and offers free bike rentals."
+            },
+            luxury: {
+                name: "Baur au Lac",
+                why: "Iconic luxury hotel with private park views of the lake and impeccable service."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Lake Zurich (Zürichsee)",
+                why: "The heart of the city's recreation with swimming in 'Badis' or year-round steamship cruises.",
+                fee: "Walk (Free); Cruise (CHF 9–25)",
+                bestTime: "Sunset",
+                image: "https://images.unsplash.com/photo-1515488764276-beab7607c1e6?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Grossmünster & Fraumünster",
+                why: "Iconic dual-towered church and a church featuring Marc Chagall stained-glass windows.",
+                fee: "Church (Free); Tower (CHF 5)",
+                bestTime: "Morning",
+                image: "https://images.unsplash.com/photo-1543336791-7f9996d91f24?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Lindt Home of Chocolate",
+                why: "Includes the world's tallest chocolate fountain and an interactive museum.",
+                fee: "CHF 15–17",
+                bestTime: "Afternoon",
+                image: "https://images.unsplash.com/photo-1504933350103-e840ede978d4?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Zeughauskeller", typeAndPrice: "Hearty Swiss dishes in a historic 15th-century hall ($$$)" },
+                { name: "Sternen Grill", typeAndPrice: "Famous for bratwurst; perfect for a quick, 'budget' lunch ($)" }
+            ],
+            mustTryDish: "Zürcher Geschnetzeltes (Sliced veal in creamy mushroom sauce with crispy Rösti)"
+        },
+        gettingAround: {
+            publicTransport: "World-class Trams, Trains, and local Boats",
+            apps: ["SBB Mobile", "ZVV", "EasyRide"],
+            dailyBudget: "$15–$30"
+        },
+        dailyBudget: {
+            accommodation: "$60–$400+",
+            food: "$40–$100",
+            transportation: "$15–$30",
+            activities: "$20–$50",
+            total: "$135–$580+"
+        },
+        whatToPack: {
+            clothing: "Smart-casual wear (Zurich is well-dressed), swimwear, warm fleece for mountains",
+            documents: "Passport, ETIAS approval",
+            gadgets: "Type J adapter (or Type C 2-pin)",
+            other: "Reusable water bottle for city fountains"
+        },
+        travelTips: {
+            safety: "Exceptionally safe; Langstrasse can be rowdy on weekends.",
+            money: "Tap water is high-quality Alpine water; consider the Zürich Card for museum savings.",
+            etiquette: "Don't be late; 5 minutes early is considered 'on time' in Switzerland.",
+            reminder: "Most shops are closed Sundays (except station/airport)."
+        },
+        photoSpots: [
+            "Lindenhof Hill overview of the Old Town",
+            "Münsterbrücke bridge for church shots",
+            "Zürich West industrial Viadukt area"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Old Town & Lake",
+                morning: "Walking tour of Niederdorf & Grossmünster",
+                afternoon: "Bahnhofstrasse shopping & Lake Cruise",
+                evening: "Fondue at Frau Gerolds Garten"
+            },
+            {
+                day: 2,
+                focus: "Chocolate & Art",
+                morning: "Lindt Home of Chocolate visit",
+                afternoon: "Kunsthaus Museum exploration",
+                evening: "Trendy Zürich West drinks"
+            },
+            {
+                day: 3,
+                focus: "The Peak of Zurich",
+                morning: "Train hike to Uetliberg Mountain",
+                afternoon: "Relax at a Badi or visit FIFA Museum",
+                evening: "Historic Schipfe river dinner"
+            }
+        ]
+    },
+    {
+        id: "grindelwald",
+        destinationName: "Grindelwald",
+        country: "Switzerland",
+        bestTime: "January–March (skiing) or July–September (hiking)",
+        lengthOfStay: "2–3 days",
+        budgetRange: "Luxury",
+        quickDescription: "Known as the 'Eiger Village,' Grindelwald is a stunning glacier village tucked in a valley surrounded by the towering peaks of the Eiger, Mönch, and Jungfrau. It is the ultimate playground for outdoor enthusiasts, offering world-famous hiking trails, high-altitude adventure parks, and access to the 'Top of Europe.'",
+        heroImage: "https://images.unsplash.com/photo-1574044536225-182daabc940b?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Zurich Airport (ZRH) or Bern Airport (BRN)",
+            transportation: "Train to Interlaken Ost, then transfer to the Bernese Oberland Railway (BOB) to Grindelwald.",
+            visa: "Schengen Area rules. ETIAS required for visa-exempt countries from late 2026."
+        },
+        whereToStay: {
+            budget: {
+                name: "Downtown Lodge",
+                why: "One of the few affordable spots in town; clean, central, and popular with younger travelers."
+            },
+            midRange: {
+                name: "Hotel Glacier",
+                why: "Incredible views of the Eiger North Face with modern design and an excellent spa."
+            },
+            luxury: {
+                name: "Romantik Hotel Schweizerhof",
+                why: "Traditional Swiss luxury experience with a large wellness area and premium service."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Jungfraujoch (Top of Europe)",
+                why: "Europe's highest railway station at 3,454m, featuring an Ice Palace and Sphinx Observatory.",
+                fee: "CHF 190–235",
+                bestTime: "First train of the morning",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "First Cliff Walk by Tissot",
+                why: "A thrilling walkway clinging to the side of a cliff with 45m views over the abyss.",
+                fee: "Free (with cable car ticket)",
+                bestTime: "Mid-morning",
+                image: "https://images.unsplash.com/photo-1596409618035-716447c21041?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Bachalpsee Hike",
+                why: "The 'Blue Jewel' of the Alps—a reflective mountain lake with spectacular views.",
+                fee: "Free",
+                bestTime: "Early afternoon",
+                image: "https://images.unsplash.com/photo-1520114878144-6123749968dd?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Barry’s", typeAndPrice: "Cozy, traditional Swiss atmosphere with fondues and meats ($$$)" },
+                { name: "Bäckerei Konditorei Ringgenberg", typeAndPrice: "Perfect for sandwiches and pastries before a hike ($)" }
+            ],
+            mustTryDish: "Rösti (Grated and pan-fried potatoes, often topped with melted cheese, ham, or a fried egg)"
+        },
+        gettingAround: {
+            publicTransport: "Local 'Grindelwald Bus' and various cable cars (Eiger Express, Firstbahn)",
+            apps: ["SBB Mobile"],
+            dailyBudget: "$40–$100"
+        },
+        dailyBudget: {
+            accommodation: "$80–$450+",
+            food: "$40–$90",
+            transportation: "$50–$200",
+            activities: "$20–$60",
+            total: "$190–$800+"
+        },
+        whatToPack: {
+            clothing: "Sturdy hiking boots, windproof/waterproof shell, thermal layers (always cold at Jungfraujoch)",
+            documents: "Passport, ETIAS approval, Jungfrau Travel Pass",
+            gadgets: "High-quality sunglasses (snow glare), power bank",
+            other: "High-SPF sunscreen (intense high-altitude sun)"
+        },
+        travelTips: {
+            safety: "Check live mountain webcams before buying cable car tickets.",
+            money: "Buy the Jungfrau Travel Pass if staying more than 3 days.",
+            etiquette: "Say 'Grüezi' (hello) to fellow hikers on the trails.",
+            reminder: "Eiger Express is the fastest way to get to Eigergletscher station."
+        },
+        photoSpots: [
+            "Top of First Cliff Walk looking into the valley",
+            "Reflection of mountains in Bachalpsee Lake",
+            "Balconies facing the Eiger North Face"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Top of Europe",
+                morning: "Eiger Express to Jungfraujoch",
+                afternoon: "Ice Palace & Mönchsjochhütte hike",
+                evening: "Traditional Fondue dinner"
+            },
+            {
+                day: 2,
+                focus: "Adventure & Lakes",
+                morning: "Grindelwald First & Cliff Walk",
+                afternoon: "Hike to Bachalpsee & First Flyer returns",
+                evening: "Relax at hotel spa"
+            },
+            {
+                day: 3,
+                focus: "Panoramic Ridges",
+                morning: "Cable car to Männlichen",
+                afternoon: "Royal Walk or Panorama Trail",
+                evening: "Farewell dinner at a mountain hut"
+            }
+        ]
+    },
+    {
+        id: "interlaken",
+        destinationName: "Interlaken",
+        country: "Switzerland",
+        bestTime: "June–September or December–February",
+        lengthOfStay: "3–4 days",
+        budgetRange: "Mid-range / Luxury",
+        quickDescription: "True to its name, Interlaken sits 'between lakes' (Thun and Brienz). It serves as the world's 'Adventure Capital' and the primary gateway to the massive peaks of the Jungfrau region, offering a perfect blend of charm and adrenaline.",
+        heroImage: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Zurich Airport (ZRH) or Bern Airport (BRN)",
+            transportation: "Direct Train (IC 81) from Zurich Airport (2h 10m) or the panoramic Luzern-Interlaken Express.",
+            visa: "Schengen Area rules. ETIAS required for visa-exempt countries from 2026."
+        },
+        whereToStay: {
+            budget: {
+                name: "Backpackers Villa Sonnenhof",
+                why: "Highly rated, clean, free breakfast, and includes a Guest Card for free local buses."
+            },
+            midRange: {
+                name: "Hotel Interlaken",
+                why: "Historic hotel next to the Japanese Garden and Interlaken Ost station."
+            },
+            luxury: {
+                name: "Victoria-Jungfrau Grand Hotel & Spa",
+                why: "Prestigious hotel with world-class spa facilities and iconic Jungfrau views."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Harder Kulm",
+                why: "Funicular ride to a viewing platform with panoramic views of both lakes and the high peaks.",
+                fee: "CHF 34–40",
+                bestTime: "Sunset",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Paragliding",
+                why: "Take off from Beatenberg and land in the heart of town at Höhematte Park.",
+                fee: "Approx. CHF 170–190",
+                bestTime: "Morning",
+                image: "https://images.unsplash.com/photo-1520114878144-6123749968dd?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Lake Brienz or Thun Cruise",
+                why: "Relaxing way to see lakeside castles, emerald waters, and the Giessbach Falls.",
+                fee: "Day pass approx. CHF 74 (Free with Swiss Travel Pass)",
+                bestTime: "Lunch cruise",
+                image: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Husi Bierhaus", typeAndPrice: "Vast beer selection and hearty local specialties ($$)" },
+                { name: "Velo Café", typeAndPrice: "Trendy, bike-themed spot for brunch and specialty coffee ($)" }
+            ],
+            mustTryDish: "Cheese Fondue (try it at Des Alpes or Restaurant Taverne)"
+        },
+        gettingAround: {
+            publicTransport: "Excellent local buses (Free with Interlaken Guest Card)",
+            apps: ["SBB Mobile"],
+            dailyBudget: "$0–$60"
+        },
+        dailyBudget: {
+            accommodation: "$45–$500+",
+            food: "$40–$90",
+            transportation: "$15–$80",
+            activities: "$40–$250",
+            total: "$140–$900+"
+        },
+        whatToPack: {
+            clothing: "Layers (mountain peaks are cold), windbreaker, comfortable walking shoes",
+            documents: "Passport, ETIAS approval, Swiss Travel Pass",
+            gadgets: "Action camera (GoPro) for adventure sports",
+            other: "High-quality sunglasses for snow glare"
+        },
+        travelTips: {
+            safety: "Check live webcams before buying high-altitude tickets.",
+            money: "Shop at Coop Supermarket for high-quality, affordable picnic supplies.",
+            etiquette: "Don't stand in the middle of Höhematte Park; it's a paraglider landing zone!",
+            reminder: "Know the difference between Interlaken Ost (mountains) and West (old town) stations."
+        },
+        photoSpots: [
+            "Two Lakes Bridge at Harder Kulm",
+            "Höhematte Park with paragliders and the Victoria-Jungfrau",
+            "Iseltwald (the 'Crash Landing on You' filming location)"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Lake & Heights",
+                morning: "Boat cruise on Lake Brienz to Giessbach Falls",
+                afternoon: "Funicular up to Harder Kulm for sunset",
+                evening: "Dinner and drinks at Husi Bierhaus"
+            },
+            {
+                day: 2,
+                focus: "Adventure Day",
+                morning: "Tandem Paragliding flight",
+                afternoon: "Explore St. Beatus Caves or visit Thun",
+                evening: "Swiss Fondue feast in the Old Town"
+            },
+            {
+                day: 3,
+                focus: "Gateway to Peaks",
+                morning: "Train to Lauterbrunnen (72 waterfalls)",
+                afternoon: "Continue to Mürren or Grindelwald for hiking",
+                evening: "Sunset walk along the Aare River"
+            }
+        ]
+    },
+    {
+        id: "barcelona",
+        destinationName: "Barcelona",
+        country: "Spain",
+        bestTime: "April–June or September–October",
+        lengthOfStay: "3–5 days",
+        budgetRange: "Mid-range",
+        quickDescription: "A Mediterranean powerhouse where surreal Gaudí architecture meets sun-drenched beaches. Barcelona is a city of distinct 'barrios,' from the labyrinthine Gothic Quarter to the chic, grid-like Eixample, all fueled by a world-class tapas culture and late-night energy.",
+        heroImage: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Josep Tarradellas Barcelona-El Prat Airport (BCN)",
+            transportation: "Aerobús (A1/A2) to Plaça de Catalunya every 5–10 mins, R2 North Train, or Metro Line L9 South.",
+            visa: "Schengen Area rules. ETIAS required for visa-exempt countries from 2026."
+        },
+        whereToStay: {
+            budget: {
+                name: "Yeah Hostel Barcelona",
+                why: "Top-rated for socialize vibe, communal dinners, and walking distance to La Pedrera."
+            },
+            midRange: {
+                name: "Hotel 1898",
+                why: "Colonial-style elegance on La Rambla with a stunning rooftop pool and historic spa."
+            },
+            luxury: {
+                name: "Majestic Hotel & Spa",
+                why: "Historic landmark on Passeig de Gràcia with Michelin-star dining and iconic views."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Sagrada Família",
+                why: "Gaudí's unfinished masterpiece with forest-like interior and incredible stained-glass light play.",
+                fee: "€26–€40",
+                bestTime: "Late afternoon (Golden Hour)",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Park Güell",
+                why: "Whimsical park with mosaic lizards and gingerbread houses and panoramic sea views.",
+                fee: "€10",
+                bestTime: "8:00 AM (to beat crowds)",
+                image: "https://images.unsplash.com/photo-1523531294919-fbabb7c385f1?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Gothic Quarter (Barri Gòtic)",
+                why: "Medieval stone alleys, the Barcelona Cathedral, and hidden plazas.",
+                fee: "Free to wander",
+                bestTime: "Early morning or late night",
+                image: "https://images.unsplash.com/photo-1512918728675-ed7a9c7921d1?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Cervecería Catalana", typeAndPrice: "The gold standard for tapas and montaditos ($$)" },
+                { name: "Can Paixano (La Xampanyeria)", typeAndPrice: "Standing-room favorite for Cava and chorizo sandwiches ($)" }
+            ],
+            mustTryDish: "Paella (best at lunch) and Patatas Bravas"
+        },
+        gettingAround: {
+            publicTransport: "Extensive Metro, Bus, and Tram network",
+            apps: ["TMB App"],
+            dailyBudget: "$10–$15"
+        },
+        dailyBudget: {
+            accommodation: "$40–$350+",
+            food: "$35–$80",
+            transportation: "$5–$15",
+            activities: "$25–$60",
+            total: "$105–$505+"
+        },
+        whatToPack: {
+            clothing: "Stylish walking shoes, theft-proof crossbody bag, smart-casual dinner attire",
+            documents: "Passport, ETIAS approval",
+            gadgets: "Portable power bank, wide-angle lens for architecture",
+            other: "High-SPF sunscreen (deceptive sun)"
+        },
+        travelTips: {
+            safety: "Beware of pickpockets, especially on La Rambla and the Metro.",
+            money: "Free entry at many museums (like Picasso Museum) on the first Sunday.",
+            etiquette: "Dinner starts late (9 PM+). Don't ask for 'French Fries'—they are Belgian!",
+            reminder: "Paella is traditionally a lunch dish; avoid 'tourist trap' evening versions."
+        },
+        photoSpots: [
+            "Bunkers del Carmel for 360° sunset views",
+            "Pont del Bisbe neo-Gothic bridge",
+            "Casa Batlló 'Dragon's Back' rooftop"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Gaudí & Modernism",
+                morning: "Sagrada Família (Inside & Towers)",
+                afternoon: "Passeig de Gràcia to Casa Batlló & La Pedrera",
+                evening: "Tapas crawl in Eixample"
+            },
+            {
+                day: 2,
+                focus: "Old City & Sea",
+                morning: "Gothic Quarter & Picasso Museum",
+                afternoon: "El Born to Barceloneta Beach",
+                evening: "Seafood dinner & Magic Fountain show"
+            },
+            {
+                day: 3,
+                focus: "Views & Culture",
+                morning: "Park Güell & Gràcia lunch",
+                afternoon: "Montjuïc cable car, castle & Olympic ring",
+                evening: "Sunset picnic at Bunkers del Carmel"
+            }
+        ]
+    },
+    {
+        id: "tirana",
+        destinationName: "Tirana",
+        country: "Albania",
+        bestTime: "May–June or September–October",
+        lengthOfStay: "2–3 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "Tirana is one of Europe's most colorful and transformed capitals. Once a grey, communist stronghold, it is now a bustling city known for its 'Blloku' nightlife, vibrant painted buildings, and sobering history museums housed in former nuclear bunkers. It offers an incredible mix of Ottoman heritage, Italian architecture, and modern Balkan energy at a fraction of the cost of Western Europe.",
+        heroImage: "https://images.unsplash.com/photo-1589136140030-cf73a7ecadb0?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Tirana International Airport Nënë Tereza (TIA)",
+            transportation: "Rinas Express Bus departs every hour (24/7) to the city center, or take an official airport taxi.",
+            visa: "Visa-free for many nationalities (US, EU, UK, etc.) for up to 90 days. Not in Schengen Area yet."
+        },
+        whereToStay: {
+            budget: {
+                name: "Trip’n’Hostel",
+                why: "Social, quirky hostel in a traditional building near the New Bazaar with a friendly vibe."
+            },
+            midRange: {
+                name: "Hotel Opera",
+                why: "Perfectly located right on Skanderbeg Square with elegant rooms and an affordable price."
+            },
+            luxury: {
+                name: "The Plaza Tirana",
+                why: "Sleek 5-star skyscraper offering city views, spa facilities, and world-class service."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Bunk’Art 2",
+                why: "Former secret nuclear bunker turned into a museum about communist police and surveillance.",
+                fee: "500 ALL",
+                bestTime: "Morning",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Dajti Ekspres (Cable Car)",
+                why: "Longest cable car in the Balkans leading to panoramic views from Mount Dajti.",
+                fee: "1000 ALL",
+                bestTime: "Hour before sunset",
+                image: "https://images.unsplash.com/photo-1511739003486-6bfe10ce785f?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Skanderbeg Square",
+                why: "The massive cultural heart of the city, featuring museums, mosques, and a clock tower.",
+                fee: "Free to wander",
+                bestTime: "Early evening (Xhiro stroll)",
+                image: "https://images.unsplash.com/photo-1574044536225-182daabc940b?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Oda", typeAndPrice: "Rustic, traditional house serving authentic Albanian classics ($)" },
+                { name: "Mullixhiu", typeAndPrice: "Fine dining using local farm ingredients near Grand Park ($$$)" }
+            ],
+            mustTryDish: "Tavë Kosi (Baked lamb with yogurt and rice)"
+        },
+        gettingAround: {
+            publicTransport: "Local buses with tickets bought on board (40 ALL).",
+            apps: ["Speed Taxi", "Lux Taxi"],
+            dailyBudget: "$2–$15"
+        },
+        dailyBudget: {
+            accommodation: "$15–$150+",
+            food: "$15–$40",
+            transportation: "$1–$10",
+            activities: "$10–$30",
+            total: "$41–$230+"
+        },
+        whatToPack: {
+            clothing: "Comfortable walking shoes, modest outfit for mosques",
+            documents: "Passport, Travel Insurance copy",
+            gadgets: "European Type C/F plug adapter",
+            other: "Cash (Albanian Lek) for cafes and buses"
+        },
+        travelTips: {
+            safety: "Very safe, but be careful with chaotic traffic even at green lights.",
+            money: "Coffee is world-class and very affordable (under $1).",
+            etiquette: "Traditional head shaking/nodding for 'yes' and 'no' can be a quirk!",
+            reminder: "Visit the New Bazaar (Pazari i Ri) on Sunday for a great atmosphere."
+        },
+        photoSpots: [
+            "Pyramid of Tirana stairs for city views",
+            "Colorfully painted buildings along Lana River",
+            "Enver Hoxha’s former villa in Blloku"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "History & Bunkers",
+                morning: "Skanderbeg Square and Bunk’Art 2",
+                afternoon: "New Bazaar lunch at Oda",
+                evening: "Dinner in trendy Blloku district"
+            },
+            {
+                day: 2,
+                focus: "Views & Nature",
+                morning: "Dajti Ekspres cable car",
+                afternoon: "Bunk’Art 1 military bunker experience",
+                evening: "Sunset walk around Grand Park lake"
+            },
+            {
+                day: 3,
+                focus: "Kruja Day Trip",
+                morning: "House of Leaves museum visit",
+                afternoon: "Short trip to Kruja Castle and historical bazaar",
+                evening: "Farewell dinner at a traditional 'Zgara'"
+            }
+        ]
+    },
+    {
+        id: "podgorica",
+        destinationName: "Podgorica",
+        country: "Montenegro",
+        bestTime: "May–June or September–October",
+        lengthOfStay: "1–2 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "Often overlooked for the coast, Podgorica is a unique blend of Ottoman history, brutalist Socialist architecture, and modern greenery. It is a city of rivers and bridges, offering a laid-back Balkan vibe and the best value for money in the country.",
+        heroImage: "https://images.unsplash.com/photo-1574044536225-182daabc940b?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Podgorica Airport (TGD)",
+            transportation: "Taxi is the most reliable (~€12–€15), or take an infrequent train from 'Aerodrom' stop.",
+            visa: "Visa-free for most for up to 90 days. Not in the Schengen Area."
+        },
+        whereToStay: {
+            budget: {
+                name: "Hostel Montenegro",
+                why: "Central, affordable, and run by locals who know the regional bus system."
+            },
+            midRange: {
+                name: "Hotel Hemera",
+                why: "Stylish boutique hotel with a library-themed design and excellent restaurant."
+            },
+            luxury: {
+                name: "Hilton Podgorica Crna Gora",
+                why: "Historic landmark building with a high-end spa and rooftop bar."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Cathedral of the Resurrection of Christ",
+                why: "One of the most stunning Orthodox churches in the Balkans with gold-leaf frescoes.",
+                fee: "Free",
+                bestTime: "Morning",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Millennium Bridge",
+                why: "The architectural symbol of modern Podgorica spanning the Morača River.",
+                fee: "Free",
+                bestTime: "Sunset/Evening",
+                image: "https://images.unsplash.com/photo-1520114878144-6123749968dd?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Stara Varoš (Old Ottoman Town)",
+                why: "Last remaining bits of the Ottoman Empire, including the Clock Tower.",
+                fee: "Free",
+                bestTime: "Afternoon",
+                image: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Pod Volat", typeAndPrice: "Carnivore spot famous for Ćevapi and grilled meats ($)" },
+                { name: "Lanterna", typeAndPrice: "Traditional Montenegrin food in a stone-walled tavern ($$)" }
+            ],
+            mustTryDish: "Popeci na podgorički način (Veal steak with cheese and prosciutto)"
+        },
+        gettingAround: {
+            publicTransport: "Limited city buses; taxis are the preferred cheap option.",
+            apps: ["Tesla Taxi", "Naš Taxi"],
+            dailyBudget: "$5–$15"
+        },
+        dailyBudget: {
+            accommodation: "$20–$140+",
+            food: "$15–$35",
+            transportation: "$3–$10",
+            activities: "$5–$15",
+            total: "$43–$200"
+        },
+        whatToPack: {
+            clothing: "Light, breathable fabrics (gets very hot), modest outfit for Cathedral",
+            documents: "Passport, green card (if driving)",
+            gadgets: "European Type C/F adapter",
+            other: "Euro (€)—Montenegro uses it although not in the Eurozone"
+        },
+        travelTips: {
+            safety: "Extremely safe; main risk is the scorching summer sun.",
+            money: "Eat at local 'Pekaras' (bakeries) for giant €1.50 Burek slices.",
+            etiquette: "Smoking is common indoors; choose outdoors if sensitive.",
+            reminder: "Most shops and malls are completely closed on Sundays."
+        },
+        photoSpots: [
+            "Millennium Bridge from the pedestrian bridge",
+            "Golden interior of the Cathedral",
+            "Nijagara Falls (Montenegro's Niagara)"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "City Highlights",
+                morning: "Cathedral & Millennium Bridge",
+                afternoon: "Old Town & Clock Tower",
+                evening: "Dinner at Pod Volat & Bokeška street nightlife"
+            },
+            {
+                day: 2,
+                focus: "Nature & Wine",
+                morning: "Nijagara Falls & Cijevna Canyon",
+                afternoon: "Plantaže Wine Cellar tunnel visit",
+                evening: "Sunset walk through Gorica Park"
+            }
+        ]
+    },
+    {
+        id: "kotor",
+        destinationName: "Kotor",
+        country: "Montenegro",
+        bestTime: "May–June or September–early October",
+        lengthOfStay: "2–3 days",
+        budgetRange: "Mid-range",
+        quickDescription: "Kotor is a dramatic, fortified town nestled at the end of Europe’s southernmost fjord (Boka Bay). A UNESCO World Heritage site, it is a maze of Venetian-style squares and narrow alleys guarded by a massive mountain wall and a colony of very famous local cats.",
+        heroImage: "https://images.unsplash.com/photo-1563273118-2e118903c72b?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Tivat Airport (TIV) or Podgorica Airport (TGD)",
+            transportation: "Taxi from Tivat (15 mins, ~€15–€20), local buses, or private boat/ferry across the bay.",
+            visa: "Visa-free for most for up to 90 days. Montenegro uses the Euro (€)."
+        },
+        whereToStay: {
+            budget: {
+                name: "Old Town Hostel Kotor",
+                why: "Housed in a 13th-century stone palace with an incredible 'social castle' vibe."
+            },
+            midRange: {
+                name: "Hotel Marija",
+                why: "Traditional stone-walled rooms located right inside the historic Old Town walls."
+            },
+            luxury: {
+                name: "Hotel Forza Terra",
+                why: "Upscale waterfront stay just outside Old Town with a private beach and luxury spa."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Hike to St. John’s Fortress (San Giovanni)",
+                why: "For the iconic panoramic view of the red-roofed Old Town and the fjord-like bay.",
+                fee: "€15",
+                bestTime: "7:00 AM (to beat heat/crowds)",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Our Lady of the Rocks (Perast)",
+                why: "A boat ride to a tiny man-made island featuring a historic church and museum.",
+                fee: "Boat: €5–€10, Church: €2",
+                bestTime: "Early morning",
+                image: "https://images.unsplash.com/photo-1511739003486-6bfe10ce785f?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Kotor Cats Museum",
+                why: "Quirky museum celebrating the town’s feline protectors through art and history.",
+                fee: "€1",
+                bestTime: "Any time (bring treats!)",
+                image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Tanjga Family Grill", typeAndPrice: "Massive portions of high-quality grilled meats ($)" },
+                { name: "Konoba Scala Santa", typeAndPrice: "One of the oldest seafood restaurants in the city ($$)" }
+            ],
+            mustTryDish: "Black Risotto (Cuttlefish ink) or Njegški Prosciutto"
+        },
+        gettingAround: {
+            publicTransport: "Pedestrianized Old Town; local 'Blue Line' buses to Perast every 30-60 mins.",
+            apps: ["Red Taxi", "MB Taxi"],
+            dailyBudget: "$5–$20"
+        },
+        dailyBudget: {
+            accommodation: "$30–$250+",
+            food: "$20–$60",
+            transportation: "$5–$25",
+            activities: "$15–$50",
+            total: "$70–$385+"
+        },
+        whatToPack: {
+            clothing: "Excellent grip shoes for slippery stone steps, swimwear",
+            documents: "Passport, boat tour confirmations",
+            gadgets: "Wide-angle lens for mountain scale",
+            other: "Cat treats (for feline friends), reusable water bottle"
+        },
+        travelTips: {
+            safety: "Avoid peak cruise ship crowds (10 AM - 4 PM) by planning boat or mountain trips then.",
+            money: "Hike the 'Ladder of Kotor' trail just outside the walls for free for similar views.",
+            etiquette: "Don't feed cats human food; stick to cat-specific snacks or water.",
+            reminder: "Tap water is generally safe but can become salty after heavy rains."
+        },
+        photoSpots: [
+            "Halfway up St. John Fortress walls for the classic bay shot",
+            "Perast Waterfront looking at the two islands",
+            "Piazza of the Arms in early morning"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Walls & Whiskers",
+                morning: "Hike to St. John’s Fortress (San Giovanni)",
+                afternoon: "Explore Old Town, Maritime Museum, and Cats Museum",
+                evening: "Dinner at Tanjga and drinks in hidden stone plazas"
+            },
+            {
+                day: 2,
+                focus: "The Boka Bay",
+                morning: "Speedboat tour to Blue Cave and submarine tunnels",
+                afternoon: "Our Lady of the Rocks and the quiet town of Perast",
+                evening: "Sunset dinner on the Perast waterfront"
+            },
+            {
+                day: 3,
+                focus: "Scenic Heights",
+                morning: "Drive the '25 Serpentines' road to Lovćen National Park",
+                afternoon: "Visit Njegoši village for traditional cheese and prosciutto",
+                evening: "Farewell drinks at an Old Town wine bar"
+            }
+        ]
+    },
+    {
+        id: "budva",
+        destinationName: "Budva",
+        country: "Montenegro",
+        bestTime: "June–September or May/October",
+        lengthOfStay: "2–3 days",
+        budgetRange: "Mid-range",
+        quickDescription: "Known as the 'Miami of Montenegro,' Budva is the country's tourism heart. It perfectly balances a 2,500-year-old medieval Old Town (Stari Grad) with a high-energy coastline of turquoise coves, sleek yachts, and some of the best nightlife in the Balkans.",
+        heroImage: "https://images.unsplash.com/photo-1555990548-6d52f6762391?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Tivat Airport (TIV) or Podgorica Airport (TGD)",
+            transportation: "Frequent buses from Podgorica (€6–€9) or taxi transfers from Tivat (25 mins, ~€20–€30) or Podgorica (~€65–€80).",
+            visa: "Visa-free for US, UK, and EU for up to 90 days. Register with the local tourist office within 24 hours."
+        },
+        whereToStay: {
+            budget: {
+                name: "Freedom Hostel Budva",
+                why: "Located inside Old Town walls; social, affordable, and historic atmosphere."
+            },
+            midRange: {
+                name: "Katamare Hotel",
+                why: "Modern hotel in Bečići offering a calmer vibe with excellent beach access."
+            },
+            luxury: {
+                name: "Boutique Hotel Vissi d'Arte",
+                why: "Opera-themed hotel next to the yacht marina with ultra-personalized service."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Budva Old Town (Stari Grad)",
+                why: "A mini-Dubrovnik with marble-paved lanes and Venetian walls. Don't miss the Citadel.",
+                fee: "Citadel: €5.50",
+                bestTime: "Early morning or after 8:00 PM",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Mogren Beach",
+                why: "Two beautiful sandy coves connected by a cliff tunnel. Best foot-reachable beach from town.",
+                fee: "Free (Sunbeds €15–€25)",
+                bestTime: "Early morning",
+                image: "https://images.unsplash.com/photo-1520114878144-6123749968dd?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Sveti Stefan Viewpoint",
+                why: "Iconic fortified island-village. Highlights include pink rocks and blue water.",
+                fee: "Free to view",
+                bestTime: "Sunset",
+                image: "https://images.unsplash.com/photo-1511739003486-6bfe10ce785f?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Jadran Kod Krsta", typeAndPrice: "Family-run seafood on the promenade ($$)" },
+                { name: "Kužina", typeAndPrice: "Traditional Montenegrin 'under the bell' cooking ($)" }
+            ],
+            mustTryDish: "Burek from Pekara Radovic"
+        },
+        gettingAround: {
+            publicTransport: "Mediteran Express bus between Budva center, Bečići, and Sveti Stefan.",
+            apps: ["Viber/WhatsApp for Tesla Taxi"],
+            dailyBudget: "$5–$20"
+        },
+        dailyBudget: {
+            accommodation: "$35–$300+",
+            food: "$25–$70",
+            transportation: "$5–$15",
+            activities: "$10–$40",
+            total: "$75–$425+"
+        },
+        whatToPack: {
+            clothing: "Glamorous evening wear, sturdy sandals for slippery marble streets",
+            documents: "Passport, Tourist Tax registration paper",
+            gadgets: "Action camera for cliff jumping or boat trips",
+            other: "High-quality earplugs if staying near the promenade"
+        },
+        travelTips: {
+            safety: "Mogren Beach path can be narrow and slippery when wet.",
+            money: "Walk the pedestrian tunnel to Bečići; it's free and faster in summer traffic.",
+            etiquette: "Every beach legally requires a 50% free zone for towels.",
+            reminder: "Budva is loud in peak season; stay in Bečići for peace and quiet."
+        },
+        photoSpots: [
+            "Budva Ballerina statue with Old Town walls",
+            "Top of Citadel walls overlooking Sveti Nikola Island",
+            "Sveti Stefan views from the cliffs"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Old Town & Coves",
+                morning: "Old Town walls and Citadel visit",
+                afternoon: "Coastal path to Mogren beaches",
+                evening: "Seafood dinner at Porto by the marina"
+            },
+            {
+                day: 2,
+                focus: "Islands & Icons",
+                morning: "Boat taxi to Sveti Nikola Island ('Hawaii')",
+                afternoon: "Sveti Stefan park and photography",
+                evening: "Sunset from Vista Vidikovac"
+            },
+            {
+                day: 3,
+                focus: "Party & Peaks",
+                morning: "Paragliding from Brajići landing on the beach",
+                afternoon: "Relax at Jaz Beach or swim at Mogren",
+                evening: "Night out at Top Hill open-air club"
+            }
+        ]
+    },
+    {
+        id: "mostar",
+        destinationName: "Mostar",
+        country: "Bosnia & Herzegovina",
+        bestTime: "May–June or September–October",
+        lengthOfStay: "1–2 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "Mostar is the soul of the Herzegovina region, famous for its iconic Ottoman-style bridge, Stari Most, which arches over the emerald Neretva River. It is a place where minarets and church spires share the skyline, and history is met with resilience and warm hospitality.",
+        heroImage: "https://images.unsplash.com/photo-1555990548-6d52f6762391?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Mostar Airport (OMO) or Sarajevo International Airport (SJJ)",
+            transportation: "Scenic train from Sarajevo (2 hours) or multiple daily buses (~€10).",
+            visa: "Visa-free for many (US, EU, UK, etc.) for up to 90 days. Not in Schengen Area."
+        },
+        whereToStay: {
+            budget: {
+                name: "Hostel Miran Mostar",
+                why: "Legendary for its 'War Tour' providing deep personal perspective on the city's history."
+            },
+            midRange: {
+                name: "Hotel-Restaurant Kriva Ćuprija",
+                why: "Heritage hotel by the 'Crooked Bridge' with traditional stone architecture."
+            },
+            luxury: {
+                name: "Hotel Mepas",
+                why: "Modern 5-star hotel in the business district with a rooftop pool and high-end shopping."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Stari Most (The Old Bridge)",
+                why: "UNESCO heart of the city; watch daredevils jump 24 meters into the emerald Neretva.",
+                fee: "Free to cross",
+                bestTime: "Sunset",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Koski Mehmed Pasha Mosque",
+                why: "Best panoramic view of the bridge from the narrow minaret.",
+                fee: "~€6",
+                bestTime: "Mid-morning",
+                image: "https://images.unsplash.com/photo-1511739003486-6bfe10ce785f?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Blagaj Tekke (Day Trip)",
+                why: "16th-century Dervish monastery built into a 200m cliff next to a crystal spring.",
+                fee: "~€5",
+                bestTime: "Early morning",
+                image: "https://images.unsplash.com/photo-1520114878144-6123749968dd?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Tima-Irma", typeAndPrice: "Legendary family-run spot for massive grilled meat platters ($)" },
+                { name: "Šadrvan", typeAndPrice: "Traditional dining with servers in national costumes ($$)" }
+            ],
+            mustTryDish: "Ćevapi or Japrak (stuffed grape/kale leaves)"
+        },
+        gettingAround: {
+            publicTransport: "Compact and entirely walkable; local buses for suburbs or Blagaj.",
+            apps: ["Mo Taxi"],
+            dailyBudget: "$2–$10"
+        },
+        dailyBudget: {
+            accommodation: "$15–$120+",
+            food: "$12–$35",
+            transportation: "$2–$10",
+            activities: "$5–$25",
+            total: "$34–$190"
+        },
+        whatToPack: {
+            clothing: "Non-slip sole shoes (bridge stones are incredibly slippery!), layers",
+            documents: "Passport (essential for border/police checks)",
+            gadgets: "High-quality camera for postcard views",
+            other: "Cash (BAM/KM)—better rates and less hassle than using Euros"
+        },
+        travelTips: {
+            safety: "Do not attempt to jump off the bridge; the currents are highly dangerous.",
+            money: "Mostar's Ottoman-style fountains provide fresh, drinkable mountain water.",
+            etiquette: "Bosnian Coffee is a slow ritual; don't stir it or you'll ruin the brew!",
+            reminder: "Mostar is much hotter than Sarajevo; plan sightings early or late in summer."
+        },
+        photoSpots: [
+            "Riverbank rocks below the bridge for the classic 'looking up' shot",
+            "Koski Mehmed Pasha Mosque minaret for the postcard view",
+            "Lucki Most for a wider perspective of the Old Town"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "The Heart of the City",
+                morning: "Kujundžiluk Bazaar and Stari Most crossing",
+                afternoon: "Koski Mehmed Pasha Mosque minaret climb",
+                evening: "Traditional dinner at Šadrvan"
+            },
+            {
+                day: 2,
+                focus: "Springs & Falls",
+                morning: "Taxi to Blagaj Tekke to see the Buna Spring",
+                afternoon: "Swimming at the massive Kravica Waterfalls",
+                evening: "Final Bosnian coffee by the river"
+            }
+        ]
+    },
+    {
+        id: "sarajevo",
+        destinationName: "Sarajevo",
+        country: "Bosnia & Herzegovina",
+        bestTime: "May–September (Festivals) or February–March (Skiing)",
+        lengthOfStay: "3–4 days",
+        budgetRange: "Budget / Mid-range",
+        quickDescription: "Known as the 'Jerusalem of Europe,' Sarajevo is a city where East meets West. Within a single block, you can find a mosque, a synagogue, and both Catholic and Orthodox cathedrals. It's defined by its resilience, Ottoman charm, and Austro-Hungarian elegance.",
+        heroImage: "https://images.unsplash.com/photo-1561569062-0e9e99c1e7a1?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Sarajevo International Airport (SJJ)",
+            transportation: "Budget-friendly Centrotrans Bus (5 BAM) or official taxis (20–30 BAM) to the center.",
+            visa: "Visa-free for many (US, EU, UK, etc.) for up to 90 days. Not in Schengen Area."
+        },
+        whereToStay: {
+            budget: {
+                name: "Waterfall Hostel",
+                why: "Highly rated for social atmosphere and walking distance to all major Old Town sights."
+            },
+            midRange: {
+                name: "Ibis Styles Sarajevo",
+                why: "Modern hotel with design inspired by the city's 1984 Winter Olympic heritage."
+            },
+            luxury: {
+                name: "Hotel Malak Regency",
+                why: "5-star retreat in the Ilidža area with premium spa facilities and refined dining."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Baščaršija (Old Bazaar)",
+                why: "15th-century Ottoman heart featuring copper-smith alleys and the Sebilj fountain.",
+                fee: "Free to explore",
+                bestTime: "Early morning or evening",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "War Childhood Museum",
+                why: "Moving award-winning museum telling stories of the Bosnian War through children's personal items.",
+                fee: "10 BAM",
+                bestTime: "Mid-afternoon",
+                image: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Trebević Cable Car",
+                why: "Scenic ride to Mount Trebević to see city views and the abandoned Olympic Bobsleigh Track.",
+                fee: "20 BAM (foreigners)",
+                bestTime: "Hour before sunset",
+                image: "https://images.unsplash.com/photo-1520114878144-6123749968dd?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Ćevabdžinica Željo", typeAndPrice: "Most famous spot for authentic Ćevapi in Old Town ($)" },
+                { name: "Inat Kuća (House of Spite)", typeAndPrice: "Fascinating history and traditional Bosnian platters by the river ($$)" }
+            ],
+            mustTryDish: "Burek (meat-filled pastry) or Klepe (Bosnian ravioli)"
+        },
+        gettingAround: {
+            publicTransport: "Extensive tram network (most iconic) along with buses and trolleybuses.",
+            apps: ["MojTaxi"],
+            dailyBudget: "$2–$10"
+        },
+        dailyBudget: {
+            accommodation: "$15–$150+",
+            food: "$12–$40",
+            transportation: "$2–$10",
+            activities: "$10–$30",
+            total: "$39–$230+"
+        },
+        whatToPack: {
+            clothing: "Comfortable walking shoes, layers for cool mountain nights",
+            documents: "Passport, Travel Insurance",
+            gadgets: "European Type C/F adapter",
+            other: "Cash (Bosnian Mark - BAM) for small cafes and trams"
+        },
+        travelTips: {
+            safety: "Very safe, but watch for pickpockets on trams and in Baščaršija.",
+            money: "Join a free walking tour for essential context on the city's complex history.",
+            etiquette: "Cover shoulders and knees when visiting mosques (scarves often provided).",
+            reminder: "Respect the 'Sarajevo Roses'—red resin sidewalk memorials; do not step on them."
+        },
+        photoSpots: [
+            "Yellow Fortress (Žuta Tabija) for the best sunset city view",
+            "Latin Bridge (site of Franz Ferdinand assassination)",
+            "Kazandžiluk Street copper-smith artisans"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "East Meets West",
+                morning: "Old Town (Baščaršija) walking tour and Cathedral",
+                afternoon: "Gazi Husrev-beg Mosque and war history museums",
+                evening: "Traditional dinner and Bosnian coffee"
+            },
+            {
+                day: 2,
+                focus: "Olympic & War History",
+                morning: "Cable Car to Trebević and Bobsleigh track",
+                afternoon: "Sarajevo Tunnel of Hope (War Tunnel Museum)",
+                evening: "Sunset at the Yellow Fortress"
+            },
+            {
+                day: 3,
+                focus: "Art & Nature",
+                morning: "National Museum (see the Sarajevo Haggadah)",
+                afternoon: "Spring of the Bosna River (Vrelo Bosne) via horse carriage",
+                evening: "Farewell dinner at Kibe Mahala with city views"
+            }
+        ]
+    },
+    {
+        id: "belgrade",
+        destinationName: "Belgrade",
+        country: "Serbia",
+        bestTime: "May–June, September or July–August (River club season)",
+        lengthOfStay: "3–4 days",
+        budgetRange: "Mid-range",
+        quickDescription: "Belgrade is 'The White City' that never sleeps. Gritty, raw, and incredibly charismatic, it balances heavy history—having been destroyed and rebuilt over 40 times—with world-class nightlife and a coffee culture that rivals Italy.",
+        heroImage: "https://images.unsplash.com/photo-1555990548-6d52f6762391?q=80&w=2000&auto=format&fit=crop",
+        howToGetThere: {
+            nearestAirport: "Belgrade Nikola Tesla Airport (BEG)",
+            transportation: "A1 Shuttle to Slavija Square (~400 RSD) or fixed-price taxi voucher (~3,000 RSD) from the arrivals desk.",
+            visa: "Visa-free for US, UK, and EU for up to 90 days. Mandatory police registration within 24 hours."
+        },
+        whereToStay: {
+            budget: {
+                name: "Hostel Bongo",
+                why: "Modern, social hostel in the city heart (Stari Grad) without being purely party-focused."
+            },
+            midRange: {
+                name: "Hotel Moskva",
+                why: "Architectural icon and one of the oldest hotels in Serbia; famous for its Moskva Šnit cake."
+            },
+            luxury: {
+                name: "Saint Ten Hotel",
+                why: "Boutique 5-star experience near Saint Sava Temple with impeccable personalized service."
+            }
+        },
+        thingsToDo: [
+            {
+                name: "Belgrade Fortress (Kalemegdan)",
+                why: "Massive park and fortress complex overlooking the river confluence; home to the 'Victor' monument.",
+                fee: "Free for park/fortress",
+                bestTime: "Sunset",
+                image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Saint Sava Temple (Hram Svetog Save)",
+                why: "One of the world's largest Orthodox churches with a stunning gold-covered crypt.",
+                fee: "Free",
+                bestTime: "Early morning",
+                image: "https://images.unsplash.com/photo-1511739003486-6bfe10ce785f?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                name: "Skadarlija (Bohemian Quarter)",
+                why: "Cobblestone street filled with traditional 'kafanas' and live tamburica music.",
+                fee: "Free to walk",
+                bestTime: "Late evening",
+                image: "https://images.unsplash.com/photo-1520114878144-6123749968dd?q=80&w=1000&auto=format&fit=crop"
+            }
+        ],
+        whereToEat: {
+            restaurants: [
+                { name: "Durmitor", typeAndPrice: "Famous traditional spot in New Belgrade; try the veal under the bell ($$)" },
+                { name: "Ćevap kod Dekija", typeAndPrice: "Legendary for the best stuffed Pljeskavica (Serbian burger) ($)" }
+            ],
+            mustTryDish: "Kajmak (creamy dairy spread) on warm lepinja bread"
+        },
+        gettingAround: {
+            publicTransport: "Trams and buses via the Beograd Plus app (simplified central zones).",
+            apps: ["Cargo", "Pink Taxi"],
+            dailyBudget: "$2–$15"
+        },
+        dailyBudget: {
+            accommodation: "$25–$200+",
+            food: "$15–$50",
+            transportation: "$1–$10",
+            activities: "$5–$25",
+            total: "$46–$285+"
+        },
+        whatToPack: {
+            clothing: "Smart casual for evening (Belgraders dress up for coffee!), comfortable walking shoes",
+            documents: "Passport (and a printed copy), Airbnb 'white card' (beli karton) for registration",
+            gadgets: "European Type C/F adapter",
+            other: "Cash (Serbian Dinar - RSD) for traditional kafanas and markets"
+        },
+        travelTips: {
+            safety: "Belgrade is very safe, but avoid heated football rivalries (Red Star vs. Partizan).",
+            money: "Belgrade tap water is safe and delicious; use public fountains to fill up.",
+            etiquette: "Ask for 'Domaća kafa' (Home coffee) rather than 'Turkish Coffee'—it's a local point of pride.",
+            reminder: "Smoking is very common indoors; look for rare non-smoking signs if sensitive."
+        },
+        photoSpots: [
+            "Confluence of Sava and Danube from Kalemegdan walls",
+            "Zemun Waterfront and Gardoš Tower view",
+            "Knez Mihailova Street vibrant street life"
+        ],
+        itinerary: [
+            {
+                day: 1,
+                focus: "Old City & Bunkers",
+                morning: "Knez Mihailova walking tour and Kalemegdan Fortress",
+                afternoon: "Nikola Tesla Museum (book ahead!)",
+                evening: "Dinner and live music in bohemian Skadarlija"
+            },
+            {
+                day: 2,
+                focus: "Temple & River Clubs",
+                morning: "Saint Sava Temple and Vračar neighborhood",
+                afternoon: "Cross to Zemun for Gardoš Tower views",
+                evening: "Party on a 'Splav' (river club) on the Danube or Sava"
+            },
+            {
+                day: 3,
+                focus: "Modern History & Leisure",
+                morning: "Museum of Yugoslavia and House of Flowers",
+                afternoon: "Relaxing at Ada Ciganlija ('The Belgrade Sea')",
+                evening: "Sunset drinks at Beton Hala waterfront warehouses"
+            }
+        ]
     }
 ];
