@@ -91,7 +91,7 @@ export default function GuideListingPage() {
 
                                     {/* Content */}
                                     <div className="p-6">
-                                        <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                                        <h3 className="text-2xl mb-3 group-hover:text-primary transition-colors">
                                             {guide.destinationName}
                                         </h3>
                                         <p className="text-muted-foreground text-sm line-clamp-2 mb-6 leading-relaxed">
