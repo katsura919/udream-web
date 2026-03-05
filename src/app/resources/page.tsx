@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ResourcesPage() {
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-white">
             {/* Hero Header */}
             <div className="relative pt-32 pb-16 px-4 text-center overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />

@@ -152,7 +152,7 @@ export function DestinationCostsSection() {
     );
 
     return (
-        <section className="py-20 px-4 bg-muted/30">
+        <section className="py-20 px-4 bg-white">
             <div className="max-w-6xl mx-auto">
                 <div className="mb-12">
                     <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">

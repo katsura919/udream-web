@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TravelToolsPage() {
     return (
-        <div className="min-h-screen bg-background pt-32 pb-16">
+        <div className="min-h-screen bg-white pt-32 pb-16">
             <TravelToolsSection />
         </div>
     );

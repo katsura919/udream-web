@@ -25,7 +25,7 @@ export default async function TravelGuidePage({ params }: { params: Promise<{ id
     }
 
     return (
-        <div className="min-h-screen bg-background pb-24 font-sans selection:bg-rose-200">
+        <div className="min-h-screen bg-white pb-24 font-sans selection:bg-rose-200">
             {/* 📸 Hero Header */}
             <div className="relative h-[65vh] min-h-[500px] w-full bg-neutral-900 overflow-hidden">
                 <div

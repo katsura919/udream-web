@@ -52,7 +52,7 @@ export default function AboutPage() {
     const continents = new Set(visitedPlaces.map((p) => p.continent)).size;
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-white">
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 px-4 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
@@ -126,7 +126,7 @@ export default function AboutPage() {
                                         }`}
                                 >
                                     {/* Dot */}
-                                    <div className="absolute left-0 md:left-1/2 w-11 h-11 -translate-x-0 md:-translate-x-1/2 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center z-10 shrink-0">
+                                    <div className="bg-white absolute left-0 md:left-1/2 w-11 h-11 -translate-x-0 md:-translate-x-1/2 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center z-10 shrink-0">
                                         <span className="text-xs font-bold text-primary">{m.year}</span>
                                     </div>
                                     {/* Content */}

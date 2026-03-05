@@ -78,7 +78,7 @@ export default async function BlogPostPage({ params }: Props) {
     // ── If API blog found, render it ──────────────────────────────────────
     if (apiBlog) {
         return (
-            <article className="min-h-screen bg-background">
+            <article className="min-h-screen bg-white">
                 {/* Hero Image */}
                 <div className="relative h-[55vh] min-h-[380px] w-full overflow-hidden">
                     {apiBlog.featuredImage ? (
@@ -90,9 +90,9 @@ export default async function BlogPostPage({ params }: Props) {
                             priority
                         />
                     ) : (
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-background" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white" />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
 
                     <Link
                         href="/blog"
@@ -309,7 +309,7 @@ export default async function BlogPostPage({ params }: Props) {
         .slice(0, 3);
 
     return (
-        <article className="min-h-screen bg-background">
+        <article className="min-h-screen bg-white">
             {/* Hero Image */}
             <div className="relative h-[55vh] min-h-[380px] w-full overflow-hidden">
                 <Image
@@ -319,7 +319,7 @@ export default async function BlogPostPage({ params }: Props) {
                     className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
 
                 <Link
                     href="/blog"

@@ -22,7 +22,7 @@ export default function GuideListingPage() {
     }, [searchQuery]);
 
     return (
-        <main className="min-h-screen bg-background text-foreground pb-20">
+        <main className="min-h-screen bg-white text-foreground pb-20">
             {/* Header Section */}
             <section className="relative pt-32 pb-20 px-6 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-30">

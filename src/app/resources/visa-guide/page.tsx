@@ -151,7 +151,7 @@ const cheatSheet = [
 
 export default function VisaGuidePage() {
     return (
-        <div className="min-h-screen bg-background pb-20">
+        <div className="min-h-screen bg-white pb-20">
             {/* Hero Header */}
             <div className="relative pt-32 pb-16 px-4 overflow-hidden border-b border-border/40">
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/5 to-transparent pointer-events-none" />

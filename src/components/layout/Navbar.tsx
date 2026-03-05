@@ -58,7 +58,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className="fixed top-0 left-0 right-0 z-[5000] border-b border-border/40 transition-all duration-300 bg-background/95 backdrop-blur-lg py-2"
+            className="fixed top-0 left-0 right-0 z-[5000] border-b border-border/40 transition-all duration-300 bg-white backdrop-blur-lg py-2"
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
@@ -103,7 +103,7 @@ export default function Navbar() {
                                 {/* Desktop Dropdown Menu */}
                                 {hasDropdown && (
                                     <div className="absolute top-[120%] left-1/2 -translate-x-1/2 w-[320px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-full transition-all duration-300 pt-4">
-                                        <div className="bg-background/95 backdrop-blur-xl border border-border overflow-hidden rounded-2xl shadow-xl p-3 grid gap-1">
+                                        <div className="bg-white backdrop-blur-xl border border-border overflow-hidden rounded-2xl shadow-xl p-3 grid gap-1">
                                             {item.dropdown!.map((sub) => (
                                                 <Link
                                                     key={sub.name}
