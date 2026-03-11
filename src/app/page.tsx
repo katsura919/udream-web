@@ -14,10 +14,10 @@ export default function Home() {
         height={16}
       />
       <AnimatedHeroDemo />
-      <FeaturedDestinations />
-      <LatestAdventures />
-      <ResourcesSection />
       <SocialWall />
+      <FeaturedDestinations />
+      <ResourcesSection />
+      <LatestAdventures />
     </main>
   );
 }
