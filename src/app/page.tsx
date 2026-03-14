@@ -1,4 +1,5 @@
 import AnimatedHeroDemo from "@/components/hero-section";
+import { BannerStrip } from "@/components/home/banner-strip";
 import { FeaturedDestinations } from "@/components/home/featured-destinations";
 import { LatestAdventures } from "@/components/home/latest-adventures";
 import { ResourcesSection } from "@/components/home/resources-section";
@@ -15,6 +16,7 @@ export default function Home() {
       />
       <AnimatedHeroDemo />
       <SocialWall />
+      <BannerStrip />
       <FeaturedDestinations />
       <ResourcesSection />
       <LatestAdventures />

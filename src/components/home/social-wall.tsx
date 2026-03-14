@@ -65,7 +65,7 @@ export function SocialWall() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-5xl font-bold tracking-tight mb-4"
                     >
-                        Watch Our <span className="text-muted-foreground">Adventures</span>
+                        Watch Our <span style={{ fontFamily: "var(--font-script)" }} className="text-primary italic">Latest Adventures</span>
                     </motion.h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                         Explore our latest travel vlogs, destination guides, and cinematic journeys on YouTube.

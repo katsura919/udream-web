@@ -28,7 +28,10 @@ const AnimatedHeroDemo = () => {
       tagline="Explore the Unexplored with Udream"
       title={
         <>
-          Adventure Awaits
+          Adventure{" "}
+          <span style={{ fontFamily: "var(--font-script)" }} className="text-primary italic">
+            Awaits
+          </span>
           <br />
           at Every Horizon
         </>

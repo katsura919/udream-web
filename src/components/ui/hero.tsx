@@ -47,7 +47,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   return (
     <section
       className={cn(
-        "relative w-full h-screen overflow-hidden bg-transparent flex flex-col items-center justify-center text-center px-4",
+        "relative w-full h-screen overflow-hidden flex flex-col items-center justify-center text-center px-4",
         className
       )}
     >
@@ -75,7 +75,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
               },
             },
           }}
-          className="text-5xl md:text-7xl font-display tracking-tighter text-foreground"
+          className="text-7xl md:text-9xl font-display font-bold tracking-tight text-foreground leading-none"
         >
           {typeof title === 'string' ? (
             title.split(" ").map((word, i) => (
@@ -130,7 +130,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           {duplicatedImages.map((src, index) => (
             <div
               key={index}
-              className="relative aspect-[3/4] h-48 md:h-64 flex-shrink-0"
+              className="relative aspect-[3/4] h-64 md:h-80 flex-shrink-0"
               style={{
                 rotate: `${(index % 2 === 0 ? -2 : 5)}deg`,
               }}

@@ -59,7 +59,7 @@ export function FeaturedDestinations() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-              Featured <span className="text-muted-foreground">Destinations</span>
+              Featured <span style={{ fontFamily: "var(--font-script)" }} className="text-primary italic">Destinations</span>
             </h2>
             <p className="text-lg text-muted-foreground">
               A curated selection of our most memorable journeys across the globe. From serene landscapes to bustling cities.
