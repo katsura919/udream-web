@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
     ChevronDown, DollarSign, Plane, Info, Clock,
     Search, ArrowLeft, ArrowUpDown, Bed, Utensils, Bus, MapPin, Check,
+    Calculator, RefreshCw,
 } from "lucide-react";
 import { destinationCosts, type DestinationCost } from "@/data/resources";
 import Link from "next/link";
@@ -14,6 +15,240 @@ import {
     DropdownMenuContent,
     DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+
+// ── Budget Planner ─────────────────────────────────────────────────────────────
+
+const CURRENCIES: { code: string; label: string; symbol: string; rate: number }[] = [
+    { code: "USD", label: "US Dollar",           symbol: "$",    rate: 1      },
+    { code: "MYR", label: "Malaysian Ringgit",   symbol: "RM",   rate: 4.70   },
+    { code: "EUR", label: "Euro",                symbol: "€",    rate: 0.92   },
+    { code: "GBP", label: "British Pound",       symbol: "£",    rate: 0.79   },
+    { code: "SGD", label: "Singapore Dollar",    symbol: "S$",   rate: 1.34   },
+    { code: "AUD", label: "Australian Dollar",   symbol: "A$",   rate: 1.52   },
+    { code: "CAD", label: "Canadian Dollar",     symbol: "C$",   rate: 1.36   },
+    { code: "JPY", label: "Japanese Yen",        symbol: "¥",    rate: 149.5  },
+    { code: "KRW", label: "South Korean Won",    symbol: "₩",    rate: 1330   },
+    { code: "THB", label: "Thai Baht",           symbol: "฿",    rate: 35.5   },
+    { code: "IDR", label: "Indonesian Rupiah",   symbol: "Rp",   rate: 15500  },
+    { code: "PHP", label: "Philippine Peso",     symbol: "₱",    rate: 56.5   },
+    { code: "INR", label: "Indian Rupee",        symbol: "₹",    rate: 83.5   },
+    { code: "AED", label: "UAE Dirham",          symbol: "AED",  rate: 3.67   },
+    { code: "CNY", label: "Chinese Yuan",        symbol: "¥",    rate: 7.20   },
+];
+
+const TIER_BREAKDOWN = {
+    budget:  { accom: 0.35, food: 0.35, transport: 0.30 },
+    mid:     { accom: 0.45, food: 0.30, transport: 0.25 },
+    luxury:  { accom: 0.55, food: 0.25, transport: 0.20 },
+} as const;
+
+function formatAmount(value: number, symbol: string, rate: number): string {
+    const converted = value * rate;
+    if (rate >= 100) return `${symbol}${Math.round(converted).toLocaleString()}`;
+    if (rate >= 10)  return `${symbol}${converted.toFixed(0)}`;
+    return `${symbol}${converted.toFixed(2)}`;
+}
+
+function BudgetPlanner() {
+    const [destId,   setDestId]   = useState<number | "">("");
+    const [days,     setDays]     = useState(7);
+    const [tier,     setTier]     = useState<"budget" | "mid" | "luxury">("mid");
+    const [currency, setCurrency] = useState("USD");
+    const [result,   setResult]   = useState<null | {
+        dailyUSD: number; totalUSD: number; accomUSD: number; foodUSD: number; transportUSD: number;
+    }>(null);
+
+    const selectedDest = destinationCosts.find((d) => d.placeId === destId);
+    const selectedCur  = CURRENCIES.find((c) => c.code === currency) ?? CURRENCIES[0];
+
+    function calculate() {
+        if (!selectedDest || days < 1) return;
+        const dailyUSD     = selectedDest.budgetPerDay[tier];
+        const breakdown    = TIER_BREAKDOWN[tier];
+        const totalUSD     = dailyUSD * days;
+        const accomUSD     = dailyUSD * breakdown.accom;
+        const foodUSD      = dailyUSD * breakdown.food;
+        const transportUSD = dailyUSD * breakdown.transport;
+        setResult({ dailyUSD, totalUSD, accomUSD, foodUSD, transportUSD });
+    }
+
+    return (
+        <div className="rounded-2xl border border-border bg-card p-6 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+                <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                    <Calculator className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                    <h2 className="font-semibold text-foreground text-base">Budget Planner</h2>
+                    <p className="text-xs text-muted-foreground">Estimate your total trip cost with currency conversion</p>
+                </div>
+            </div>
+
+            {/* Controls */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+                {/* Destination */}
+                <div>
+                    <label className="block text-xs font-medium text-muted-foreground mb-1.5">Destination</label>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger className="w-full flex items-center justify-between h-10 pl-3 pr-3 rounded-xl border border-border bg-card text-sm hover:bg-muted/60 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/30">
+                            <span className={selectedDest ? "text-foreground" : "text-muted-foreground"}>
+                                {selectedDest ? `${selectedDest.name}, ${selectedDest.country}` : "Select a destination…"}
+                            </span>
+                            <ChevronDown className="w-3.5 h-3.5 text-muted-foreground shrink-0 ml-2" />
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="start" className="max-h-60 overflow-y-auto w-[--radix-dropdown-menu-trigger-width]">
+                            {destinationCosts.map((d) => (
+                                <DropdownMenuItem
+                                    key={d.placeId}
+                                    onClick={() => { setDestId(d.placeId); setResult(null); }}
+                                    className="flex items-center justify-between gap-4"
+                                >
+                                    {d.name}, {d.country}
+                                    {destId === d.placeId && <Check className="w-3.5 h-3.5 text-primary shrink-0" />}
+                                </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+                </div>
+
+                {/* Duration */}
+                <div>
+                    <label className="block text-xs font-medium text-muted-foreground mb-1.5">Trip Duration (days)</label>
+                    <input
+                        type="number"
+                        min={1}
+                        max={365}
+                        value={days}
+                        onChange={(e) => { setDays(Math.max(1, Number(e.target.value))); setResult(null); }}
+                        className="w-full h-10 px-3 rounded-xl border border-border bg-card text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                    />
+                </div>
+
+                {/* Budget tier */}
+                <div>
+                    <label className="block text-xs font-medium text-muted-foreground mb-1.5">Travel Style</label>
+                    <div className="flex h-10 rounded-xl border border-border overflow-hidden">
+                        {(["budget", "mid", "luxury"] as const).map((t) => (
+                            <button
+                                key={t}
+                                onClick={() => { setTier(t); setResult(null); }}
+                                className={`flex-1 text-xs font-medium transition-colors ${
+                                    tier === t
+                                        ? t === "budget"  ? "bg-emerald-500 text-white"
+                                        : t === "mid"     ? "bg-amber-500 text-white"
+                                        : "bg-rose-500 text-white"
+                                        : "text-muted-foreground hover:bg-muted/50"
+                                }`}
+                            >
+                                {t.charAt(0).toUpperCase() + t.slice(1)}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Currency */}
+                <div>
+                    <label className="block text-xs font-medium text-muted-foreground mb-1.5">Your Currency</label>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger className="w-full flex items-center justify-between h-10 pl-3 pr-3 rounded-xl border border-border bg-card text-sm hover:bg-muted/60 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/30">
+                            <span className="text-foreground">{selectedCur.code} — {selectedCur.label}</span>
+                            <ChevronDown className="w-3.5 h-3.5 text-muted-foreground shrink-0 ml-2" />
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="start" className="max-h-60 overflow-y-auto w-[--radix-dropdown-menu-trigger-width]">
+                            {CURRENCIES.map((c) => (
+                                <DropdownMenuItem
+                                    key={c.code}
+                                    onClick={() => { setCurrency(c.code); setResult(null); }}
+                                    className="flex items-center justify-between gap-4"
+                                >
+                                    <span>{c.code} — {c.label}</span>
+                                    {currency === c.code && <Check className="w-3.5 h-3.5 text-primary shrink-0" />}
+                                </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+                </div>
+            </div>
+
+            <button
+                onClick={calculate}
+                disabled={!selectedDest}
+                className="flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+                <Calculator className="w-4 h-4" /> Calculate Budget
+            </button>
+
+            {/* Results */}
+            <AnimatePresence>
+                {result && selectedDest && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                        animate={{ opacity: 1, height: "auto", marginTop: 20 }}
+                        exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                    >
+                        <div className="rounded-xl bg-muted/40 border border-border p-5">
+                            {/* Total */}
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-5 pb-5 border-b border-border">
+                                <div>
+                                    <p className="text-xs text-muted-foreground mb-1">
+                                        {days}-day {tier} trip to {selectedDest.name}
+                                    </p>
+                                    <p className="text-3xl font-bold text-foreground">
+                                        {formatAmount(result.totalUSD, selectedCur.symbol, selectedCur.rate)}
+                                        <span className="text-base font-normal text-muted-foreground ml-1">{selectedCur.code}</span>
+                                    </p>
+                                    {selectedCur.code !== "USD" && (
+                                        <p className="text-sm text-muted-foreground mt-0.5">
+                                            ≈ ${result.totalUSD.toFixed(0)} USD total
+                                        </p>
+                                    )}
+                                </div>
+                                <div className="flex items-center gap-1.5 text-sm">
+                                    <span className="text-muted-foreground">Per day:</span>
+                                    <span className="font-semibold text-foreground">
+                                        {formatAmount(result.dailyUSD, selectedCur.symbol, selectedCur.rate)}
+                                    </span>
+                                    <span className="text-muted-foreground">{selectedCur.code}</span>
+                                </div>
+                            </div>
+
+                            {/* Breakdown */}
+                            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                                Daily Cost Breakdown (estimated)
+                            </p>
+                            <div className="grid grid-cols-3 gap-3">
+                                {[
+                                    { label: "Accommodation", icon: <Bed className="w-3.5 h-3.5" />, amountUSD: result.accomUSD, color: "text-blue-600" },
+                                    { label: "Food & Drinks", icon: <Utensils className="w-3.5 h-3.5" />, amountUSD: result.foodUSD, color: "text-emerald-600" },
+                                    { label: "Transport & Activities", icon: <Bus className="w-3.5 h-3.5" />, amountUSD: result.transportUSD, color: "text-violet-600" },
+                                ].map(({ label, icon, amountUSD, color }) => (
+                                    <div key={label} className="bg-card rounded-xl p-3 border border-border">
+                                        <div className={`flex items-center gap-1.5 mb-2 ${color}`}>
+                                            {icon}
+                                            <span className="text-xs font-medium">{label}</span>
+                                        </div>
+                                        <p className="text-base font-bold text-foreground">
+                                            {formatAmount(amountUSD, selectedCur.symbol, selectedCur.rate)}
+                                        </p>
+                                        <p className="text-[10px] text-muted-foreground">/day</p>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <p className="flex items-center gap-1.5 mt-4 text-[10px] text-muted-foreground">
+                                <RefreshCw className="w-3 h-3" />
+                                Exchange rates are approximate. Verify with your bank before travelling.
+                                {selectedDest.currency !== "USD" && ` Local currency: ${selectedDest.currency}.`}
+                            </p>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+}
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
@@ -261,6 +496,15 @@ export function DestinationCostsSection() {
             </div>
 
             <div className="max-w-4xl mx-auto px-4 mt-10">
+
+                {/* ── Budget Planner ───────────────────────────────────────── */}
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                >
+                    <BudgetPlanner />
+                </motion.div>
 
                 {/* ── Legend ──────────────────────────────────────────────── */}
                 <motion.div

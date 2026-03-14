@@ -92,7 +92,7 @@ export function LatestAdventures() {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        getPublicBlogs({ limit: 3 })
+        getPublicBlogs({ limit: 3, businessId: process.env.NEXT_PUBLIC_BUSINESS_ID })
           .then((res) => setBlogs(res.data))
           .catch(() => setError(true))
           .finally(() => setLoading(false));

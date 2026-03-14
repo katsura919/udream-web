@@ -137,7 +137,7 @@ export default function BlogPage() {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        getPublicBlogs({ limit: 12 })
+        getPublicBlogs({ limit: 12, businessId: process.env.NEXT_PUBLIC_BUSINESS_ID })
             .then((res) => setApiBlogs(res.data))
             .catch(() => setError("Could not load latest posts."))
             .finally(() => setLoading(false));

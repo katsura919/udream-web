@@ -1,7 +1,5 @@
 import api from "@/utils/api";
 
-const BUSINESS_ID = process.env.BUSINESS_ID;
-
 export interface PublicBlog {
   _id: string;
   title: string;
@@ -32,31 +30,16 @@ export interface PublicBlogsParams {
   limit?: number;
 }
 
-// Get public blogs for listing page
+// Get public blogs for landing page
 export const getPublicBlogs = async (
   params?: PublicBlogsParams,
 ): Promise<PublicBlogsResponse> => {
   const response = await api.get<PublicBlogsResponse>("/blogs/public", {
     params: {
-      businessId: params?.businessId || BUSINESS_ID,
+      businessId: params?.businessId || undefined,
       category: params?.category || undefined,
       page: params?.page?.toString() || "1",
       limit: params?.limit?.toString() || "10",
-    },
-  });
-  return response.data;
-};
-
-// Get top blogs for landing page
-export const getTopBlogs = async (
-  params?: PublicBlogsParams,
-): Promise<PublicBlogsResponse> => {
-  const response = await api.get<PublicBlogsResponse>("/blogs/top", {
-    params: {
-      businessId: params?.businessId || BUSINESS_ID,
-      category: params?.category || undefined,
-      page: params?.page?.toString() || "1",
-      limit: params?.limit?.toString() || "3",
     },
   });
   return response.data;

@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Menu, X, Globe, Map as MapIcon, BookOpen, User,
-    Home, Backpack, ChevronDown, FileText, CheckSquare, Plane
+    Home, Backpack, ChevronDown, FileText, CheckSquare, Plane, ClipboardCheck
 } from "lucide-react";
 
 type NavItem = {
@@ -60,6 +60,12 @@ const navItems: NavItem[] = [
         href: "/resources/itinerary-planner",
         icon: <MapIcon size={18} />,
         description: "Drag & drop builder",
+      },
+      {
+        name: "Travel Assessment",
+        href: "/resources/travel-assessment",
+        icon: <ClipboardCheck size={18} />,
+        description: "Are you ready to travel?",
       },
     ],
   },
