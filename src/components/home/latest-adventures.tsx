@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Calendar, BookOpen, Loader2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { getTopBlogs, type PublicBlog } from "@/hooks/useblogs";
+import { getPublicBlogs, type PublicBlog } from "@/hooks/useblogs";
 
 const BlogCard = ({ blog, index }: { blog: PublicBlog; index: number }) => {
     return (
@@ -92,80 +92,89 @@ export function LatestAdventures() {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        getTopBlogs({ limit: 3 })
-            .then((res) => setBlogs(res.data))
-            .catch(() => setError(true))
-            .finally(() => setLoading(false));
+        getPublicBlogs({ limit: 3 })
+          .then((res) => setBlogs(res.data))
+          .catch(() => setError(true))
+          .finally(() => setLoading(false));
     }, []);
 
     return (
-        <section className="py-24 px-4 bg-foreground">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16 max-w-2xl mx-auto">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-background"
-                    >
-                        Latest <span className="text-primary">Adventures</span>
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-lg text-background/60"
-                    >
-                        Dive into our travel journals, guides, and tips from recent trips around the world.
-                    </motion.p>
-                </div>
+      <section className="py-24 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 max-w-2xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-foreground"
+            >
+              Latest{" "}
+              <span
+                style={{ fontFamily: "var(--font-script)" }}
+                className="text-primary italic"
+              >
+                Adventures
+              </span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-lg text-foreground"
+            >
+              Dive into our travel journals, guides, and tips from recent trips
+              around the world.
+            </motion.p>
+          </div>
 
-                {/* Loading skeletons */}
-                {loading && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[0, 1, 2].map((i) => <SkeletonCard key={i} index={i} />)}
-                    </div>
-                )}
-
-                {/* Error state */}
-                {error && !loading && (
-                    <p className="text-center text-background/50 py-10">
-                        Could not load latest posts. Check back soon!
-                    </p>
-                )}
-
-                {/* Blog cards */}
-                {!loading && !error && blogs.length > 0 && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {blogs.map((blog, index) => (
-                            <BlogCard key={blog._id} blog={blog} index={index} />
-                        ))}
-                    </div>
-                )}
-
-                {/* Empty state */}
-                {!loading && !error && blogs.length === 0 && (
-                    <p className="text-center text-background/50 py-10">
-                        No posts yet — stay tuned!
-                    </p>
-                )}
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 }}
-                    className="mt-12 text-center"
-                >
-                    <Link
-                        href="/blog"
-                        className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
-                    >
-                        View all articles
-                    </Link>
-                </motion.div>
+          {/* Loading skeletons */}
+          {loading && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[0, 1, 2].map((i) => (
+                <SkeletonCard key={i} index={i} />
+              ))}
             </div>
-        </section>
+          )}
+
+          {/* Error state */}
+          {error && !loading && (
+            <p className="text-center text-foreground py-10">
+              Could not load latest posts. Check back soon!
+            </p>
+          )}
+
+          {/* Blog cards */}
+          {!loading && !error && blogs.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogs.map((blog, index) => (
+                <BlogCard key={blog._id} blog={blog} index={index} />
+              ))}
+            </div>
+          )}
+
+          {/* Empty state */}
+          {!loading && !error && blogs.length === 0 && (
+            <p className="text-center text-background/50 py-10">
+              No posts yet — stay tuned!
+            </p>
+          )}
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="mt-12 text-center"
+          >
+            <Link
+              href="/blog"
+              className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
+            >
+              View all articles
+            </Link>
+          </motion.div>
+        </div>
+      </section>
     );
 }

@@ -3,6 +3,7 @@ import { Playfair_Display, Lato, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { NewsletterCTA } from "@/components/home/newsletter-cta";
 import { LenisProvider } from "@/components/providers/LenisProvider";
 
 const playfairDisplay = Playfair_Display({
@@ -40,6 +41,7 @@ export default function RootLayout({
         <LenisProvider>
           <Navbar />
           <main>{children}</main>
+          <NewsletterCTA />
           <Footer />
         </LenisProvider>
       </body>

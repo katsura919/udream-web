@@ -1,8 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { Send, Mail, Instagram, Twitter, Facebook, Youtube, Github, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { Instagram, Twitter, Facebook, Youtube, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -42,121 +38,11 @@ const SOCIAL_LINKS = [
 ];
 
 export function Footer() {
-    const [email, setEmail] = useState("");
-    const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
-
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setStatus("loading");
-        try {
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ firstName: '', lastName: '', email, tags: ['Newsletter'] }),
-            });
-            const data = await res.json();
-            if (!res.ok && data.error !== 'duplicate') {
-                setStatus("idle");
-                return;
-            }
-        } catch {
-            setStatus("idle");
-            return;
-        }
-        setStatus("success");
-        setEmail("");
-    };
-
     return (
         <footer className="bg-foreground text-background">
             <div className="max-w-7xl mx-auto px-6 py-24">
-                {/* Newsletter / CTA Section at the Top */}
-                {/* <div className="relative mb-24 rounded-3xl overflow-hidden border border-background/10 bg-background/5 p-8 md:p-16 text-center backdrop-blur-sm">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-3xl -translate-y-1/2 translate-x-1/2" />
-                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-background/5 blur-3xl translate-y-1/2 -translate-x-1/2" />
-
-                    <div className="relative z-10">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-primary/40 rotate-12"
-                        >
-                            <Mail className="w-8 h-8 text-white" />
-                        </motion.div>
-
-                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
-                            Don&apos;t Miss the <span className="text-primary">Next Adventure</span>
-                        </h2>
-                        <p className="text-lg text-background/70 mb-10 max-w-xl mx-auto">
-                            Join our community of explorers. Subscribe to get the latest itineraries and secret travel tips.
-                        </p>
-
-                        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                            <input
-                                type="email"
-                                required
-                                placeholder="Your travel email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                className="flex-1 h-12 px-6 rounded-full bg-background/10 border border-background/20 text-background placeholder:text-background/40 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                            />
-                            <button
-                                disabled={status !== "idle"}
-                                className="h-12 px-8 rounded-full bg-primary text-white font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 disabled:opacity-50 transition-all shadow-lg shadow-primary/20 active:scale-95 whitespace-nowrap"
-                            >
-                                {status === "loading" ? (
-                                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                                ) : status === "success" ? (
-                                    "Subscribed!"
-                                ) : (
-                                    <>
-                                        Join Now
-                                        <Send className="w-4 h-4" />
-                                    </>
-                                )}
-                            </button>
-                        </form>
-                    </div>
-                </div> */}
-
-                {/* Newsletter CTA */}
-                <div className="mb-16 pb-16 border-b border-background/10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-                    <div>
-                        <h3 className="text-white font-bold text-lg mb-1">Stay in the loop</h3>
-                        <p className="text-background/50 text-sm">Travel tips, guides & hidden gems — straight to your inbox.</p>
-                    </div>
-                    <form onSubmit={handleSubmit} className="flex gap-2 w-full sm:w-auto">
-                        <input
-                            type="email"
-                            required
-                            placeholder="your@email.com"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            disabled={status !== "idle"}
-                            className="flex-1 sm:w-64 h-10 px-4 rounded-full bg-background/10 border border-background/15 text-background placeholder:text-background/35 text-sm focus:outline-none focus:border-primary/60 transition-colors disabled:opacity-50"
-                        />
-                        <button
-                            type="submit"
-                            disabled={status !== "idle"}
-                            className="h-10 px-5 rounded-full bg-primary text-white text-sm font-semibold flex items-center gap-2 hover:bg-primary/90 disabled:opacity-60 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
-                        >
-                            {status === "loading" ? (
-                                <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
-                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
-                                </svg>
-                            ) : status === "success" ? (
-                                "Subscribed!"
-                            ) : (
-                                <>Subscribe <Send className="w-3.5 h-3.5" /></>
-                            )}
-                        </button>
-                    </form>
-                </div>
-
                 {/* Main Footer Links */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 ">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
                     <div className="lg:col-span-2">
                         <Link href="/" className="inline-block mb-6 transition-transform hover:scale-105">
                             <div className="relative w-32 h-16 overflow-hidden">
@@ -164,7 +50,7 @@ export function Footer() {
                                     src="/assets/logo.png"
                                     alt="Udream Logo"
                                     fill
-                                    className="object-contain "
+                                    className="object-contain"
                                 />
                             </div>
                         </Link>
