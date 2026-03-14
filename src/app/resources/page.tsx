@@ -89,6 +89,32 @@ export default function ResourcesPage() {
                         </div>
                     </div>
                 </Link>
+
+                <Link href="/resources/guide" className="group block">
+                    <div className="relative h-full overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all hover:border-primary/40 hover:shadow-md">
+                        <div className="flex flex-col h-full gap-4 relative z-10">
+                            <h2 className="text-2xl group-hover:text-primary transition-colors">Travel Guides</h2>
+                            <p className="text-muted-foreground flex-grow">Curated destination guides with budget ranges, best times to visit, and local tips.</p>
+                            <div className="flex items-center gap-2 text-primary font-medium mt-4">
+                                <span>Browse Guides</span>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+
+                <Link href="/resources/travel-assessment" className="group block">
+                    <div className="relative h-full overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all hover:border-primary/40 hover:shadow-md">
+                        <div className="flex flex-col h-full gap-4 relative z-10">
+                            <h2 className="text-2xl group-hover:text-primary transition-colors">Traveler Assessment</h2>
+                            <p className="text-muted-foreground flex-grow">15 quick questions to find out how ready you are for your first trip and get a personalised checklist.</p>
+                            <div className="flex items-center gap-2 text-primary font-medium mt-4">
+                                <span>Take Assessment</span>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </div>
+                        </div>
+                    </div>
+                </Link>
             </div>
         </div>
     );
