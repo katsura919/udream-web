@@ -25,7 +25,8 @@ export interface PublicBlogsResponse {
 
 export interface PublicBlogsParams {
   businessId?: string;
-  category?: string;
+  search?: string;
+  status?: string;
   page?: number;
   limit?: number;
 }
@@ -34,10 +35,11 @@ export interface PublicBlogsParams {
 export const getPublicBlogs = async (
   params?: PublicBlogsParams,
 ): Promise<PublicBlogsResponse> => {
-  const response = await api.get<PublicBlogsResponse>("/blogs/public", {
+  const businessId = params?.businessId || process.env.NEXT_PUBLIC_BUSINESS_ID;
+  const response = await api.get<PublicBlogsResponse>(`/businesses/${businessId}/blogs`, {
     params: {
-      businessId: params?.businessId || undefined,
-      category: params?.category || undefined,
+      search: params?.search || undefined,
+      status: params?.status || undefined,
       page: params?.page?.toString() || "1",
       limit: params?.limit?.toString() || "10",
     },
