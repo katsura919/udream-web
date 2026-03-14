@@ -45,7 +45,7 @@ export const visitedPlaces: VisitedPlace[] = [
     dateVisited: "2023",
     coordinates: [4.8903, 114.9401],
     thumbnail:
-      "https://images.unsplash.com/photo-1503254332200-a5170d473456?w=400&q=80",
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773493881/Brunei-1_fqael2.jpg",
     blogLink: "/blog/brunei",
     description: "Golden-domed mosques and the water village of Kampong Ayer.",
   },
@@ -57,7 +57,7 @@ export const visitedPlaces: VisitedPlace[] = [
     dateVisited: "2023",
     coordinates: [13.7563, 100.5018],
     thumbnail:
-      "https://images.unsplash.com/photo-1508009603885-50cf7c579367?w=400&q=80",
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773493884/couple-exploring-khao-sok-in-thailand-6_ujfjne.jpg",
     blogLink: "/blog/thailand",
     description: "Ornate shrines and a bustling street life.",
   },
@@ -69,7 +69,7 @@ export const visitedPlaces: VisitedPlace[] = [
     dateVisited: "2023",
     coordinates: [13.3671, 103.8448],
     thumbnail:
-      "https://images.unsplash.com/photo-1500049222538-2ef428420ef2?w=400&q=80",
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773493939/cambodia-acr-2025-16-9-1024x576_fwqyxg.jpg",
     blogLink: "/blog/cambodia",
     description: "Gateway to the majestic Angkor Wat temple complex.",
   },
@@ -239,7 +239,7 @@ export const visitedPlaces: VisitedPlace[] = [
     dateVisited: "2023",
     coordinates: [5.9804, 116.0735],
     thumbnail:
-      "https://images.unsplash.com/photo-1543888514-94f4a3861218?q=80&w=2000&auto=format&fit=crop",
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773494061/caption_aamagz.jpg",
     blogLink: "/blog/kota-kinabalu",
     description:
       "Perfect for beach lovers and nature enthusiasts with island hopping and beautiful sunsets.",
@@ -252,7 +252,7 @@ export const visitedPlaces: VisitedPlace[] = [
     dateVisited: "2023",
     coordinates: [7.8804, 98.3923],
     thumbnail:
-      "https://images.unsplash.com/photo-1589394815804-964ce0fa58d4?q=80&w=2000&auto=format&fit=crop",
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773494135/phuket-thailand-karst-formation-phuket0327-92bd3ce9266148dba74cba5e36c711e2_rh0qv5.jpg",
     blogLink: "/blog/phuket",
     description:
       "Thailand's largest island, known for stunning beaches and vibrant nightlife.",
@@ -400,7 +400,7 @@ export const visitedPlaces: VisitedPlace[] = [
     dateVisited: "2022",
     coordinates: [44.7866, 20.4489],
     thumbnail:
-      "https://images.unsplash.com/photo-1552227465-38cc5ce44955?w=400&q=80",
+      "https://res.cloudinary.com/dg1i3ew9w/image/upload/v1773466830/DJI_20251227151826_0619_D_eimjwd.jpg",
     blogLink: "/blog/serbia",
     description: "The confluence of the Sava and Danube rivers.",
   },

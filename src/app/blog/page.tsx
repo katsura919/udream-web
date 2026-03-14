@@ -169,7 +169,7 @@ export default function BlogPage() {
                     </h1>
                     <p className="text-lg text-muted-foreground max-w-xl mx-auto">
                         {visitedPlaces.length} destinations across{" "}
-                        {new Set(visitedPlaces.map((p) => p.country)).size} countries — and counting.
+                        {new Set(visitedPlaces.map((p) => p.country)).size} countries and counting.
                     </p>
                 </div>
             </div>

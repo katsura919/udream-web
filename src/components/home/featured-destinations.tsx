@@ -93,7 +93,7 @@ export function FeaturedDestinations() {
             </p>
           </div>
           <Link
-            href="/destinations"
+            href="/map"
             className="group inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors"
           >
             Explore all destinations

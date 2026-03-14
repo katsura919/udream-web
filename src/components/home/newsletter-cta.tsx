@@ -54,7 +54,7 @@ export function NewsletterCTA() {
               <em className="text-primary not-italic">next adventure</em>
             </h2>
             <p className="text-background/55 text-base leading-relaxed mb-8 max-w-md">
-              Real travel stories, honest guides, and nomad insights delivered straight to your inbox — no fluff, no spam.
+              Real travel stories, honest guides, and nomad insights delivered straight to your inbox, no fluff, no spam.
             </p>
 
             {/* Perks */}
