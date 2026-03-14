@@ -5,7 +5,7 @@ export interface TravelTool {
     category: "flights" | "accommodation" | "transport" | "connectivity" | "insurance" | "planning";
     description: string;
     url: string;
-    icon: string; // emoji
+    icon: string; // lucide icon key
     isFavorite?: boolean;
 }
 
@@ -42,7 +42,7 @@ export const travelTools: TravelTool[] = [
         category: "flights",
         description: "Best for tracking price trends and setting fare alerts over time.",
         url: "https://flights.google.com",
-        icon: "✈️",
+        icon: "plane",
         isFavorite: true,
     },
     {
@@ -50,14 +50,14 @@ export const travelTools: TravelTool[] = [
         category: "flights",
         description: "Compare prices across hundreds of airlines. The 'Everywhere' feature is great for inspiration.",
         url: "https://www.skyscanner.net",
-        icon: "🔍",
+        icon: "plane-takeoff",
     },
     {
         name: "Kiwi.com",
         category: "flights",
         description: "Excellent for building multi-city itineraries with virtual interlining.",
         url: "https://www.kiwi.com",
-        icon: "🥝",
+        icon: "route",
     },
 
     // Accommodation
@@ -66,7 +66,7 @@ export const travelTools: TravelTool[] = [
         category: "accommodation",
         description: "Largest inventory, free cancellation on most properties, and no hidden fees.",
         url: "https://www.booking.com",
-        icon: "🏨",
+        icon: "hotel",
         isFavorite: true,
     },
     {
@@ -74,14 +74,14 @@ export const travelTools: TravelTool[] = [
         category: "accommodation",
         description: "Go-to platform for budget travelers and hostel hunters worldwide.",
         url: "https://www.hostelworld.com",
-        icon: "🎒",
+        icon: "luggage",
     },
     {
         name: "Airbnb",
         category: "accommodation",
         description: "Best for long stays, unique homes, and traveling with a group.",
         url: "https://www.airbnb.com",
-        icon: "🏠",
+        icon: "house",
     },
 
     // Transport
@@ -90,7 +90,7 @@ export const travelTools: TravelTool[] = [
         category: "transport",
         description: "Shows every transport option (train, bus, ferry, flight) between any two places.",
         url: "https://www.rome2rio.com",
-        icon: "🗺️",
+        icon: "map",
         isFavorite: true,
     },
     {
@@ -98,14 +98,14 @@ export const travelTools: TravelTool[] = [
         category: "transport",
         description: "Book trains, buses, and ferries across Europe in one place.",
         url: "https://www.omio.com",
-        icon: "🚆",
+        icon: "train",
     },
     {
         name: "Grab",
         category: "transport",
         description: "Southeast Asia's essential ride-hailing and delivery super-app.",
         url: "https://www.grab.com",
-        icon: "🚗",
+        icon: "car",
     },
 
     // Connectivity
@@ -114,7 +114,7 @@ export const travelTools: TravelTool[] = [
         category: "connectivity",
         description: "Buy affordable eSIMs for 190+ countries before you even board the plane.",
         url: "https://www.airalo.com",
-        icon: "📱",
+        icon: "smartphone",
         isFavorite: true,
     },
     {
@@ -122,7 +122,7 @@ export const travelTools: TravelTool[] = [
         category: "connectivity",
         description: "Send money abroad and spend with a multi-currency debit card at real exchange rates.",
         url: "https://www.wise.com",
-        icon: "💳",
+        icon: "credit-card",
     },
 
     // Insurance
@@ -131,7 +131,7 @@ export const travelTools: TravelTool[] = [
         category: "insurance",
         description: "Affordable travel insurance built for nomads and long-term travelers.",
         url: "https://safetywing.com",
-        icon: "🛡️",
+        icon: "shield-check",
         isFavorite: true,
     },
     {
@@ -139,7 +139,7 @@ export const travelTools: TravelTool[] = [
         category: "insurance",
         description: "Covers adventure activities — great if you plan to hike, dive, or ski.",
         url: "https://www.worldnomads.com",
-        icon: "🏔️",
+        icon: "mountain",
     },
 
     // Planning
@@ -148,21 +148,21 @@ export const travelTools: TravelTool[] = [
         category: "planning",
         description: "Build your own trip planner database with itineraries, packing lists, and budgets.",
         url: "https://www.notion.so",
-        icon: "📓",
+        icon: "file-text",
     },
     {
         name: "TripIt",
         category: "planning",
         description: "Automatically parses your booking confirmation emails into a master itinerary.",
         url: "https://www.tripit.com",
-        icon: "📋",
+        icon: "list-checks",
     },
     {
         name: "XE Currency",
         category: "planning",
         description: "Real-time exchange rates and a universal currency converter.",
         url: "https://www.xe.com",
-        icon: "💱",
+        icon: "arrow-left-right",
         isFavorite: true,
     },
 ];
@@ -479,10 +479,10 @@ export const destinationCosts: DestinationCost[] = [
 ];
 
 export const toolCategories = [
-    { id: "flights", label: "Flights", icon: "✈️" },
-    { id: "accommodation", label: "Stay", icon: "🏨" },
-    { id: "transport", label: "Transport", icon: "🚆" },
-    { id: "connectivity", label: "Money & SIM", icon: "📱" },
-    { id: "insurance", label: "Insurance", icon: "🛡️" },
-    { id: "planning", label: "Planning", icon: "📋" },
+    { id: "flights",       label: "Flights",     icon: "plane"       },
+    { id: "accommodation", label: "Stay",         icon: "hotel"       },
+    { id: "transport",     label: "Transport",    icon: "train"       },
+    { id: "connectivity",  label: "Money & SIM",  icon: "smartphone"  },
+    { id: "insurance",     label: "Insurance",    icon: "shield-check"},
+    { id: "planning",      label: "Planning",     icon: "calendar"    },
 ] as const;
