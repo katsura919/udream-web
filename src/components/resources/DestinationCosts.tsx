@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
     ChevronDown, DollarSign, Plane, Info, Clock,
     Search, ArrowLeft, ArrowUpDown, Bed, Utensils, Bus, MapPin, Check,
-    Calculator, RefreshCw,
+    Calculator, RefreshCw, Home,
 } from "lucide-react";
 import { destinationCosts, type DestinationCost } from "@/data/resources";
 import Link from "next/link";
@@ -16,25 +16,76 @@ import {
     DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 
-// ── Budget Planner ─────────────────────────────────────────────────────────────
+// ── Currencies ─────────────────────────────────────────────────────────────────
 
 const CURRENCIES: { code: string; label: string; symbol: string; rate: number }[] = [
-    { code: "USD", label: "US Dollar",           symbol: "$",    rate: 1      },
-    { code: "MYR", label: "Malaysian Ringgit",   symbol: "RM",   rate: 4.70   },
-    { code: "EUR", label: "Euro",                symbol: "€",    rate: 0.92   },
-    { code: "GBP", label: "British Pound",       symbol: "£",    rate: 0.79   },
-    { code: "SGD", label: "Singapore Dollar",    symbol: "S$",   rate: 1.34   },
-    { code: "AUD", label: "Australian Dollar",   symbol: "A$",   rate: 1.52   },
-    { code: "CAD", label: "Canadian Dollar",     symbol: "C$",   rate: 1.36   },
-    { code: "JPY", label: "Japanese Yen",        symbol: "¥",    rate: 149.5  },
-    { code: "KRW", label: "South Korean Won",    symbol: "₩",    rate: 1330   },
-    { code: "THB", label: "Thai Baht",           symbol: "฿",    rate: 35.5   },
-    { code: "IDR", label: "Indonesian Rupiah",   symbol: "Rp",   rate: 15500  },
-    { code: "PHP", label: "Philippine Peso",     symbol: "₱",    rate: 56.5   },
-    { code: "INR", label: "Indian Rupee",        symbol: "₹",    rate: 83.5   },
-    { code: "AED", label: "UAE Dirham",          symbol: "AED",  rate: 3.67   },
-    { code: "CNY", label: "Chinese Yuan",        symbol: "¥",    rate: 7.20   },
+    { code: "USD", label: "US Dollar",            symbol: "$",    rate: 1       },
+    { code: "MYR", label: "Malaysian Ringgit",    symbol: "RM",   rate: 4.70    },
+    { code: "EUR", label: "Euro",                 symbol: "€",    rate: 0.92    },
+    { code: "GBP", label: "British Pound",        symbol: "£",    rate: 0.79    },
+    { code: "SGD", label: "Singapore Dollar",     symbol: "S$",   rate: 1.34    },
+    { code: "AUD", label: "Australian Dollar",    symbol: "A$",   rate: 1.52    },
+    { code: "CAD", label: "Canadian Dollar",      symbol: "C$",   rate: 1.36    },
+    { code: "JPY", label: "Japanese Yen",         symbol: "¥",    rate: 149.5   },
+    { code: "KRW", label: "South Korean Won",     symbol: "₩",    rate: 1330    },
+    { code: "THB", label: "Thai Baht",            symbol: "฿",    rate: 35.5    },
+    { code: "IDR", label: "Indonesian Rupiah",    symbol: "Rp",   rate: 15500   },
+    { code: "PHP", label: "Philippine Peso",      symbol: "₱",    rate: 56.5    },
+    { code: "INR", label: "Indian Rupee",         symbol: "₹",    rate: 83.5    },
+    { code: "AED", label: "UAE Dirham",           symbol: "AED",  rate: 3.67    },
+    { code: "CNY", label: "Chinese Yuan",         symbol: "¥",    rate: 7.20    },
+    { code: "VND", label: "Vietnamese Dong",      symbol: "₫",    rate: 25000   },
+    { code: "HKD", label: "Hong Kong Dollar",     symbol: "HK$",  rate: 7.83    },
+    { code: "SAR", label: "Saudi Riyal",          symbol: "SAR",  rate: 3.75    },
+    { code: "QAR", label: "Qatari Riyal",         symbol: "QAR",  rate: 3.64    },
+    { code: "TWD", label: "New Taiwan Dollar",    symbol: "NT$",  rate: 31      },
+    { code: "BHD", label: "Bahraini Dinar",       symbol: "BHD",  rate: 0.376   },
+    { code: "KWD", label: "Kuwaiti Dinar",        symbol: "KWD",  rate: 0.307   },
 ];
+
+// ── Home cities ────────────────────────────────────────────────────────────────
+// Maps origin city → currency code + estimated daily living cost (USD, mid-range)
+
+const HOME_CITIES: { city: string; country: string; currency: string; avgDailyUSD: number }[] = [
+    // Philippines
+    { city: "Philippines",      country: "Philippines",   currency: "PHP", avgDailyUSD: 32  },
+    // Malaysia
+    { city: "Kuala Lumpur",     country: "Malaysia",      currency: "MYR", avgDailyUSD: 35  },
+    { city: "Penang",           country: "Malaysia",      currency: "MYR", avgDailyUSD: 28  },
+    { city: "Johor Bahru",      country: "Malaysia",      currency: "MYR", avgDailyUSD: 25  },
+    // Southeast Asia
+    { city: "Singapore",        country: "Singapore",     currency: "SGD", avgDailyUSD: 120 },
+    { city: "Jakarta",          country: "Indonesia",     currency: "IDR", avgDailyUSD: 30  },
+    { city: "Bangkok",          country: "Thailand",      currency: "THB", avgDailyUSD: 45  },
+    { city: "Ho Chi Minh City", country: "Vietnam",       currency: "VND", avgDailyUSD: 35  },
+    // East Asia
+    { city: "Tokyo",            country: "Japan",         currency: "JPY", avgDailyUSD: 100 },
+    { city: "Seoul",            country: "South Korea",   currency: "KRW", avgDailyUSD: 80  },
+    { city: "Taipei",           country: "Taiwan",        currency: "TWD", avgDailyUSD: 60  },
+    { city: "Hong Kong",        country: "Hong Kong",     currency: "HKD", avgDailyUSD: 110 },
+    { city: "Beijing",          country: "China",         currency: "CNY", avgDailyUSD: 60  },
+    // South Asia
+    { city: "Mumbai",           country: "India",         currency: "INR", avgDailyUSD: 30  },
+    // Middle East (popular OFW destinations)
+    { city: "Dubai",            country: "UAE",           currency: "AED", avgDailyUSD: 100 },
+    { city: "Abu Dhabi",        country: "UAE",           currency: "AED", avgDailyUSD: 95  },
+    { city: "Riyadh",           country: "Saudi Arabia",  currency: "SAR", avgDailyUSD: 80  },
+    { city: "Jeddah",           country: "Saudi Arabia",  currency: "SAR", avgDailyUSD: 75  },
+    { city: "Doha",             country: "Qatar",         currency: "QAR", avgDailyUSD: 90  },
+    { city: "Kuwait City",      country: "Kuwait",        currency: "KWD", avgDailyUSD: 85  },
+    { city: "Manama",           country: "Bahrain",       currency: "BHD", avgDailyUSD: 70  },
+    // Oceania
+    { city: "Sydney",           country: "Australia",     currency: "AUD", avgDailyUSD: 120 },
+    // Europe
+    { city: "London",           country: "UK",            currency: "GBP", avgDailyUSD: 130 },
+    { city: "Paris",            country: "France",        currency: "EUR", avgDailyUSD: 120 },
+    // Americas
+    { city: "New York",         country: "USA",           currency: "USD", avgDailyUSD: 150 },
+    { city: "Los Angeles",      country: "USA",           currency: "USD", avgDailyUSD: 130 },
+    { city: "Toronto",          country: "Canada",        currency: "CAD", avgDailyUSD: 100 },
+];
+
+// ── Budget Planner ─────────────────────────────────────────────────────────────
 
 const TIER_BREAKDOWN = {
     budget:  { accom: 0.35, food: 0.35, transport: 0.30 },
@@ -44,8 +95,9 @@ const TIER_BREAKDOWN = {
 
 function formatAmount(value: number, symbol: string, rate: number): string {
     const converted = value * rate;
-    if (rate >= 100) return `${symbol}${Math.round(converted).toLocaleString()}`;
-    if (rate >= 10)  return `${symbol}${converted.toFixed(0)}`;
+    if (rate >= 1000) return `${symbol}${Math.round(converted).toLocaleString()}`;
+    if (rate >= 100)  return `${symbol}${Math.round(converted).toLocaleString()}`;
+    if (rate >= 10)   return `${symbol}${converted.toFixed(0)}`;
     return `${symbol}${converted.toFixed(2)}`;
 }
 
@@ -53,13 +105,14 @@ function BudgetPlanner() {
     const [destId,   setDestId]   = useState<number | "">("");
     const [days,     setDays]     = useState(7);
     const [tier,     setTier]     = useState<"budget" | "mid" | "luxury">("mid");
-    const [currency, setCurrency] = useState("USD");
+    const [homeCity, setHomeCity] = useState("Kuala Lumpur");
     const [result,   setResult]   = useState<null | {
         dailyUSD: number; totalUSD: number; accomUSD: number; foodUSD: number; transportUSD: number;
     }>(null);
 
     const selectedDest = destinationCosts.find((d) => d.placeId === destId);
-    const selectedCur  = CURRENCIES.find((c) => c.code === currency) ?? CURRENCIES[0];
+    const selectedHome = HOME_CITIES.find(h => h.city === homeCity) ?? HOME_CITIES[0];
+    const selectedCur  = CURRENCIES.find(c => c.code === selectedHome.currency) ?? CURRENCIES[0];
 
     function calculate() {
         if (!selectedDest || days < 1) return;
@@ -72,6 +125,16 @@ function BudgetPlanner() {
         setResult({ dailyUSD, totalUSD, accomUSD, foodUSD, transportUSD });
     }
 
+    // Cost savings vs staying at home for the same number of days
+    const homeTotalUSD = selectedHome.avgDailyUSD * days;
+    const savingsPct   = result && homeTotalUSD > 0
+        ? Math.round(((homeTotalUSD - result.totalUSD) / homeTotalUSD) * 100)
+        : null;
+
+    // Show flight estimate when origin is Malaysian city
+    const isMalaysianOrigin = selectedHome.country === "Malaysia";
+    const showFlight = isMalaysianOrigin && !!selectedDest?.flightFromKL;
+
     return (
         <div className="rounded-2xl border border-border bg-card p-6 mb-8">
             <div className="flex items-center gap-3 mb-6">
@@ -80,12 +143,45 @@ function BudgetPlanner() {
                 </div>
                 <div>
                     <h2 className="font-semibold text-foreground text-base">Budget Planner</h2>
-                    <p className="text-xs text-muted-foreground">Estimate your total trip cost with currency conversion</p>
+                    <p className="text-xs text-muted-foreground">Estimate your trip cost — costs shown in your home currency</p>
                 </div>
             </div>
 
             {/* Controls */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+
+                {/* Where are you from */}
+                <div>
+                    <label className="block text-xs font-medium text-muted-foreground mb-1.5">
+                        <span className="inline-flex items-center gap-1"><Home className="w-3 h-3" /> Where are you from?</span>
+                    </label>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger className="w-full flex items-center justify-between h-10 pl-3 pr-3 rounded-xl border border-border bg-card text-sm hover:bg-muted/60 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/30">
+                            <span className="text-foreground truncate">
+                                {selectedHome.city !== selectedHome.country
+                                    ? `${selectedHome.city}, ${selectedHome.country}`
+                                    : selectedHome.city}
+                            </span>
+                            <ChevronDown className="w-3.5 h-3.5 text-muted-foreground shrink-0 ml-2" />
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="start" data-lenis-prevent className="max-h-60 overflow-y-auto w-[--radix-dropdown-menu-trigger-width]">
+                            {HOME_CITIES.map((h) => (
+                                <DropdownMenuItem
+                                    key={h.city}
+                                    onClick={() => { setHomeCity(h.city); setResult(null); }}
+                                    className="flex items-center justify-between gap-4"
+                                >
+                                    <div className="flex flex-col">
+                                        <span>{h.city}</span>
+                                        <span className="text-[10px] text-muted-foreground">{h.city !== h.country ? `${h.country} · ` : ""}{h.currency}</span>
+                                    </div>
+                                    {homeCity === h.city && <Check className="w-3.5 h-3.5 text-primary shrink-0" />}
+                                </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+                </div>
+
                 {/* Destination */}
                 <div>
                     <label className="block text-xs font-medium text-muted-foreground mb-1.5">Destination</label>
@@ -96,7 +192,7 @@ function BudgetPlanner() {
                             </span>
                             <ChevronDown className="w-3.5 h-3.5 text-muted-foreground shrink-0 ml-2" />
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="start" className="max-h-60 overflow-y-auto w-[--radix-dropdown-menu-trigger-width]">
+                        <DropdownMenuContent align="start" data-lenis-prevent className="max-h-60 overflow-y-auto w-[--radix-dropdown-menu-trigger-width]">
                             {destinationCosts.map((d) => (
                                 <DropdownMenuItem
                                     key={d.placeId}
@@ -124,7 +220,7 @@ function BudgetPlanner() {
                     />
                 </div>
 
-                {/* Budget tier */}
+                {/* Travel style */}
                 <div>
                     <label className="block text-xs font-medium text-muted-foreground mb-1.5">Travel Style</label>
                     <div className="flex h-10 rounded-xl border border-border overflow-hidden">
@@ -144,29 +240,6 @@ function BudgetPlanner() {
                             </button>
                         ))}
                     </div>
-                </div>
-
-                {/* Currency */}
-                <div>
-                    <label className="block text-xs font-medium text-muted-foreground mb-1.5">Your Currency</label>
-                    <DropdownMenu>
-                        <DropdownMenuTrigger className="w-full flex items-center justify-between h-10 pl-3 pr-3 rounded-xl border border-border bg-card text-sm hover:bg-muted/60 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/30">
-                            <span className="text-foreground">{selectedCur.code} — {selectedCur.label}</span>
-                            <ChevronDown className="w-3.5 h-3.5 text-muted-foreground shrink-0 ml-2" />
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="start" className="max-h-60 overflow-y-auto w-[--radix-dropdown-menu-trigger-width]">
-                            {CURRENCIES.map((c) => (
-                                <DropdownMenuItem
-                                    key={c.code}
-                                    onClick={() => { setCurrency(c.code); setResult(null); }}
-                                    className="flex items-center justify-between gap-4"
-                                >
-                                    <span>{c.code} — {c.label}</span>
-                                    {currency === c.code && <Check className="w-3.5 h-3.5 text-primary shrink-0" />}
-                                </DropdownMenuItem>
-                            ))}
-                        </DropdownMenuContent>
-                    </DropdownMenu>
                 </div>
             </div>
 
@@ -189,8 +262,9 @@ function BudgetPlanner() {
                         className="overflow-hidden"
                     >
                         <div className="rounded-xl bg-muted/40 border border-border p-5">
+
                             {/* Total */}
-                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-5 pb-5 border-b border-border">
+                            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-5 pb-5 border-b border-border">
                                 <div>
                                     <p className="text-xs text-muted-foreground mb-1">
                                         {days}-day {tier} trip to {selectedDest.name}
@@ -205,24 +279,40 @@ function BudgetPlanner() {
                                         </p>
                                     )}
                                 </div>
-                                <div className="flex items-center gap-1.5 text-sm">
-                                    <span className="text-muted-foreground">Per day:</span>
-                                    <span className="font-semibold text-foreground">
-                                        {formatAmount(result.dailyUSD, selectedCur.symbol, selectedCur.rate)}
-                                    </span>
-                                    <span className="text-muted-foreground">{selectedCur.code}</span>
+
+                                <div className="flex flex-col items-start sm:items-end gap-2">
+                                    <div className="flex items-center gap-1.5 text-sm">
+                                        <span className="text-muted-foreground">Per day:</span>
+                                        <span className="font-semibold text-foreground">
+                                            {formatAmount(result.dailyUSD, selectedCur.symbol, selectedCur.rate)}
+                                        </span>
+                                        <span className="text-muted-foreground">{selectedCur.code}</span>
+                                    </div>
+
+                                    {/* Savings vs home */}
+                                    {savingsPct !== null && savingsPct !== 0 && (
+                                        <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${
+                                            savingsPct > 0
+                                                ? "bg-emerald-100 text-emerald-700"
+                                                : "bg-rose-100 text-rose-700"
+                                        }`}>
+                                            {savingsPct > 0
+                                                ? `${savingsPct}% cheaper than staying in ${selectedHome.city}`
+                                                : `${Math.abs(savingsPct)}% pricier than staying in ${selectedHome.city}`}
+                                        </span>
+                                    )}
                                 </div>
                             </div>
 
-                            {/* Breakdown */}
+                            {/* Daily breakdown */}
                             <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
                                 Daily Cost Breakdown (estimated)
                             </p>
                             <div className="grid grid-cols-3 gap-3">
                                 {[
-                                    { label: "Accommodation", icon: <Bed className="w-3.5 h-3.5" />, amountUSD: result.accomUSD, color: "text-blue-600" },
-                                    { label: "Food & Drinks", icon: <Utensils className="w-3.5 h-3.5" />, amountUSD: result.foodUSD, color: "text-emerald-600" },
-                                    { label: "Transport & Activities", icon: <Bus className="w-3.5 h-3.5" />, amountUSD: result.transportUSD, color: "text-violet-600" },
+                                    { label: "Accommodation",          icon: <Bed      className="w-3.5 h-3.5" />, amountUSD: result.accomUSD,     color: "text-blue-600"   },
+                                    { label: "Food & Drinks",          icon: <Utensils className="w-3.5 h-3.5" />, amountUSD: result.foodUSD,      color: "text-emerald-600" },
+                                    { label: "Transport & Activities", icon: <Bus      className="w-3.5 h-3.5" />, amountUSD: result.transportUSD, color: "text-violet-600" },
                                 ].map(({ label, icon, amountUSD, color }) => (
                                     <div key={label} className="bg-card rounded-xl p-3 border border-border">
                                         <div className={`flex items-center gap-1.5 mb-2 ${color}`}>
@@ -236,6 +326,18 @@ function BudgetPlanner() {
                                     </div>
                                 ))}
                             </div>
+
+                            {/* Flight estimate (Malaysian origin only) */}
+                            {showFlight && (
+                                <div className="mt-4 flex items-center gap-2.5 rounded-xl bg-card border border-border px-4 py-3">
+                                    <Plane className="w-3.5 h-3.5 text-primary shrink-0" />
+                                    <p className="text-xs text-foreground">
+                                        Est. return flight from <span className="font-semibold">{selectedHome.city}</span>:{" "}
+                                        <span className="font-semibold text-primary">{selectedDest.flightFromKL}</span>
+                                        <span className="text-muted-foreground ml-1">(based on budget airlines)</span>
+                                    </p>
+                                </div>
+                            )}
 
                             <p className="flex items-center gap-1.5 mt-4 text-[10px] text-muted-foreground">
                                 <RefreshCw className="w-3 h-3" />
@@ -260,12 +362,12 @@ function getTier(mid: number) {
 
 function getVisaBadge(forMalaysians: string, fee: string) {
     if (forMalaysians === "Home country")
-        return { label: "Home Country",   badgeCls: "bg-blue-100 text-blue-700",    textCls: "text-blue-600"    };
+        return { label: "Home Country",    badgeCls: "bg-blue-100 text-blue-700",       textCls: "text-blue-600"    };
     if (fee === "Free" || fee.includes("Free"))
-        return { label: "Visa-free",      badgeCls: "bg-emerald-100 text-emerald-700", textCls: "text-emerald-600" };
+        return { label: "Visa-free",       badgeCls: "bg-emerald-100 text-emerald-700", textCls: "text-emerald-600" };
     if (forMalaysians.toLowerCase().includes("on arrival"))
-        return { label: "Visa on Arrival", badgeCls: "bg-amber-100 text-amber-700",  textCls: "text-amber-600"   };
-    return { label: "Visa Required",   badgeCls: "bg-red-100 text-red-700",      textCls: "text-red-600"     };
+        return { label: "Visa on Arrival", badgeCls: "bg-amber-100 text-amber-700",     textCls: "text-amber-600"   };
+    return { label: "Visa Required",   badgeCls: "bg-red-100 text-red-700",         textCls: "text-red-600"     };
 }
 
 // ── Sub-components ─────────────────────────────────────────────────────────────
@@ -376,7 +478,7 @@ function CostCard({ dest }: { dest: DestinationCost }) {
                                 </div>
                             </div>
 
-                            {/* Visa + Best time */}
+                            {/* Visa + Best time + Flight */}
                             <div className="grid sm:grid-cols-2 gap-3">
                                 <div className="flex items-start gap-3 bg-muted/50 rounded-xl p-3.5">
                                     <Plane className="w-4 h-4 text-muted-foreground mt-0.5 shrink-0" />
@@ -391,6 +493,11 @@ function CostCard({ dest }: { dest: DestinationCost }) {
                                     <div>
                                         <p className="text-xs text-muted-foreground mb-0.5">Best Time to Visit</p>
                                         <p className="text-sm font-semibold text-foreground">{dest.bestTimeToVisit}</p>
+                                        {dest.flightFromKL && (
+                                            <p className="text-xs text-muted-foreground mt-1">
+                                                Flight from KL: <span className="font-medium text-foreground">{dest.flightFromKL}</span>
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
                             </div>
