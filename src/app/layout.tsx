@@ -5,6 +5,8 @@ import Navbar from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { NewsletterCTA } from "@/components/home/newsletter-cta";
 import { LenisProvider } from "@/components/providers/LenisProvider";
+import {  GoogleTagManager } from "@next/third-parties/google";
+
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair",
@@ -73,7 +75,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfairDisplay.variable} ${lato.variable} ${dancingScript.variable} antialiased`}>
+      <GoogleTagManager gtmId="G-8D3H8C0J53" />
+      <body
+        className={`${playfairDisplay.variable} ${lato.variable} ${dancingScript.variable} antialiased`}
+      >
         <LenisProvider>
           <Navbar />
           <main>{children}</main>
