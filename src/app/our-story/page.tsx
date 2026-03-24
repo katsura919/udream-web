@@ -140,7 +140,7 @@ export default function AboutPage() {
     }));
 
     return (
-        <div className="min-h-screen bg-white selection:bg-primary/20">
+        <div className="min-h-screen bg-white selection:bg-primary/20 overflow-x-hidden">
 
             {/* ── Hero / The Story Begins ─────────────────────────────────── */}
             <section className="relative pt-20 pb-8 px-4 overflow-hidden">
@@ -150,8 +150,8 @@ export default function AboutPage() {
                 />
 
                 <div className="max-w-7xl mx-auto relative z-10 mt-4 mb-4 px-4 md:px-8">
-                    <div className="flex justify-center mb-10 w-full mt-20">
-                        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-5">
+                    <div className="flex justify-center mb-8 w-full mt-12 md:mt-20">
+                        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs md:text-sm font-medium">
                             <BookOpen className="w-3.5 h-3.5" />
                             Our Story
                         </span>
@@ -160,7 +160,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                         {/* Left: Image Feature */}
                         <div className="relative order-2 lg:order-1">
-                            <div className="group relative w-full aspect-video md:aspect-[4/3] lg:aspect-[5/4] xl:aspect-[4/3] rounded-[2.5rem] overflow-hidden ring-1 ring-border shadow-2xl bg-white mx-auto">
+                            <div className="group relative w-full aspect-video md:aspect-[4/3] lg:aspect-[5/4] xl:aspect-[4/3] rounded-3xl md:rounded-[2.5rem] overflow-hidden ring-1 ring-border shadow-2xl bg-white mx-auto">
                                 {/* Realistic photo behind */}
                                 <Image
                                     src="/assets/our-story.jpg"
@@ -183,13 +183,13 @@ export default function AboutPage() {
                         {/* Right: Text Feature */}
                         <div className="order-1 lg:order-2 text-center flex flex-col justify-center items-center">
                             <div className="mb-6">
-                                <h1 className="font-display text-4xl md:text-5xl xl:text-5xl font-bold tracking-tight mb-6 leading-tight text-foreground">
+                                <h1 className="font-display text-3xl md:text-5xl xl:text-5xl font-bold tracking-tight mb-6 leading-tight text-foreground">
                                     Two persons.<br className="hidden lg:block"/> One shared dream. <br />
                                     <span className="text-primary italic font-normal">No looking back.</span>
                                 </h1>
                             </div>
                             
-                            <div className="bg-primary/5 p-6 md:p-8 rounded-3xl border border-primary/10 relative text-center max-w-lg mx-auto">
+                            <div className="bg-primary/5 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-primary/10 relative text-center max-w-lg mx-auto">
                                 <Quote className="absolute top-4 left-4 md:top-6 md:left-6 w-6 h-6 text-primary/20 hidden md:block" />
                                 <h2 className="font-script text-2xl md:text-3xl text-primary leading-snug mt-2 mb-3 relative z-10">
                                     &quot;We didn&apos;t wait for the perfect moment. We built it.&quot;
@@ -245,17 +245,17 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none" />
 
                 <div className="max-w-5xl mx-auto relative z-10">
-                    <div className="text-center mb-16">
-                        <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Before &amp; Now</h2>
-                        <p className="text-muted-foreground tracking-widest uppercase text-sm font-semibold">The Shift That Changed Everything</p>
+                    <div className="text-center mb-12 md:mb-16">
+                        <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">Before &amp; Now</h2>
+                        <p className="text-muted-foreground tracking-widest uppercase text-[10px] md:text-sm font-semibold">The Shift That Changed Everything</p>
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-8 md:gap-0 items-stretch bg-white rounded-3xl overflow-hidden shadow-2xl border border-border group/card">
                         {/* Before Side */}
-                        <div className="flex-1 p-10 md:p-14 bg-muted/20 relative transition-colors duration-500 group-hover/card:bg-muted/10">
-                            <div className="flex items-center gap-4 mb-10 justify-center md:justify-start">
+                        <div className="flex-1 p-8 md:p-14 bg-muted/20 relative transition-colors duration-500 group-hover/card:bg-muted/10">
+                            <div className="flex items-center gap-4 mb-8 md:mb-10 justify-center md:justify-start">
                                 <div className="w-10 h-px bg-border hidden sm:block" />
-                                <h3 className="font-script text-4xl text-muted-foreground/60">Before</h3>
+                                <h3 className="font-script text-3xl md:text-4xl text-muted-foreground/60">Before</h3>
                             </div>
                             <ul className="space-y-6">
                                 {[
@@ -280,9 +280,9 @@ export default function AboutPage() {
                         </div>
 
                         {/* Now Side */}
-                        <div className="flex-1 p-10 md:p-14 bg-gradient-to-br from-primary/5 to-primary/10 relative transition-colors duration-500 group-hover/card:to-primary/15">
-                            <div className="flex items-center gap-4 mb-10 justify-center md:justify-start">
-                                <h3 className="font-script text-4xl text-primary font-bold">Now</h3>
+                        <div className="flex-1 p-8 md:p-14 bg-gradient-to-br from-primary/5 to-primary/10 relative transition-colors duration-500 group-hover/card:to-primary/15">
+                            <div className="flex items-center gap-4 mb-8 md:mb-10 justify-center md:justify-start">
+                                <h3 className="font-script text-3xl md:text-4xl text-primary font-bold">Now</h3>
                                 <div className="w-10 h-px bg-primary/20 hidden sm:block" />
                             </div>
                             <ul className="space-y-6">
@@ -302,8 +302,8 @@ export default function AboutPage() {
                     </div>
 
                     {/* Final Word */}
-                    <div className="mt-32 text-center max-w-3xl mx-auto flex flex-col items-center">
-                        <p className="font-display text-3xl md:text-4xl text-foreground leading-snug">
+                    <div className="mt-20 md:mt-32 text-center max-w-3xl mx-auto flex flex-col items-center">
+                        <p className="font-display text-2xl md:text-4xl text-foreground leading-snug">
                             &quot;Freedom isn&apos;t a privilege. <br className="hidden md:block"/>
                             <span className="italic text-primary">It&apos;s a decision.</span> <br className="hidden md:block"/>
                             We made ours, and we haven&apos;t looked back.&quot;
@@ -317,35 +317,32 @@ export default function AboutPage() {
             </section>
             
             {/* ── CTA / Next Steps ─────────────────────────────────────────── */}
-            <section className="py-24 px-4 relative">
+            <section className="py-24 px-4 relative overflow-hidden">
                 <div className="max-w-5xl mx-auto">
                     <div className=" px-6 py-16 md:py-24    text-center ">
                         {/* Background Deco Orbs */}
-                        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-                        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3 pointer-events-none" />
+
 
                         <div className="relative z-10 max-w-4xl mx-auto">
-                            <h3 className="font-script text-3xl md:text-5xl text-primary mb-6">What's your next move?</h3>
-                            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+                            <h3 className="font-script text-2xl md:text-5xl text-primary mb-6">What's your next move?</h3>
+                            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                                 Start Your Own Journey
                             </h2>
-                            <p className="text-muted-foreground text-lg mb-16 max-w-xl mx-auto leading-relaxed">
+                            <p className="text-muted-foreground text-base md:text-lg mb-12 md:mb-16 max-w-xl mx-auto leading-relaxed">
                                 The hardest part is deciding to go. Use the resources below to map out your adventure and make it happen.
                             </p>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-0 text-left">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-4 md:px-0 text-left">
                                 {CTA_LINKS.map(({ href, icon: Icon, label, sub, primary }) => (
                                     <Link
                                         key={href}
                                         href={href}
-                                        className={`group relative flex flex-col gap-4 p-8 rounded-[2rem] border transition-all duration-500 overflow-hidden hover:-translate-y-2 hover:shadow-2xl ${
+                                        className={`group relative flex flex-col gap-4 p-6 md:p-8 rounded-2xl md:rounded-[2rem] border transition-all duration-500 overflow-hidden hover:-translate-y-2 hover:shadow-2xl ${
                                             primary
                                                 ? "bg-primary border-primary text-white shadow-lg shadow-primary/30"
                                                 : "bg-white border-border text-foreground hover:border-primary/30"
                                         }`}
                                     >
-                                        {/* Hover glare effect */}
-                                        <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/20 to-white/0 translate-x-[-150%] skew-x-12 group-hover:translate-x-[150%] transition-transform duration-1000 ease-out pointer-events-none" />
 
                                         <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 ${
                                             primary 
