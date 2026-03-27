@@ -77,6 +77,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="MmIFsmxGN8Jxsj08chlEiUC9Vyco9_ZFfOkFMerqod0"
+        />
         <Script
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
