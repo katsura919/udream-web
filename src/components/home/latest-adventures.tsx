@@ -100,7 +100,7 @@ export function LatestAdventures() {
     }, []);
 
     return (
-      <section className="py-24 px-4 bg-white">
+      <section className="pt-24 pb-10 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 max-w-2xl mx-auto">
             <motion.h2

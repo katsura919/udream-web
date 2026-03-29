@@ -53,7 +53,7 @@ const ITEMS = [...STICKERS, ...STICKERS, ...STICKERS];
 
 export function BannerStrip() {
     return (
-        <div className="relative w-full py-4">
+        <div className="relative w-full">
 
             <div className="overflow-hidden">
                 <motion.div

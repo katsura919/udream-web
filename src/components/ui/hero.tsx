@@ -38,7 +38,11 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   // Animation variants for the text content
   const FADE_IN_ANIMATION_VARIANTS: Variants = {
     hidden: { opacity: 0, y: 10 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 20 } },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 100, damping: 20 },
+    },
   };
 
   // Duplicate images for a seamless loop
@@ -47,11 +51,10 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   return (
     <section
       className={cn(
-        "relative w-full h-screen overflow-hidden flex flex-col items-center justify-center text-center px-4",
-        className
+        "relative w-full h-screen overflow-hidden flex flex-col items-center justify-start pt-40 text-center px-4 md:justify-center md:pt-0",
+        className,
       )}
     >
-
       <div className="z-10 flex flex-col items-center">
         {/* Tagline */}
         <motion.div
@@ -77,19 +80,17 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-foreground leading-none"
         >
-          {typeof title === 'string' ? (
-            title.split(" ").map((word, i) => (
-              <motion.span
-                key={i}
-                variants={FADE_IN_ANIMATION_VARIANTS}
-                className="inline-block"
-              >
-                {word}&nbsp;
-              </motion.span>
-            ))
-          ) : (
-            title
-          )}
+          {typeof title === "string"
+            ? title.split(" ").map((word, i) => (
+                <motion.span
+                  key={i}
+                  variants={FADE_IN_ANIMATION_VARIANTS}
+                  className="inline-block"
+                >
+                  {word}&nbsp;
+                </motion.span>
+              ))
+            : title}
         </motion.h1>
 
         {/* Description */}
@@ -132,7 +133,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
               key={index}
               className="relative aspect-[3/4] h-64 md:h-80 flex-shrink-0"
               style={{
-                rotate: `${(index % 2 === 0 ? -2 : 5)}deg`,
+                rotate: `${index % 2 === 0 ? -2 : 5}deg`,
               }}
             >
               <img
