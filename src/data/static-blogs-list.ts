@@ -1,3 +1,5 @@
+import { spotImages } from "./attraction-images";
+
 export interface StaticBlogCard {
   id: string;
   title: string;
@@ -9,6 +11,78 @@ export interface StaticBlogCard {
 }
 
 export const customStaticBlogs: StaticBlogCard[] = [
+  {
+    id: "famous-landmarks-entrance-fees",
+    title: "What the World's Famous Landmarks Actually Cost to Visit in 2026",
+    excerpt: "Entrance fees for 180+ landmarks across the 30 cities we've visited ~ the icons, the rip-offs, and the world-class sights that cost nothing.",
+    thumbnail: spotImages["rome:Colosseum"].src,
+    href: "/blog/famous-landmarks-entrance-fees",
+    date: "2026-07-04",
+    category: "Travel Budget",
+  },
+  {
+    id: "istanbul-travel-cost",
+    title: "Is Istanbul Expensive? What It Really Costs in 2026",
+    excerpt: "The big sights now charge in euros (Hagia Sophia €25, Topkapi €55), but food, ferries and hotels are still great value. Full budget breakdown.",
+    thumbnail: spotImages["hero:istanbul"].src,
+    href: "/blog/istanbul-travel-cost",
+    date: "2026-07-03",
+    category: "Travel Budget",
+  },
+  {
+    id: "taipei-budget-travel",
+    title: "Taipei on a Budget: Why It's East Asia's Best-Value City",
+    excerpt: "Tokyo-level food, transit, and safety at half the price: $35-55/day, $10 night-market feasts, and only two tickets worth buying.",
+    thumbnail: spotImages["hero:taipei"].src,
+    href: "/blog/taipei-budget-travel",
+    date: "2026-07-02",
+    category: "Travel Budget",
+  },
+  {
+    id: "balkans-itinerary",
+    title: "The Balkans Itinerary We'd Repeat: Sarajevo, Belgrade & Tirana in 2 Weeks",
+    excerpt: "Three capitals, $40-60 a day, and the friendliest people in Europe ~ the two-week overland route with real costs and bus logistics.",
+    thumbnail: spotImages["hero:sarajevo"].src,
+    href: "/blog/balkans-itinerary",
+    date: "2026-07-01",
+    category: "Itinerary",
+  },
+  {
+    id: "brunei-itinerary",
+    title: "Brunei in 48 Hours: The Itinerary, the Costs, and Whether It's Worth It",
+    excerpt: "Golden mosques (free), the world's largest water village, and a Sultan's treasury ~ our honest 2-day Brunei itinerary with 2026 costs.",
+    thumbnail: spotImages["hero:bandar-seri-begawan"].src,
+    href: "/blog/brunei-itinerary",
+    date: "2026-06-30",
+    category: "Itinerary",
+  },
+  {
+    id: "things-to-do-in-almaty",
+    title: "Things to Do in Almaty: Kazakhstan's Mountain City (Prices + 4-Day Itinerary)",
+    excerpt: "The 10 best things to do in Almaty with 2026 entry prices and a 4-day itinerary ~ Medeu, Shymbulak, Big Almaty Lake, and Charyn Canyon.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Sunset_over_the_Almaty_seen_from_Kok_Tobe_mountain%2C_pic_2.jpg/1280px-Sunset_over_the_Almaty_seen_from_Kok_Tobe_mountain%2C_pic_2.jpg",
+    href: "/blog/things-to-do-in-almaty",
+    date: "2026-07-04",
+    category: "Travel Guide",
+  },
+  {
+    id: "ha-long-bay-cruise-price",
+    title: "Ha Long Bay Cruise Prices in 2026: Day vs Overnight, and How Not to Overpay",
+    excerpt: "Day cruises from $55, overnight from $100, the real entrance fees, hidden extras, and the Lan Ha Bay trick that saves you 40%.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/The_lovely_colours_of_sunset_over_Halong_Bay_%2831520161931%29.jpg/1280px-The_lovely_colours_of_sunset_over_Halong_Bay_%2831520161931%29.jpg",
+    href: "/blog/ha-long-bay-cruise-price",
+    date: "2026-07-04",
+    category: "Travel Budget",
+  },
+  {
+    id: "tbilisi-travel-cost",
+    title: "Is Tbilisi Cheap? What Georgia Actually Costs in 2026",
+    excerpt: "Real daily budgets for one of Europe's cheapest capitals: $30-45/day mid-range, 40-cent metro rides, $6 feasts, and the one splurge worth making.",
+    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Parts_of_Old_Tbilisi%2C_historical_center_of_Tbilisi%2C_Georgia._View_from_the_Metekhi_church._July_2023.jpg/1280px-Parts_of_Old_Tbilisi%2C_historical_center_of_Tbilisi%2C_Georgia._View_from_the_Metekhi_church._July_2023.jpg",
+    href: "/blog/tbilisi-travel-cost",
+    date: "2026-07-04",
+    category: "Travel Budget",
+  },
   {
     id: "bali-digital-nomads",
     title: "Bali for Digital Nomads: Where to Stay, Work, and Live on a Budget",

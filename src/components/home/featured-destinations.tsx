@@ -50,9 +50,6 @@ className={`group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg 
 
         {/* Bottom content */}
         <div className="absolute bottom-0 left-0 right-0 p-5">
-          <p className="text-white/45 text-[11px] tracking-[0.2em] uppercase font-medium mb-1.5">
-            {place.dateVisited}
-          </p>
           <h3 className="text-xl font-bold text-white leading-snug mb-3">
             {place.name}
           </h3>
@@ -74,7 +71,7 @@ className={`group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg 
 };
 
 export function FeaturedDestinations() {
-  const featuredIds = [2, 6, 23, 27, 6, 10, 18, ,24, 25];
+  const featuredIds = [2, 6, 23, 27, 10, 18, 24, 25];
   const featured = visitedPlaces.filter((p) => featuredIds.includes(p.id));
 
   return (

@@ -10,11 +10,37 @@ import {
 } from 'lucide-react';
 import { travelGuides } from '@/data/guides';
 import { BreadcrumbSchema } from '@/components/seo/breadcrumb-schema';
+import { FAQSection } from '@/components/blog/faq-section';
+import { getGuideFaqs } from '@/data/guide-faqs';
 
 export async function generateStaticParams() {
     return travelGuides.map((guide) => ({
         id: guide.id,
     }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
+    const guide = travelGuides.find((g) => g.id === id);
+    if (!guide) return { title: "Travel Guide | Udream" };
+
+    const url = `https://udreamtravels.com/resources/guide/${guide.id}`;
+    const title = `${guide.destinationName} Travel Guide: Itinerary, Costs & Tips | Udream`;
+    const description = guide.quickDescription.slice(0, 158);
+
+    return {
+        title,
+        description,
+        alternates: { canonical: url },
+        openGraph: {
+            type: "article",
+            url,
+            title,
+            description,
+            images: guide.heroImage ? [{ url: guide.heroImage, alt: `${guide.destinationName} travel guide` }] : undefined,
+        },
+        twitter: { card: "summary_large_image", title, description },
+    };
 }
 
 export default async function TravelGuidePage({ params }: { params: Promise<{ id: string }> }) {
@@ -370,6 +396,15 @@ export default async function TravelGuidePage({ params }: { params: Promise<{ id
                     </div>
                 </div>
             </div>
+
+            {/* ❓ FAQs (feeds FAQPage structured data) */}
+            {getGuideFaqs(guide.id).length > 0 && (
+                <FAQSection
+                    faqs={getGuideFaqs(guide.id)}
+                    title={`${guide.destinationName} FAQ`}
+                    description={`Quick answers to the questions travelers ask most about ${guide.destinationName}.`}
+                />
+            )}
         </div>
     );
 }

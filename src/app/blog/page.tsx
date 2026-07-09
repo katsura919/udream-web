@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { visitedPlaces } from "@/data/visited-places";
-import { MapPin, Calendar, ArrowUpRight, BookOpen, Loader2, Globe } from "lucide-react";
+import { MapPin, Calendar, ArrowUpRight, BookOpen, Loader2, Globe, Search, X } from "lucide-react";
 import { getPublicBlogs, type PublicBlog } from "@/hooks/useblogs";
 import { VisitedPlace } from "@/data/visited-places";
 import { customStaticBlogs, type StaticBlogCard } from "@/data/static-blogs-list";
@@ -139,10 +139,6 @@ function DestinationCard({ place }: { place: VisitedPlace }) {
                     {place.country}
                 </span>
 
-                {/* Date badge */}
-                <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white/80 text-[11px] border border-white/15">
-                    {place.dateVisited}
-                </span>
             </div>
 
             {/* Content */}
@@ -185,14 +181,33 @@ function SectionHeader({ icon: Icon, title, sub }: { icon: React.ElementType; ti
 export default function BlogPage() {
     const [apiBlogs, setApiBlogs] = useState<PublicBlog[]>([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+    const [query, setQuery] = useState("");
 
     useEffect(() => {
         getPublicBlogs({ limit: 12 })
             .then((res) => setApiBlogs(res.data))
-            .catch(() => setError("Could not load latest posts."))
+            .catch(() => {
+                /* static articles still render */
+            })
             .finally(() => setLoading(false));
     }, []);
+
+    // Merge CMS posts with static articles, newest first. The top 8 fill
+    // "Latest Posts"; remaining static articles fall to "Featured Guides".
+    type FeedEntry =
+        | { kind: "api"; date: string; blog: PublicBlog }
+        | { kind: "static"; date: string; blog: StaticBlogCard };
+
+    const merged: FeedEntry[] = [
+        ...apiBlogs.map((b): FeedEntry => ({ kind: "api", date: b.createdAt, blog: b })),
+        ...customStaticBlogs.map((b): FeedEntry => ({ kind: "static", date: b.date, blog: b })),
+    ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    const latestPosts = merged.slice(0, 8);
+    const latestStaticIds = new Set(
+        latestPosts.filter((e) => e.kind === "static").map((e) => (e.blog as StaticBlogCard).id),
+    );
+    const featuredGuides = customStaticBlogs.filter((b) => !latestStaticIds.has(b.id));
 
     const grouped = continentOrder
         .map((continent) => ({
@@ -200,6 +215,25 @@ export default function BlogPage() {
             places: visitedPlaces.filter((p) => p.continent === continent),
         }))
         .filter((g) => g.places.length > 0);
+
+    // ── Search across posts, guides and destinations ──
+    const q = query.trim().toLowerCase();
+    const isSearching = q.length > 0;
+
+    const blogText = (e: FeedEntry) =>
+        e.kind === "api"
+            ? `${e.blog.title} ${e.blog.category ?? ""}`
+            : `${e.blog.title} ${e.blog.excerpt} ${e.blog.category ?? ""}`;
+
+    const blogResults = isSearching
+        ? merged.filter((e) => blogText(e).toLowerCase().includes(q))
+        : [];
+    const placeResults = isSearching
+        ? visitedPlaces.filter((p) =>
+              `${p.name} ${p.country} ${p.continent} ${p.description}`.toLowerCase().includes(q),
+          )
+        : [];
+    const totalResults = blogResults.length + placeResults.length;
 
     return (
         <div className="min-h-screen bg-white">
@@ -222,12 +256,69 @@ export default function BlogPage() {
                         {visitedPlaces.length} destinations across{" "}
                         {new Set(visitedPlaces.map((p) => p.country)).size} countries and counting.
                     </p>
+
+                    {/* Search */}
+                    <div className="relative max-w-xl mx-auto mt-8">
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground/60 pointer-events-none" />
+                        <input
+                            type="text"
+                            value={query}
+                            onChange={(e) => setQuery(e.target.value)}
+                            placeholder="Search destinations, guides, articles…"
+                            aria-label="Search the blog"
+                            className="w-full pl-12 pr-11 py-3.5 rounded-full bg-card border border-border shadow-sm text-foreground placeholder:text-muted-foreground/60 outline-none focus:ring-2 focus:ring-primary/40 focus:border-transparent transition-all"
+                        />
+                        {query && (
+                            <button
+                                onClick={() => setQuery("")}
+                                aria-label="Clear search"
+                                className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                            >
+                                <X className="w-4 h-4" />
+                            </button>
+                        )}
+                    </div>
                 </div>
             </div>
 
             <div className="max-w-7xl mx-auto px-4 space-y-20 pb-28">
 
-                {/* ── Latest Posts ── */}
+                {/* ── Search results ── */}
+                {isSearching && (
+                    <section className="space-y-8">
+                        <SectionHeader
+                            icon={Search}
+                            title="Search results"
+                            sub={`${totalResults} match${totalResults === 1 ? "" : "es"} for "${query.trim()}"`}
+                        />
+                        {totalResults === 0 ? (
+                            <div className="text-center py-16 text-muted-foreground">
+                                <p className="mb-2">Nothing matched that search.</p>
+                                <button onClick={() => setQuery("")} className="text-primary font-semibold hover:underline">
+                                    Clear search
+                                </button>
+                            </div>
+                        ) : (
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                                {blogResults.map((item) =>
+                                    item.kind === "api" ? (
+                                        <BlogCard key={item.blog._id} blog={item.blog} />
+                                    ) : (
+                                        <CustomStaticBlogCard key={item.blog.id} blog={item.blog} />
+                                    ),
+                                )}
+                                {placeResults.map((place) => (
+                                    <DestinationCard key={place.id} place={place} />
+                                ))}
+                            </div>
+                        )}
+                    </section>
+                )}
+
+
+                {!isSearching && (
+                <>
+                {/* ── Latest Posts (CMS posts merged with newest static articles) ── */}
                 <section className="space-y-8">
                     <SectionHeader icon={BookOpen} title="Latest Posts" />
 
@@ -237,29 +328,25 @@ export default function BlogPage() {
                             <span>Loading posts…</span>
                         </div>
                     )}
-                    {error && (
-                        <p className="text-center text-sm text-muted-foreground py-10">{error}</p>
-                    )}
-                    {!loading && !error && apiBlogs.length === 0 && (
-                        <p className="text-center text-sm text-muted-foreground py-10">
-                            No posts yet — check back soon!
-                        </p>
-                    )}
-                    {!loading && !error && apiBlogs.length > 0 && (
+                    {!loading && (
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                            {apiBlogs.map((blog) => (
-                                <BlogCard key={blog._id} blog={blog} />
-                            ))}
+                            {latestPosts.map((item) =>
+                                item.kind === "api" ? (
+                                    <BlogCard key={item.blog._id} blog={item.blog} />
+                                ) : (
+                                    <CustomStaticBlogCard key={item.blog.id} blog={item.blog} />
+                                ),
+                            )}
                         </div>
                     )}
                 </section>
 
-                {/* ── Featured Guides (Static) ── */}
-                {customStaticBlogs.length > 0 && (
+                {/* ── Featured Guides (remaining static articles) ── */}
+                {featuredGuides.length > 0 && (
                     <section className="space-y-8">
                         <SectionHeader icon={BookOpen} title="Featured Guides" sub="Handcrafted travel guides and resources" />
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                            {customStaticBlogs.map((blog) => (
+                            {featuredGuides.map((blog) => (
                                 <CustomStaticBlogCard key={blog.id} blog={blog} />
                             ))}
                         </div>
@@ -292,6 +379,8 @@ export default function BlogPage() {
                         </div>
                     ))}
                 </section>
+                </>
+                )}
 
             </div>
         </div>

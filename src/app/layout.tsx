@@ -1,25 +1,29 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato, Dancing_Script } from "next/font/google";
+import { Poppins, Manrope, Dancing_Script } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollProgress } from "@/components/layout/ScrollProgress";
+import { BackToTop } from "@/components/layout/BackToTop";
 import { NewsletterCTA } from "@/components/home/newsletter-cta";
 import { LenisProvider } from "@/components/providers/LenisProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
+// Display face in the spirit of Trend Sans One ~ bold, geometric, confident.
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   style: ["normal", "italic"],
 });
 
-const lato = Lato({
-  variable: "--font-lato",
+// Body face in the spirit of Agrandir ~ modern geometric grotesque.
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const dancingScript = Dancing_Script({
@@ -28,7 +32,13 @@ const dancingScript = Dancing_Script({
   weight: ["400", "600", "700"],
 });
 
+// Google AdSense publisher ID, e.g. "ca-pub-1234567890123456".
+// Set NEXT_PUBLIC_ADSENSE_CLIENT in the deployment environment to enable
+// Auto Ads + ads.txt (see src/app/ads.txt/route.ts).
+const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://udreamtravels.com"),
   title: "Udream | Travel & Adventure",
   description: "A modern travel blog showcasing adventures around the world.",
   keywords: ["travel", "adventure", "blog", "exploring", "destinations"],
@@ -75,7 +85,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${poppins.variable} ${manrope.variable} ${dancingScript.variable}`}
+    >
       <head>
         <meta
           name="google-site-verification"
@@ -89,15 +102,23 @@ export default function RootLayout({
           strategy="beforeInteractive"
           async
         />
+        {ADSENSE_CLIENT && (
+          <Script
+            id="adsense"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        )}
       </head>
-      <body
-        className={`${playfairDisplay.variable} ${lato.variable} ${dancingScript.variable} antialiased`}
-      >
+      <body className="antialiased">
         <LenisProvider>
+          <ScrollProgress />
           <Navbar />
           <main>{children}</main>
           <NewsletterCTA />
           <Footer />
+          <BackToTop />
         </LenisProvider>
       </body>
       <GoogleAnalytics gaId="G-8D3H8C0J53" />
